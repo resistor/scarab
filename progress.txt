@@ -1,0 +1,22 @@
+Step 0: Introduce SoR, explain goal
+
+Step 1: Research Mac 68k binary format: 
+CODE resource forks: https://support.apple.com/kb/TA21606?locale=en_US
+SegmentManager: http://mirror.informatimago.com/next/developer.apple.com/documentation/mac/Processes/Processes-135.html
+
+Step 2: Setup vMac, MPW, use DumpCode to generate disassembly
+
+Step 3: Split into files per CODE segment, beginning splitting at Jump Table offsets
+
+Step 4: Notice that disassembled instructions span Jump Table offsets: constant pools?  Annotate to revisit later
+
+Step 5: Use RTS instructions to further split up segments
+
+Step 6: Notice that "constant pools" come after functions, contain strings that appear to be symbol names.  Start using those in annotations
+MacsBug symbols:  http://www.toddp.com/classic/Software%20Install/Development%20Tools/001%20-%20Application%20Suites/001%20-%20CodeWarrior/CodeWarrior%202000%20(Full)/Metrowerks%20CodeWarrior/MacOS%20Support/Headers/Universal%20Headers/DisAsmLookup.h
+
+Step 7: Run across lots of familiar-looking libc functions!
+
+Step 8: Try to work out execution flow starting in CODE 0.  Identify that it's basically crt1.o, figure out how it finds and calls main in CODE 1.  Remark on constant pool used for main() offset - cheap linker hack?
+
+

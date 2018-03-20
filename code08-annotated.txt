@@ -1,0 +1,24 @@
+File: Scarab, Resource 8, Type: CODE
+First jump table entry offset = $8258, Jump table entries used = 1
+Segment size = $36 [54]
+
+Jump Table 76:
+(func extern Adder)
+00000000: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000004: 2F3C 0000 084A  '/<...J'        MOVE.L   #$0000084A,-(A7)    
+0000000A: 4EAD 040A       'N...'          JSR      $040A(A5)           
+0000000E: 3EBC FFFB       '>...'          MOVE.W   #$FFFB,(A7)         
+00000012: 4EAD 0492       'N...'          JSR      $0492(A5)           
+00000016: 3EBC 004B       '>..K'          MOVE.W   #$004B,(A7)         
+0000001A: 42A7            'B.'            CLR.L    -(A7)               
+0000001C: 486D 043A       'Hm.:'          PEA      $043A(A5)           
+00000020: 42A7            'B.'            CLR.L    -(A7)               
+00000022: 4EAD 010A       'N...'          JSR      $010A(A5)           
+00000026: 4E5E            'N^'            UNLK     A6                  
+00000028: 4E75            'Nu'            RTS                          
+---
+0000002A: 8541 6464       '.Add'          PACK     D1,D2,#$6464        
+0000002E: 6572            'er'            BCS.S    *+$0074             ; 000000A2
+00000030: 0000            '..'            DC.W     $0000            
+
+

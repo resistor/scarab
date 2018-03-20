@@ -1,0 +1,22 @@
+File: Scarab, Resource 6, Type: CODE
+First jump table entry offset = $8248, Jump table entries used = 1
+Segment size = $30 [48]
+
+Jump Table 74:
+(func extern panther)
+00000000: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000004: 2F3C 0000 07C4  '/<....'        MOVE.L   #$000007C4,-(A7)    
+0000000A: 4EAD 040A       'N...'          JSR      $040A(A5)           
+0000000E: 3EBC 000F       '>...'          MOVE.W   #$000F,(A7)         
+00000012: 4EAD 050A       'N...'          JSR      $050A(A5)           
+00000016: 4440            'D@'            NEG.W    D0                  
+00000018: 3E80            '>.'            MOVE.W   D0,(A7)             
+0000001A: 4EAD 0492       'N...'          JSR      $0492(A5)           
+0000001E: 4E5E            'N^'            UNLK     A6                  
+00000020: 4E75            'Nu'            RTS                          
+---
+00000022: 8770            '.p'            DC.W     $8770               ; ????
+00000024: 616E            'an'            BSR.S    *+$0070             ; 00000094
+00000026: 7468            'th'            MOVEQ    #$68,D2             ; 'h'
+00000028: 6572            'er'            BCS.S    *+$0074             ; 0000009C
+0000002A: 0000            '..'            DC.W     $0000            
