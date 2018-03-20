@@ -1,0 +1,44 @@
+File: Scarab, Resource 17, Type: CODE
+First jump table entry offset = $8270, Jump table entries used = 1
+Segment size = $86 [134]
+
+Jump Table 79:
+(func extern plank)
+00000000: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000004: 302D 9B48       '0-.H'          MOVE.W   -$64B8(A5),D0       
+00000008: 48C0            'H.'            EXT.L    D0                  
+0000000A: E988            '..'            LSL.L    #$4,D0              
+0000000C: 204D            ' M'            MOVEA.L  A5,A0               
+0000000E: D1C0            '..'            ADDA.L   D0,A0               
+00000010: 302D 9B4A       '0-.J'          MOVE.W   -$64B6(A5),D0       
+00000014: 48C0            'H.'            EXT.L    D0                  
+00000016: C0A8 C738       '...8'          AND.L    -$38C8(A0),D0       
+0000001A: 661E            'f.'            BNE.S    *+$0020             ; 0000003A
+0000001C: 2F3C 0000 0CB4  '/<....'        MOVE.L   #$00000CB4,-(A7)    
+00000022: 2F3C 0000 0CB6  '/<....'        MOVE.L   #$00000CB6,-(A7)    
+00000028: 2F3C 0000 0CB8  '/<....'        MOVE.L   #$00000CB8,-(A7)    
+0000002E: 2F3C 0000 0CBA  '/<....'        MOVE.L   #$00000CBA,-(A7)    
+00000034: 4EAD 051A       'N...'          JSR      $051A(A5)           
+00000038: 603C            '`<'            BRA.S    *+$003E             ; 00000076
+0000003A: 3F2D 9B4A       '?-.J'          MOVE.W   -$64B6(A5),-(A7)    
+0000003E: 3F2D 9B48       '?-.H'          MOVE.W   -$64B8(A5),-(A7)    
+00000042: 4EAD 03AA       'N...'          JSR      $03AA(A5)           
+00000046: 3B40 9B48       ';@.H'          MOVE.W   D0,-$64B8(A5)       
+0000004A: 4EAD 0242       'N..B'          JSR      $0242(A5)           
+0000004E: 3EAD 9B4A       '>..J'          MOVE.W   -$64B6(A5),(A7)     
+00000052: 4EAD 03CA       'N...'          JSR      $03CA(A5)           
+00000056: 3E80            '>.'            MOVE.W   D0,(A7)             
+00000058: 3F2D 9B48       '?-.H'          MOVE.W   -$64B8(A5),-(A7)    
+0000005C: 4EAD 03AA       'N...'          JSR      $03AA(A5)           
+00000060: 3B40 9B48       ';@.H'          MOVE.W   D0,-$64B8(A5)       
+00000064: 3E80            '>.'            MOVE.W   D0,(A7)             
+00000066: 4EAD 057A       'N..z'          JSR      $057A(A5)           
+0000006A: 3EAD 9B4A       '>..J'          MOVE.W   -$64B6(A5),(A7)     
+0000006E: 3F2D 9B48       '?-.H'          MOVE.W   -$64B8(A5),-(A7)    
+00000072: 4EAD 0132       'N..2'          JSR      $0132(A5)           
+00000076: 4E5E            'N^'            UNLK     A6                  
+00000078: 4E75            'Nu'            RTS                          
+---
+0000007A: 8570 6C61       '.pla'          OR.W     D2,$61(A0,D6.L*4)   
+0000007E: 6E6B            'nk'            BGT.S    *+$006D             ; 000000EB
+00000080: 0000            '..'            DC.W     $0000   
