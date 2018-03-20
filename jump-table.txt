@@ -3,7 +3,7 @@ File: Scarab, Resource 0, Type: CODE
 Classic Jump Table Format; Above A5 size = $670, Below A5 size = $6A68
 Jump Table length = $650, Offset from A5 = $20, 202 entries.
 Entry   A5_Offset   Seg_Offset   Code
-    1:   $000020     $000008     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
+    1:   $000020     $000008     MOVE.W    #$0001,-(A7)	_LoadSeg  	; _start
     2:   $000028     $000130     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
     3:   $000030     $000144     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
     4:   $000038     $000158     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
@@ -14,32 +14,32 @@ Entry   A5_Offset   Seg_Offset   Code
     9:   $000060     $00020C     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
    10:   $000068     $0003EC     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
    11:   $000070     $0012A4     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   12:   $000078     $001416     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   13:   $000080     $00184E     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
+   12:   $000078     $001416     MOVE.W    #$0002,-(A7)	_LoadSeg  	; Throw
+   13:   $000080     $00184E     MOVE.W    #$0002,-(A7)	_LoadSeg  	; InsInven
    14:   $000088     $001898     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   15:   $000090     $0018B4     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   16:   $000098     $00192E     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   17:   $0000A0     $00256C     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   18:   $0000A8     $0025DE     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   19:   $0000B0     $002600     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
+   15:   $000090     $0018B4     MOVE.W    #$0002,-(A7)	_LoadSeg  	; NewInven
+   16:   $000098     $00192E     MOVE.W    #$0002,-(A7)	_LoadSeg  	; SelInven
+   17:   $0000A0     $00256C     MOVE.W    #$0002,-(A7)	_LoadSeg  	; FlipTopStat
+   18:   $0000A8     $0025DE     MOVE.W    #$0002,-(A7)	_LoadSeg  	; mySetScroll
+   19:   $0000B0     $002600     MOVE.W    #$0002,-(A7)	_LoadSeg  	; myScroll
    20:   $0000B8     $00284C     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   21:   $0000C0     $002822     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   22:   $0000C8     $0028CE     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   23:   $0000D0     $002A76     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   24:   $0000D8     $002926     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   25:   $0000E0     $0029C0     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   26:   $0000E8     $002A06     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   27:   $0000F0     $002AAC     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   28:   $0000F8     $002B0A     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   29:   $000100     $002CD4     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   30:   $000108     $002BBE     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   31:   $000110     $002D70     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   32:   $000118     $002DBE     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
+   21:   $0000C0     $002822     MOVE.W    #$0002,-(A7)	_LoadSeg  	; mySetCtlMax
+   22:   $0000C8     $0028CE     MOVE.W    #$0002,-(A7)	_LoadSeg  	; AddIn
+   23:   $0000D0     $002A76     MOVE.W    #$0002,-(A7)	_LoadSeg  	; TypeInList
+   24:   $0000D8     $002926     MOVE.W    #$0002,-(A7)	_LoadSeg  	; AddThing
+   25:   $0000E0     $0029C0     MOVE.W    #$0002,-(A7)	_LoadSeg  	; DelThing
+   26:   $0000E8     $002A06     MOVE.W    #$0002,-(A7)	_LoadSeg  	; FlagInList
+   27:   $0000F0     $002AAC     MOVE.W    #$0002,-(A7)	_LoadSeg  	; TypeNum
+   28:   $0000F8     $002B0A     MOVE.W    #$0002,-(A7)	_LoadSeg  	; PassTime
+   29:   $000100     $002CD4     MOVE.W    #$0002,-(A7)	_LoadSeg  	; DelRAEvent
+   30:   $000108     $002BBE     MOVE.W    #$0002,-(A7)	_LoadSeg  	; AddRAEvent
+   31:   $000110     $002D70     MOVE.W    #$0002,-(A7)	_LoadSeg  	; FuncInEvents
+   32:   $000118     $002DBE     MOVE.W    #$0002,-(A7)	_LoadSeg  	; ThingInEvents
    33:   $000120     $002E54     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
    34:   $000128     $002E9E     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   35:   $000130     $002EEE     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   36:   $000138     $00478A     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   37:   $000140     $001CA4     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
+   35:   $000130     $002EEE     MOVE.W    #$0002,-(A7)	_LoadSeg  	; view
+   36:   $000138     $00478A     MOVE.W    #$0002,-(A7)	_LoadSeg  	; MapMe
+   37:   $000140     $001CA4     MOVE.W    #$0002,-(A7)	_LoadSeg  	; main
    38:   $000148     $0019A2     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
    39:   $000150     $001B0C     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
    40:   $000158     $001B1A     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
@@ -57,152 +57,152 @@ Entry   A5_Offset   Seg_Offset   Code
    52:   $0001B8     $001C9C     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
    53:   $0001C0     $000786     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
    54:   $0001C8     $000BFE     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   55:   $0001D0     $000C46     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   56:   $0001D8     $00119A     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   57:   $0001E0     $0011E4     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   58:   $0001E8     $000000     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   59:   $0001F0     $0003EC     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   60:   $0001F8     $000470     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   61:   $000200     $000566     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   62:   $000208     $00053A     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   63:   $000210     $000654     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   64:   $000218     $0005DC     MOVE.W    #$0002,-(A7)	_LoadSeg  	; A9F0
-   65:   $000220     $0007D6     MOVE.W    #$0003,-(A7)	_LoadSeg  	; A9F0
-   66:   $000228     $0007B6     MOVE.W    #$0003,-(A7)	_LoadSeg  	; A9F0
-   67:   $000230     $000BA0     MOVE.W    #$0003,-(A7)	_LoadSeg  	; A9F0
-   68:   $000238     $0003A8     MOVE.W    #$0003,-(A7)	_LoadSeg  	; A9F0
+   55:   $0001D0     $000C46     MOVE.W    #$0002,-(A7)	_LoadSeg  	; youfound
+   56:   $0001D8     $00119A     MOVE.W    #$0002,-(A7)	_LoadSeg  	; FlashButton
+   57:   $0001E0     $0011E4     MOVE.W    #$0002,-(A7)	_LoadSeg  	; SetSpoor
+   58:   $0001E8     $000000     MOVE.W    #$0002,-(A7)	_LoadSeg  	; AnimalMove
+   59:   $0001F0     $0003EC     MOVE.W    #$0002,-(A7)	_LoadSeg  	; InitAnimal
+   60:   $0001F8     $000470     MOVE.W    #$0002,-(A7)	_LoadSeg  	; StepOnAnimal
+   61:   $000200     $000566     MOVE.W    #$0002,-(A7)	_LoadSeg  	; WakeyTime
+   62:   $000208     $00053A     MOVE.W    #$0002,-(A7)	_LoadSeg  	; SleepyTime
+   63:   $000210     $000654     MOVE.W    #$0002,-(A7)	_LoadSeg  	; StopAnimal
+   64:   $000218     $0005DC     MOVE.W    #$0002,-(A7)	_LoadSeg  	; NetIt
+   65:   $000220     $0007D6     MOVE.W    #$0003,-(A7)	_LoadSeg  	; ShowThings
+   66:   $000228     $0007B6     MOVE.W    #$0003,-(A7)	_LoadSeg  	; ShowScroll
+   67:   $000230     $000BA0     MOVE.W    #$0003,-(A7)	_LoadSeg  	; PickFilter
+   68:   $000238     $0003A8     MOVE.W    #$0003,-(A7)	_LoadSeg  	; pickup
    69:   $000240     $0001FC     MOVE.W    #$0003,-(A7)	_LoadSeg  	; A9F0
-   70:   $000248     $0002A0     MOVE.W    #$0003,-(A7)	_LoadSeg  	; A9F0
-   71:   $000250     $000000     MOVE.W    #$0003,-(A7)	_LoadSeg  	; A9F0
+   70:   $000248     $0002A0     MOVE.W    #$0003,-(A7)	_LoadSeg  	; LetGoOf
+   71:   $000250     $000000     MOVE.W    #$0003,-(A7)	_LoadSeg  	; binocs
    72:   $000258     $0001EC     MOVE.W    #$0003,-(A7)	_LoadSeg  	; A9F0
-   73:   $000260     $000000     MOVE.W    #$0005,-(A7)	_LoadSeg  	; A9F0
-   74:   $000268     $000000     MOVE.W    #$0006,-(A7)	_LoadSeg  	; A9F0
-   75:   $000270     $000000     MOVE.W    #$0007,-(A7)	_LoadSeg  	; A9F0
-   76:   $000278     $000000     MOVE.W    #$0008,-(A7)	_LoadSeg  	; A9F0
-   77:   $000280     $000000     MOVE.W    #$000B,-(A7)	_LoadSeg  	; A9F0
-   78:   $000288     $000000     MOVE.W    #$000E,-(A7)	_LoadSeg  	; A9F0
-   79:   $000290     $000000     MOVE.W    #$0011,-(A7)	_LoadSeg  	; A9F0
-   80:   $000298     $000000     MOVE.W    #$0012,-(A7)	_LoadSeg  	; A9F0
-   81:   $0002A0     $000216     MOVE.W    #$0012,-(A7)	_LoadSeg  	; A9F0
+   73:   $000260     $000000     MOVE.W    #$0005,-(A7)	_LoadSeg  	; monkey
+   74:   $000268     $000000     MOVE.W    #$0006,-(A7)	_LoadSeg  	; panther
+   75:   $000270     $000000     MOVE.W    #$0007,-(A7)	_LoadSeg  	; bullwhip
+   76:   $000278     $000000     MOVE.W    #$0008,-(A7)	_LoadSeg  	; Adder
+   77:   $000280     $000000     MOVE.W    #$000B,-(A7)	_LoadSeg  	; Notice
+   78:   $000288     $000000     MOVE.W    #$000E,-(A7)	_LoadSeg  	; snakecure
+   79:   $000290     $000000     MOVE.W    #$0011,-(A7)	_LoadSeg  	; plank
+   80:   $000298     $000000     MOVE.W    #$0012,-(A7)	_LoadSeg  	; net
+   81:   $0002A0     $000216     MOVE.W    #$0012,-(A7)	_LoadSeg  	; usenet
    82:   $0002A8     $000000     MOVE.W    #$0013,-(A7)	_LoadSeg  	; A9F0
    83:   $0002B0     $00008E     MOVE.W    #$0013,-(A7)	_LoadSeg  	; A9F0
-   84:   $0002B8     $000000     MOVE.W    #$0015,-(A7)	_LoadSeg  	; A9F0
-   85:   $0002C0     $0002B4     MOVE.W    #$0015,-(A7)	_LoadSeg  	; A9F0
-   86:   $0002C8     $00028E     MOVE.W    #$0015,-(A7)	_LoadSeg  	; A9F0
-   87:   $0002D0     $00080A     MOVE.W    #$0015,-(A7)	_LoadSeg  	; A9F0
-   88:   $0002D8     $0003B8     MOVE.W    #$0015,-(A7)	_LoadSeg  	; A9F0
-   89:   $0002E0     $000000     MOVE.W    #$0016,-(A7)	_LoadSeg  	; A9F0
-   90:   $0002E8     $000000     MOVE.W    #$0018,-(A7)	_LoadSeg  	; A9F0
-   91:   $0002F0     $000062     MOVE.W    #$0018,-(A7)	_LoadSeg  	; A9F0
-   92:   $0002F8     $000000     MOVE.W    #$001A,-(A7)	_LoadSeg  	; A9F0
-   93:   $000300     $000126     MOVE.W    #$001E,-(A7)	_LoadSeg  	; A9F0
+   84:   $0002B8     $000000     MOVE.W    #$0015,-(A7)	_LoadSeg  	; ShowMap
+   85:   $0002C0     $0002B4     MOVE.W    #$0015,-(A7)	_LoadSeg  	; doLegend
+   86:   $0002C8     $00028E     MOVE.W    #$0015,-(A7)	_LoadSeg  	; doPrintMap
+   87:   $0002D0     $00080A     MOVE.W    #$0015,-(A7)	_LoadSeg  	; MapFilter
+   88:   $0002D8     $0003B8     MOVE.W    #$0015,-(A7)	_LoadSeg  	; PrintMap
+   89:   $0002E0     $000000     MOVE.W    #$0016,-(A7)	_LoadSeg  	; firstaid
+   90:   $0002E8     $000000     MOVE.W    #$0018,-(A7)	_LoadSeg  	; dart
+   91:   $0002F0     $000062     MOVE.W    #$0018,-(A7)	_LoadSeg  	; gun
+   92:   $0002F8     $000000     MOVE.W    #$001A,-(A7)	_LoadSeg  	; charcoal
+   93:   $000300     $000126     MOVE.W    #$001E,-(A7)	_LoadSeg  	; StockMaze
    94:   $000308     $000000     MOVE.W    #$001E,-(A7)	_LoadSeg  	; A9F0
-   95:   $000310     $000000     MOVE.W    #$000A,-(A7)	_LoadSeg  	; A9F0
-   96:   $000318     $000230     MOVE.W    #$000A,-(A7)	_LoadSeg  	; A9F0
+   95:   $000310     $000000     MOVE.W    #$000A,-(A7)	_LoadSeg  	; SetUpMenus
+   96:   $000318     $000230     MOVE.W    #$000A,-(A7)	_LoadSeg  	; SetUpWindows
    97:   $000320     $0005BE     MOVE.W    #$000A,-(A7)	_LoadSeg  	; A9F0
    98:   $000328     $000724     MOVE.W    #$000A,-(A7)	_LoadSeg  	; A9F0
-   99:   $000330     $00074A     MOVE.W    #$000A,-(A7)	_LoadSeg  	; A9F0
-  100:   $000338     $000782     MOVE.W    #$000A,-(A7)	_LoadSeg  	; A9F0
-  101:   $000340     $000000     MOVE.W    #$0020,-(A7)	_LoadSeg  	; A9F0
-  102:   $000348     $000000     MOVE.W    #$0027,-(A7)	_LoadSeg  	; A9F0
-  103:   $000350     $0000EC     MOVE.W    #$0027,-(A7)	_LoadSeg  	; A9F0
-  104:   $000358     $000132     MOVE.W    #$0027,-(A7)	_LoadSeg  	; A9F0
-  105:   $000360     $000000     MOVE.W    #$002A,-(A7)	_LoadSeg  	; A9F0
-  106:   $000368     $0000A0     MOVE.W    #$002A,-(A7)	_LoadSeg  	; A9F0
-  107:   $000370     $000248     MOVE.W    #$002D,-(A7)	_LoadSeg  	; A9F0
-  108:   $000378     $000062     MOVE.W    #$002D,-(A7)	_LoadSeg  	; A9F0
-  109:   $000380     $00008C     MOVE.W    #$002D,-(A7)	_LoadSeg  	; A9F0
-  110:   $000388     $0000DC     MOVE.W    #$002D,-(A7)	_LoadSeg  	; A9F0
-  111:   $000390     $000140     MOVE.W    #$002D,-(A7)	_LoadSeg  	; A9F0
-  112:   $000398     $000190     MOVE.W    #$002D,-(A7)	_LoadSeg  	; A9F0
-  113:   $0003A0     $000000     MOVE.W    #$0004,-(A7)	_LoadSeg  	; A9F0
-  114:   $0003A8     $000098     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  115:   $0003B0     $0000F6     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  116:   $0003B8     $000188     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  117:   $0003C0     $0001D0     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  118:   $0003C8     $000218     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  119:   $0003D0     $000262     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  120:   $0003D8     $0005CE     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  121:   $0003E0     $000726     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  122:   $0003E8     $0007A4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  123:   $0003F0     $00081A     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+   99:   $000330     $00074A     MOVE.W    #$000A,-(A7)	_LoadSeg  	; TrapAvailable
+  100:   $000338     $000782     MOVE.W    #$000A,-(A7)	_LoadSeg  	; WNEisImplemented
+  101:   $000340     $000000     MOVE.W    #$0020,-(A7)	_LoadSeg  	; pole
+  102:   $000348     $000000     MOVE.W    #$0027,-(A7)	_LoadSeg  	; lantern
+  103:   $000350     $0000EC     MOVE.W    #$0027,-(A7)	_LoadSeg  	; droplantern
+  104:   $000358     $000132     MOVE.W    #$0027,-(A7)	_LoadSeg  	; throwlantern
+  105:   $000360     $000000     MOVE.W    #$002A,-(A7)	_LoadSeg  	; gold
+  106:   $000368     $0000A0     MOVE.W    #$002A,-(A7)	_LoadSeg  	; throwgold
+  107:   $000370     $000248     MOVE.W    #$002D,-(A7)	_LoadSeg  	; SilentSound
+  108:   $000378     $000062     MOVE.W    #$002D,-(A7)	_LoadSeg  	; trip
+  109:   $000380     $00008C     MOVE.W    #$002D,-(A7)	_LoadSeg  	; speartrap
+  110:   $000388     $0000DC     MOVE.W    #$002D,-(A7)	_LoadSeg  	; windtrap
+  111:   $000390     $000140     MOVE.W    #$002D,-(A7)	_LoadSeg  	; darttrap
+  112:   $000398     $000190     MOVE.W    #$002D,-(A7)	_LoadSeg  	; watertrap
+  113:   $0003A0     $000000     MOVE.W    #$0004,-(A7)	_LoadSeg  	; key
+  114:   $0003A8     $000098     MOVE.W    #$0009,-(A7)	_LoadSeg  	; GoDir
+  115:   $0003B0     $0000F6     MOVE.W    #$0009,-(A7)	_LoadSeg  	; InBounds
+  116:   $0003B8     $000188     MOVE.W    #$0009,-(A7)	_LoadSeg  	; leftof
+  117:   $0003C0     $0001D0     MOVE.W    #$0009,-(A7)	_LoadSeg  	; rightof
+  118:   $0003C8     $000218     MOVE.W    #$0009,-(A7)	_LoadSeg  	; reverseof
+  119:   $0003D0     $000262     MOVE.W    #$0009,-(A7)	_LoadSeg  	; randdir
+  120:   $0003D8     $0005CE     MOVE.W    #$0009,-(A7)	_LoadSeg  	; MyGrowWindow
+  121:   $0003E0     $000726     MOVE.W    #$0009,-(A7)	_LoadSeg  	; SizeDestView
+  122:   $0003E8     $0007A4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; SizeScrollBars
+  123:   $0003F0     $00081A     MOVE.W    #$0009,-(A7)	_LoadSeg  	; myGrowDrawIcon
   124:   $0003F8     $000CEE     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
   125:   $000400     $000D0A     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  126:   $000408     $000D28     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  127:   $000410     $000F26     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  128:   $000418     $001178     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  129:   $000420     $0011E4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  130:   $000428     $001244     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  131:   $000430     $00126C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  132:   $000438     $0012D4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  133:   $000440     $00131C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  126:   $000408     $000D28     MOVE.W    #$0009,-(A7)	_LoadSeg  	; News
+  127:   $000410     $000F26     MOVE.W    #$0009,-(A7)	_LoadSeg  	; Nameit
+  128:   $000418     $001178     MOVE.W    #$0009,-(A7)	_LoadSeg  	; burnoil
+  129:   $000420     $0011E4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; oil
+  130:   $000428     $001244     MOVE.W    #$0009,-(A7)	_LoadSeg  	; throwoil
+  131:   $000430     $00126C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; OutlineButton
+  132:   $000438     $0012D4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; poison
+  133:   $000440     $00131C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; PutIn
   134:   $000448     $00145C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  135:   $000450     $00148E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  135:   $000450     $00148E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; Speed
   136:   $000458     $001578     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  137:   $000460     $0015A0     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  138:   $000468     $001764     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  139:   $000470     $00182C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  140:   $000478     $0019B4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  141:   $000480     $0019D4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  137:   $000460     $0015A0     MOVE.W    #$0009,-(A7)	_LoadSeg  	; HeroStatus
+  138:   $000468     $001764     MOVE.W    #$0009,-(A7)	_LoadSeg  	; UpdateTherm
+  139:   $000470     $00182C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; InitStatus
+  140:   $000478     $0019B4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; UpdateCompass
+  141:   $000480     $0019D4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; Compass
   142:   $000488     $001A86     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  143:   $000490     $001B0E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  143:   $000490     $001B0E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; AddHealth
   144:   $000498     $001BB6     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  145:   $0004A0     $001BEA     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  146:   $0004A8     $001D46     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  147:   $0004B0     $001DDA     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  148:   $0004B8     $001E02     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  149:   $0004C0     $001E2E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  150:   $0004C8     $001EAC     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  151:   $0004D0     $001F32     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  152:   $0004D8     $001F7C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  153:   $0004E0     $002032     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  154:   $0004E8     $0020E8     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  155:   $0004F0     $002146     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  156:   $0004F8     $002174     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  157:   $000500     $00231A     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  158:   $000508     $0023BC     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  159:   $000510     $0023F0     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  160:   $000518     $00241E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  161:   $000520     $00244E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  145:   $0004A0     $001BEA     MOVE.W    #$0009,-(A7)	_LoadSeg  	; food
+  146:   $0004A8     $001D46     MOVE.W    #$0009,-(A7)	_LoadSeg  	; digest
+  147:   $0004B0     $001DDA     MOVE.W    #$0009,-(A7)	_LoadSeg  	; strlen
+  148:   $0004B8     $001E02     MOVE.W    #$0009,-(A7)	_LoadSeg  	; myTEInsert
+  149:   $0004C0     $001E2E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; Pstrcpy
+  150:   $0004C8     $001EAC     MOVE.W    #$0009,-(A7)	_LoadSeg  	; PstrEqual
+  151:   $0004D0     $001F32     MOVE.W    #$0009,-(A7)	_LoadSeg  	; mystrncat
+  152:   $0004D8     $001F7C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; strncmp
+  153:   $0004E0     $002032     MOVE.W    #$0009,-(A7)	_LoadSeg  	; atol
+  154:   $0004E8     $0020E8     MOVE.W    #$0009,-(A7)	_LoadSeg  	; Talisman
+  155:   $0004F0     $002146     MOVE.W    #$0009,-(A7)	_LoadSeg  	; MummyDearest
+  156:   $0004F8     $002174     MOVE.W    #$0009,-(A7)	_LoadSeg  	; tprintf
+  157:   $000500     $00231A     MOVE.W    #$0009,-(A7)	_LoadSeg  	; Pi2d
+  158:   $000508     $0023BC     MOVE.W    #$0009,-(A7)	_LoadSeg  	; rand
+  159:   $000510     $0023F0     MOVE.W    #$0009,-(A7)	_LoadSeg  	; WaitForClick
+  160:   $000518     $00241E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; TellUser
+  161:   $000520     $00244E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; AskUser
   162:   $000528     $002488     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  163:   $000530     $002606     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  164:   $000538     $000928     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  165:   $000540     $000B9E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  166:   $000548     $000AC8     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  163:   $000530     $002606     MOVE.W    #$0009,-(A7)	_LoadSeg  	; Beep
+  164:   $000538     $000928     MOVE.W    #$0009,-(A7)	_LoadSeg  	; CreateThing
+  165:   $000540     $000B9E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; LoseThing
+  166:   $000548     $000AC8     MOVE.W    #$0009,-(A7)	_LoadSeg  	; MakeThing
   167:   $000550     $000BC0     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  168:   $000558     $00089A     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  169:   $000560     $00029C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  170:   $000568     $0002BC     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  171:   $000570     $00054E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  172:   $000578     $000036     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  173:   $000580     $000000     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  168:   $000558     $00089A     MOVE.W    #$0009,-(A7)	_LoadSeg  	; LookForTraps
+  169:   $000560     $00029C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; howmuch
+  170:   $000568     $0002BC     MOVE.W    #$0009,-(A7)	_LoadSeg  	; GetAmount
+  171:   $000570     $00054E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; WaitForMouseUp
+  172:   $000578     $000036     MOVE.W    #$0009,-(A7)	_LoadSeg  	; CanPickUp
+  173:   $000580     $000000     MOVE.W    #$0009,-(A7)	_LoadSeg  	; benchmark
   174:   $000588     $000000     MOVE.W    #$000D,-(A7)	_LoadSeg  	; A9F0
-  175:   $000590     $000000     MOVE.W    #$000F,-(A7)	_LoadSeg  	; A9F0
-  176:   $000598     $000098     MOVE.W    #$000F,-(A7)	_LoadSeg  	; A9F0
-  177:   $0005A0     $000000     MOVE.W    #$0017,-(A7)	_LoadSeg  	; A9F0
-  178:   $0005A8     $000DC8     MOVE.W    #$0017,-(A7)	_LoadSeg  	; A9F0
-  179:   $0005B0     $00122E     MOVE.W    #$0017,-(A7)	_LoadSeg  	; A9F0
-  180:   $0005B8     $001260     MOVE.W    #$0017,-(A7)	_LoadSeg  	; A9F0
-  181:   $0005C0     $000872     MOVE.W    #$0017,-(A7)	_LoadSeg  	; A9F0
-  182:   $0005C8     $0012EA     MOVE.W    #$0017,-(A7)	_LoadSeg  	; A9F0
-  183:   $0005D0     $00063E     MOVE.W    #$001B,-(A7)	_LoadSeg  	; A9F0
-  184:   $0005D8     $000908     MOVE.W    #$001B,-(A7)	_LoadSeg  	; A9F0
-  185:   $0005E0     $0012B6     MOVE.W    #$001B,-(A7)	_LoadSeg  	; A9F0
-  186:   $0005E8     $000000     MOVE.W    #$001B,-(A7)	_LoadSeg  	; A9F0
-  187:   $0005F0     $000170     MOVE.W    #$001B,-(A7)	_LoadSeg  	; A9F0
-  188:   $0005F8     $000620     MOVE.W    #$001B,-(A7)	_LoadSeg  	; A9F0
-  189:   $000600     $000000     MOVE.W    #$001C,-(A7)	_LoadSeg  	; A9F0
+  175:   $000590     $000000     MOVE.W    #$000F,-(A7)	_LoadSeg  	; pickmelon
+  176:   $000598     $000098     MOVE.W    #$000F,-(A7)	_LoadSeg  	; eatmelon
+  177:   $0005A0     $000000     MOVE.W    #$0017,-(A7)	_LoadSeg  	; SaveGame
+  178:   $0005A8     $000DC8     MOVE.W    #$0017,-(A7)	_LoadSeg  	; MakeAFile
+  179:   $0005B0     $00122E     MOVE.W    #$0017,-(A7)	_LoadSeg  	; SaveErr
+  180:   $0005B8     $001260     MOVE.W    #$0017,-(A7)	_LoadSeg  	; myWrite
+  181:   $0005C0     $000872     MOVE.W    #$0017,-(A7)	_LoadSeg  	; ResumeGame
+  182:   $0005C8     $0012EA     MOVE.W    #$0017,-(A7)	_LoadSeg  	; myRead
+  183:   $0005D0     $00063E     MOVE.W    #$001B,-(A7)	_LoadSeg  	; TopTen
+  184:   $0005D8     $000908     MOVE.W    #$001B,-(A7)	_LoadSeg  	; doTopTen
+  185:   $0005E0     $0012B6     MOVE.W    #$001B,-(A7)	_LoadSeg  	; TSFilter
+  186:   $0005E8     $000000     MOVE.W    #$001B,-(A7)	_LoadSeg  	; FullStatus
+  187:   $0005F0     $000170     MOVE.W    #$001B,-(A7)	_LoadSeg  	; doFullStatus
+  188:   $0005F8     $000620     MOVE.W    #$001B,-(A7)	_LoadSeg  	; FSFilter
+  189:   $000600     $000000     MOVE.W    #$001C,-(A7)	_LoadSeg  	; mummy
   190:   $000608     $0000A6     MOVE.W    #$001C,-(A7)	_LoadSeg  	; A9F0
-  191:   $000610     $000118     MOVE.W    #$001C,-(A7)	_LoadSeg  	; A9F0
-  192:   $000618     $0001A8     MOVE.W    #$001C,-(A7)	_LoadSeg  	; A9F0
-  193:   $000620     $000000     MOVE.W    #$0014,-(A7)	_LoadSeg  	; A9F0
-  194:   $000628     $00002C     MOVE.W    #$0014,-(A7)	_LoadSeg  	; A9F0
-  195:   $000630     $00006E     MOVE.W    #$0014,-(A7)	_LoadSeg  	; A9F0
-  196:   $000638     $000090     MOVE.W    #$0014,-(A7)	_LoadSeg  	; A9F0
-  197:   $000640     $00039A     MOVE.W    #$001D,-(A7)	_LoadSeg  	; A9F0
-  198:   $000648     $0005A8     MOVE.W    #$001D,-(A7)	_LoadSeg  	; A9F0
-  199:   $000650     $00001A     MOVE.W    #$001D,-(A7)	_LoadSeg  	; A9F0
-  200:   $000658     $0000BA     MOVE.W    #$001D,-(A7)	_LoadSeg  	; A9F0
-  201:   $000660     $0002EC     MOVE.W    #$001D,-(A7)	_LoadSeg  	; A9F0
-  202:   $000668     $0007BA     MOVE.W    #$001D,-(A7)	_LoadSeg  	; A9F0
+  191:   $000610     $000118     MOVE.W    #$001C,-(A7)	_LoadSeg  	; throwScarab
+  192:   $000618     $0001A8     MOVE.W    #$001C,-(A7)	_LoadSeg  	; MummyMaker
+  193:   $000620     $000000     MOVE.W    #$0014,-(A7)	_LoadSeg  	; pickcompass
+  194:   $000628     $00002C     MOVE.W    #$0014,-(A7)	_LoadSeg  	; dropcompass
+  195:   $000630     $00006E     MOVE.W    #$0014,-(A7)	_LoadSeg  	; throwcompass
+  196:   $000638     $000090     MOVE.W    #$0014,-(A7)	_LoadSeg  	; usecompass
+  197:   $000640     $00039A     MOVE.W    #$001D,-(A7)	_LoadSeg  	; doHelp
+  198:   $000648     $0005A8     MOVE.W    #$001D,-(A7)	_LoadSeg  	; HDoScroll
+  199:   $000650     $00001A     MOVE.W    #$001D,-(A7)	_LoadSeg  	; HelpMenu
+  200:   $000658     $0000BA     MOVE.W    #$001D,-(A7)	_LoadSeg  	; Help
+  201:   $000660     $0002EC     MOVE.W    #$001D,-(A7)	_LoadSeg  	; HelpButtons
+  202:   $000668     $0007BA     MOVE.W    #$001D,-(A7)	_LoadSeg  	; hShowScroll
 

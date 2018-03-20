@@ -1158,7 +1158,7 @@ Jump Table 53:
 00000BFA: 6374            'ct'            BLS.S    *+$0076             ; 00000C70
 00000BFC: 0000
 
-Jump Table 54
+Jump Table 54:
 (func extern ???)
 // NOTE: Incorrect disassembly
 00000BFE: 2F0C       '../.'          ORI.B    #$2F0C,D0           
@@ -1731,9 +1731,13 @@ Jump Table 57:
 0000129C: 5370            'Sp'            DC.W     $5370               ; ????
 0000129E: 6F6F            'oo'            BLE.S    *+$0071             ; 0000130F
 000012A0: 7200            'r.'            MOVEQ    #$00,D1             
-000012A2: 0000 2F0C       '../.'          ORI.B    #$2F0C,D0           
+000012A2: 0000 
 
-Jump Table 11: // NOTE: Correct address is 0x12A4.  Bad disassembly???
+
+Jump Table 11:
+(func extern ???)
+// NOTE: Incorrect disassembly!!!
+000012A4: 2F0C       '../.'          ORI.B    #$2F0C,D0           
 000012A6: 302D 9B48       '0-.H'          MOVE.W   -$64B8(A5),D0       
 000012AA: 48C0            'H.'            EXT.L    D0                  
 000012AC: E988            '..'            LSL.L    #$4,D0              

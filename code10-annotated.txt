@@ -559,7 +559,7 @@ Jump Table 97:
 00000722: 4E75            'Nu'            RTS                          
 
 
-Jump table 98:
+Jump Table 98:
 (func extern ???)
 00000724: 2F07            '/.'            MOVE.L   D7,-(A7)            
 00000726: 7E00            '~.'            MOVEQ    #$00,D7             

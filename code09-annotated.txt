@@ -1753,7 +1753,7 @@ Jump Table 128:
 000011E2: 0000
 
 
-JUmp Table 129:
+Jump Table 129:
 (func extern oil)
 // NOTE: Incorrect disassembly!!!
 000011E4: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
