@@ -4,15 +4,15 @@ Classic Jump Table Format; Above A5 size = $670, Below A5 size = $6A68
 Jump Table length = $650, Offset from A5 = $20, 202 entries.
 Entry   A5_Offset   Seg_Offset   Code
     1:   $000020     $000008     MOVE.W    #$0001,-(A7)	_LoadSeg  	; _start
-    2:   $000028     $000130     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
-    3:   $000030     $000144     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
-    4:   $000038     $000158     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
-    5:   $000040     $000174     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
-    6:   $000048     $0001AA     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
-    7:   $000050     $0001CA     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
-    8:   $000058     $0001EC     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
-    9:   $000060     $00020C     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
-   10:   $000068     $0003EC     MOVE.W    #$0001,-(A7)	_LoadSeg  	; A9F0
+    2:   $000028     $000130     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon16
+    3:   $000030     $000144     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon17
+    4:   $000038     $000158     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon18
+    5:   $000040     $000174     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon19
+    6:   $000048     $0001AA     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon20
+    7:   $000050     $0001CA     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon21
+    8:   $000058     $0001EC     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon22
+    9:   $000060     $00020C     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon23
+   10:   $000068     $0003EC     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon24
    11:   $000070     $0012A4     MOVE.W    #$0002,-(A7)	_LoadSeg  	; code2-anon2
    12:   $000078     $001416     MOVE.W    #$0002,-(A7)	_LoadSeg  	; Throw
    13:   $000080     $00184E     MOVE.W    #$0002,-(A7)	_LoadSeg  	; InsInven

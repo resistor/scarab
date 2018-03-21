@@ -7,6 +7,7 @@ Segment size = $40E [1038]
 00000004: 0000 0142       '...B'          ORI.B    #$0142,D0           ; 'B'
 
 Jump Table 1:
+(func extern _start)
 00000008: 4278 0A4A       'Bx.J'          CLR.W    $0A4A               
 0000000C: 9DCE            '..'            SUBA.L   A6,A6               
 0000000E: 2C3C 5354 5253  ',<STRS'        MOVE.L   #$53545253,D6       ; 'STRS'
@@ -53,9 +54,12 @@ Jump Table 1:
 00000092: 4CDF 1FFF       'L...'          MOVEM.L  (A7)+,D0-D7/A0-A4   
 00000096: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon0)
 00000098: 700F            'p.'            MOVEQ    #$0F,D0             
 0000009A: A9C9            '..'            _SysError                     ; A9C9
+
+
+(func intern code1_anon25
 0000009C: 598F            'Y.'            SUBQ.L   #$4,A7              
 0000009E: 2F3C 5A45 524F  '/<ZERO'        MOVE.L   #$5A45524F,-(A7)    ; 'ZERO'
 000000A4: 4267            'Bg'            CLR.W    -(A7)               
@@ -101,31 +105,32 @@ Jump Table 1:
 00000108: A9A3            '..'            _ReleaseResource                     ; A9A3
 0000010A: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon1)
 0000010C: 204B            ' K'            MOVEA.L  A3,A0               
 0000010E: 4A78 028E       'Jx..'          TST.W    $028E               
 00000112: 6A04            'j.'            BPL.S    *+$0006             ; 00000118
 00000114: 1613            '..'            MOVE.B   (A3),D3             
 00000116: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon2)
 00000118: A069            '.i'            _HGetState                     ; A069
 0000011A: 1600            '..'            MOVE.B   D0,D3               
 0000011C: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon3)
 0000011E: 4A78 028E       'Jx..'          TST.W    $028E               
 00000122: 6A04            'j.'            BPL.S    *+$0006             ; 00000128
 00000124: 1683            '..'            MOVE.B   D3,(A3)             
 00000126: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon4)
 00000128: 204B            ' K'            MOVEA.L  A3,A0               
 0000012A: 1003            '..'            MOVE.B   D3,D0               
 0000012C: A06A            '.j'            _HSetState                     ; A06A
 0000012E: 4E75            'Nu'            RTS
 
 Jump Table 2:                          
+(func extern code1_anon16)
 00000130: 205F            ' _'            MOVEA.L  (A7)+,A0            
 00000132: 3218            '2.'            MOVE.W   (A0)+,D1            
 00000134: 3418            '4.'            MOVE.W   (A0)+,D2            
@@ -136,6 +141,7 @@ Jump Table 2:
 00000140: 4EF0 20FC       'N. .'          JMP      -$04(A0,D2.W)       
 
 Jump Table 3:
+(func extern code1_anon17)
 00000144: 205F            ' _'            MOVEA.L  (A7)+,A0            
 00000146: 3218            '2.'            MOVE.W   (A0)+,D1            
 00000148: 3418            '4.'            MOVE.W   (A0)+,D2            
@@ -146,6 +152,7 @@ Jump Table 3:
 00000154: 4EF0 20FA       'N. .'          JMP      -$06(A0,D2.W)       
 
 Jump Table 4:
+(func extern code1_anon18)
 00000158: 205F            ' _'            MOVEA.L  (A7)+,A0            
 0000015A: 3218            '2.'            MOVE.W   (A0)+,D1            
 0000015C: 3418            '4.'            MOVE.W   (A0)+,D2            
@@ -160,6 +167,7 @@ Jump Table 4:
 00000170: 4EF0 0000       'N...'          JMP      $00(A0,D0.W)        
 
 Jump Table 5:
+(func extern code1_anon19)
 00000174: 202F 0004       ' /..'          MOVE.L   $0004(A7),D0        
 00000178: 2F41 0004       '/A..'          MOVE.L   D1,$0004(A7)        
 0000017C: 222F 0008       '"/..'          MOVE.L   $0008(A7),D1        
@@ -183,6 +191,7 @@ Jump Table 5:
 000001A8: 4E75            'Nu'            RTS                          
 
 Jump Table 6:
+(func extern code1_anon20)
 000001AA: 202F 0004       ' /..'          MOVE.L   $0004(A7),D0        
 000001AE: 2F41 0004       '/A..'          MOVE.L   D1,$0004(A7)        
 000001B2: 222F 0008       '"/..'          MOVE.L   $0008(A7),D1        
@@ -194,6 +203,7 @@ Jump Table 6:
 000001C8: 4E75            'Nu'            RTS                          
 
 Jump Table 7:
+(func extern code1_anon21)
 000001CA: 202F 0004       ' /..'          MOVE.L   $0004(A7),D0        
 000001CE: 2F41 0004       '/A..'          MOVE.L   D1,$0004(A7)        
 000001D2: 222F 0008       '"/..'          MOVE.L   $0008(A7),D1        
@@ -206,6 +216,7 @@ Jump Table 7:
 000001EA: 4E75            'Nu'            RTS                          
 
 Jump Table 8:
+(func extern code1_anon22)
 000001EC: 202F 0004       ' /..'          MOVE.L   $0004(A7),D0        
 000001F0: 2F41 0004       '/A..'          MOVE.L   D1,$0004(A7)        
 000001F4: 222F 0008       '"/..'          MOVE.L   $0008(A7),D1        
@@ -217,6 +228,7 @@ Jump Table 8:
 0000020A: 4E75            'Nu'            RTS                          
 
 Jump Table 9:
+(func extern code1_anon23)
 0000020C: 202F 0004       ' /..'          MOVE.L   $0004(A7),D0        
 00000210: 2F41 0004       '/A..'          MOVE.L   D1,$0004(A7)        
 00000214: 222F 0008       '"/..'          MOVE.L   $0008(A7),D1        
@@ -228,7 +240,7 @@ Jump Table 9:
 0000022A: 221F            '".'            MOVE.L   (A7)+,D1            
 0000022C: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon4)
 0000022E: 4A80            'J.'            TST.L    D0                  
 00000230: 6A1C            'j.'            BPL.S    *+$001E             ; 0000024E
 00000232: 4A81            'J.'            TST.L    D1                  
@@ -239,14 +251,14 @@ Jump Table 9:
 0000023E: 4481            'D.'            NEG.L    D1                  
 00000240: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon5)
 00000242: 4480            'D.'            NEG.L    D0                  
 00000244: 4EBA 0016       'N...'          JSR      *+$0018             ; 0000025C
 00000248: 4480            'D.'            NEG.L    D0                  
 0000024A: 4481            'D.'            NEG.L    D1                  
 0000024C: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon6)
 0000024E: 4A81            'J.'            TST.L    D1                  
 00000250: 6A0A            'j.'            BPL.S    *+$000C             ; 0000025C
 00000252: 4481            'D.'            NEG.L    D1                  
@@ -254,7 +266,7 @@ Jump Table 9:
 00000258: 4480            'D.'            NEG.L    D0                  
 0000025A: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon7)
 0000025C: 2E3C 0000 FFFF  '.<....'        MOVE.L   #$0000FFFF,D7       
 00000262: B280            '..'            CMP.L    D0,D1               
 00000264: 6306            'c.'            BLS.S    *+$0008             ; 0000026C
@@ -262,7 +274,7 @@ Jump Table 9:
 00000268: 7000            'p.'            MOVEQ    #$00,D0             
 0000026A: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon8)
 0000026C: B087            '..'            CMP.L    D7,D0               
 0000026E: 620C            'b.'            BHI.S    *+$000E             ; 0000027C
 00000270: 80C1            '..'            DIVU.W   D1,D0               
@@ -272,7 +284,7 @@ Jump Table 9:
 00000278: 4840            'H@'            SWAP     D0                  
 0000027A: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon9)
 0000027C: B287            '..'            CMP.L    D7,D1               
 0000027E: 621A            'b.'            BHI.S    *+$001C             ; 0000029A
 00000280: 2E00            '..'            MOVE.L   D0,D7               
@@ -289,7 +301,7 @@ Jump Table 9:
 00000296: 3207            '2.'            MOVE.W   D7,D1               
 00000298: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon10)
 0000029A: 2400            '$.'            MOVE.L   D0,D2               
 0000029C: 2601            '&.'            MOVE.L   D1,D3               
 0000029E: E288            '..'            LSR.L    #$1,D0              
@@ -311,7 +323,7 @@ Jump Table 9:
 000002BE: 4481            'D.'            NEG.L    D1                  
 000002C0: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon11)
 000002C2: 5340            'S@'            SUBQ.W   #$1,D0              
 000002C4: 60E4            '`.'            BRA.S    *-$001A             ; 000002AA
 000002C6: 7E00            '~.'            MOVEQ    #$00,D7             
@@ -366,7 +378,7 @@ Jump Table 9:
 00000338: 7001            'p.'            MOVEQ    #$01,D0             
 0000033A: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon12)
 0000033C: 2004            ' .'            MOVE.L   D4,D0               
 0000033E: A11E            '..'            _NewPtr                      ; A11E
 00000340: 2008            ' .'            MOVE.L   A0,D0               
@@ -400,18 +412,18 @@ Jump Table 9:
 00000384: 7001            'p.'            MOVEQ    #$01,D0             
 00000386: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon13)
 00000388: 204B            ' K'            MOVEA.L  A3,A0               
 0000038A: 4A45            'JE'            TST.W    D5                  
 0000038C: 6604            'f.'            BNE.S    *+$0006             ; 00000392
 0000038E: A023            '.#'            _DisposeHandle                     ; A023
 00000390: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon14)
 00000392: A01F            '..'            _DisposePtr                     ; A01F
 00000394: 4E75            'Nu'            RTS                          
 
-(intern ???)
+(func intern code1_anon15)
 00000396: 7018            'p.'            MOVEQ    #$18,D0             
 00000398: 4A78 028E       'Jx..'          TST.W    $028E               
 0000039C: 6A04            'j.'            BPL.S    *+$0006             ; 000003A2
@@ -445,6 +457,7 @@ Jump Table 9:
 000003EA: 4E75            'Nu'            RTS                          
 
 Jump Table 10:
+(func extern code1_anon24)
 000003EC: 226D 0068       '"m.h'          MOVEA.L  $0068(A5),A1        
 000003F0: 303C A9F0       '0<..'          MOVE.W   #$A9F0,D0           
 000003F4: 2069 0008       ' i..'          MOVEA.L  $0008(A1),A0        
