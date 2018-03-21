@@ -3,7 +3,7 @@ First jump table entry offset = $8568, Jump table entries used = 1
 Segment size = $134 [308]
 
 Jump Table 174:
-(func extern ???)
+(func extern code13-anon0)
 00000000: 48E7 0118       'H...'          MOVEM.L  D7/A3/A4,-(A7)      
 00000004: 7E00            '~.'            MOVEQ    #$00,D7             
 00000006: 6040            '`@'            BRA.S    *+$0042             ; 00000048
@@ -13,10 +13,10 @@ Jump Table 174:
 0000000E: E788            '..'            LSL.L    #$3,D0              
 00000010: D1C0            '..'            ADDA.L   D0,A0               
 00000012: 2F28 FA66       '/(.f'          MOVE.L   -$059A(A0),-(A7)    
-00000016: 4EAD 00F2       'N...'          JSR      $00F2(A5)           
+00000016: 4EAD 00F2       'N...'          JSR      $00F2(A5)           ; TypeNum()
 0000001A: 3E80            '>.'            MOVE.W   D0,(A7)             
 0000001C: 2F2D 9672       '/-.r'          MOVE.L   -$698E(A5),-(A7)    
-00000020: 4EAD 00D2       'N...'          JSR      $00D2(A5)           
+00000020: 4EAD 00D2       'N...'          JSR      $00D2(A5)           ; TypeInList()
 00000024: 204D            ' M'            MOVEA.L  A5,A0               
 00000026: 2207            '".'            MOVE.L   D7,D1               
 00000028: 48C1            'H.'            EXT.L    D1                  
@@ -43,7 +43,7 @@ Jump Table 174:
 0000005E: 2F3C 0000 1C70  '/<...p'        MOVE.L   #$00001C70,-(A7)    
 00000064: 2F3C 0000 1C72  '/<...r'        MOVE.L   #$00001C72,-(A7)    
 0000006A: 2F3C 0000 1C9C  '/<....'        MOVE.L   #$00001C9C,-(A7)    
-00000070: 4EAD 0522       'N.."'          JSR      $0522(A5)           
+00000070: 4EAD 0522       'N.."'          JSR      $0522(A5)           ; AskUser()
 00000074: 4A40            'J@'            TST.W    D0                  
 00000076: 4FEF 0010       'O...'          LEA      $0010(A7),A7        
 0000007A: 6700 00AE       'g...'          BEQ      *+$00B0             ; 0000012A
@@ -59,10 +59,10 @@ Jump Table 174:
 00000098: E788            '..'            LSL.L    #$3,D0              
 0000009A: D1C0            '..'            ADDA.L   D0,A0               
 0000009C: 2F28 FA66       '/(.f'          MOVE.L   -$059A(A0),-(A7)    
-000000A0: 4EAD 00F2       'N...'          JSR      $00F2(A5)           
+000000A0: 4EAD 00F2       'N...'          JSR      $00F2(A5)           ; TypeNum()
 000000A4: 3E80            '>.'            MOVE.W   D0,(A7)             
 000000A6: 2F2D 9672       '/-.r'          MOVE.L   -$698E(A5),-(A7)    
-000000AA: 4EAD 00D2       'N...'          JSR      $00D2(A5)           
+000000AA: 4EAD 00D2       'N...'          JSR      $00D2(A5)           ; TypeInList()
 000000AE: 2640            '&@'            MOVEA.L  D0,A3               
 000000B0: 200B            ' .'            MOVE.L   A3,D0               
 000000B2: 508F            'P.'            ADDQ.L   #$8,A7              
@@ -83,10 +83,10 @@ Jump Table 174:
 000000DC: 4AA8 FA66       'J..f'          TST.L    -$059A(A0)          
 000000E0: 66B0            'f.'            BNE.S    *-$004E             ; 00000092
 000000E2: 2F3C 0000 1CC6  '/<....'        MOVE.L   #$00001CC6,-(A7)    
-000000E8: 4EAD 00F2       'N...'          JSR      $00F2(A5)           
+000000E8: 4EAD 00F2       'N...'          JSR      $00F2(A5)           ; TypeNum()
 000000EC: 3E80            '>.'            MOVE.W   D0,(A7)             
 000000EE: 2F2D 9672       '/-.r'          MOVE.L   -$698E(A5),-(A7)    
-000000F2: 4EAD 00D2       'N...'          JSR      $00D2(A5)           
+000000F2: 4EAD 00D2       'N...'          JSR      $00D2(A5)           ; TypeInList()
 000000F6: 2840            '(@'            MOVEA.L  D0,A4               
 000000F8: 200C            ' .'            MOVE.L   A4,D0               
 000000FA: 508F            'P.'            ADDQ.L   #$8,A7              
@@ -99,7 +99,7 @@ Jump Table 174:
 0000010E: D1AD 9676       '...v'          ADD.L    D0,-$698A(A5)       
 00000112: 4878 0001       'Hx..'          PEA      $0001               
 00000116: 3F3C 0001       '?<..'          MOVE.W   #$0001,-(A7)        
-0000011A: 4EAD 00A2       'N...'          JSR      $00A2(A5)           
+0000011A: 4EAD 00A2       'N...'          JSR      $00A2(A5)           ; mySetScroll()
 0000011E: 206D 9B70       ' m.p'          MOVEA.L  -$6490(A5),A0       
 00000122: 2E90            '..'            MOVE.L   (A0),(A7)           
 00000124: A851            '.Q'            _SetCursor                     ; A851

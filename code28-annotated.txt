@@ -8,23 +8,23 @@ Jump Table 189:
 00000000: 4E56 FFFE       'NV..'          LINK     A6,#$FFFE           
 00000004: 2F07            '/.'            MOVE.L   D7,-(A7)            
 00000006: 2F3C 0000 2A22  '/<..*"'        MOVE.L   #$00002A22,-(A7)    
-0000000C: 4EAD 00F2       'N...'          JSR      $00F2(A5)           
+0000000C: 4EAD 00F2       'N...'          JSR      $00F2(A5)           ; TypeNum()
 00000010: 3E80            '>.'            MOVE.W   D0,(A7)             
 00000012: 2F2D 9672       '/-.r'          MOVE.L   -$698E(A5),-(A7)    
-00000016: 4EAD 00D2       'N...'          JSR      $00D2(A5)           
+00000016: 4EAD 00D2       'N...'          JSR      $00D2(A5)           ; TypeInList()
 0000001A: 4A80            'J.'            TST.L    D0                  
 0000001C: 508F            'P.'            ADDQ.L   #$8,A7              
 0000001E: 6632            'f2'            BNE.S    *+$0034             ; 00000052
 00000020: 426D 9686       'Bm..'          CLR.W    -$697A(A5)          
 00000024: 4267            'Bg'            CLR.W    -(A7)               
-00000026: 4EAD 0462       'N..b'          JSR      $0462(A5)           
+00000026: 4EAD 0462       'N..b'          JSR      $0462(A5)           ; HeroStatus()
 0000002A: 2F3C 0000 2A2A  '/<..**'        MOVE.L   #$00002A2A,-(A7)    
 00000030: 2F3C 0000 2A2C  '/<..*,'        MOVE.L   #$00002A2C,-(A7)    
 00000036: 2F3C 0000 2A2E  '/<..*.'        MOVE.L   #$00002A2E,-(A7)    
 0000003C: 2F3C 0000 2A42  '/<..*B'        MOVE.L   #$00002A42,-(A7)    
-00000042: 4EAD 051A       'N...'          JSR      $051A(A5)           
+00000042: 4EAD 051A       'N...'          JSR      $051A(A5)           ; TellUser()
 00000046: 4257            'BW'            CLR.W    (A7)                
-00000048: 4EAD 0492       'N...'          JSR      $0492(A5)           
+00000048: 4EAD 0492       'N...'          JSR      $0492(A5)           ; AddHealth()
 0000004C: 4FEF 0012       'O...'          LEA      $0012(A7),A7        
 00000050: 6046            '`F'            BRA.S    *+$0048             ; 00000098
 00000052: 3E2D 9686       '>-..'          MOVE.W   -$697A(A5),D7       
@@ -33,15 +33,15 @@ Jump Table 189:
 00000060: 6C04            'l.'            BGE.S    *+$0006             ; 00000066
 00000062: 426D 9686       'Bm..'          CLR.W    -$697A(A5)          
 00000066: 4267            'Bg'            CLR.W    -(A7)               
-00000068: 4EAD 0462       'N..b'          JSR      $0462(A5)           
+00000068: 4EAD 0462       'N..b'          JSR      $0462(A5)           ; HeroStatus()
 0000006C: 2F3C 0000 2A6C  '/<..*l'        MOVE.L   #$00002A6C,-(A7)    
 00000072: 2F3C 0000 2A6E  '/<..*n'        MOVE.L   #$00002A6E,-(A7)    
 00000078: 2F3C 0000 2A70  '/<..*p'        MOVE.L   #$00002A70,-(A7)    
 0000007E: 2F3C 0000 2A84  '/<..*.'        MOVE.L   #$00002A84,-(A7)    
-00000084: 4EAD 051A       'N...'          JSR      $051A(A5)           
+00000084: 4EAD 051A       'N...'          JSR      $051A(A5)           ; TellUser()
 00000088: 3B47 9686       ';G..'          MOVE.W   D7,-$697A(A5)       
 0000008C: 3EBC FFE2       '>...'          MOVE.W   #$FFE2,(A7)         
-00000090: 4EAD 0492       'N...'          JSR      $0492(A5)           
+00000090: 4EAD 0492       'N...'          JSR      $0492(A5)           ; AddHealth()
 00000094: 4FEF 0012       'O...'          LEA      $0012(A7),A7        
 00000098: 2E1F            '..'            MOVE.L   (A7)+,D7            
 0000009A: 4E5E            'N^'            UNLK     A6                  
@@ -55,14 +55,14 @@ Jump Table 189:
 
 
 Jump Table 190:
-(func extern ???)
+(func extern code28-anon0)
 // NOTE: Incorrect disassembly!!!
 000000A6: 48E7       '..H.'          ORI.B    #$48E7,D0           
 000000A8: 0108 302D       '..0-'          MOVEP.W  $302D(A0),D0        
 000000AC: 968C            '..'            SUB.L    A4,D3               
 000000AE: C1ED 968E       '....'          MULS.W   -$6972(A5),D0       
 000000B2: 3F00            '?.'            MOVE.W   D0,-(A7)            
-000000B4: 4EAD 050A       'N...'          JSR      $050A(A5)           
+000000B4: 4EAD 050A       'N...'          JSR      $050A(A5)           ; rand()
 000000B8: 3E00            '>.'            MOVE.W   D0,D7               
 000000BA: 548F            'T.'            ADDQ.L   #$2,A7              
 000000BC: 2007            ' .'            MOVE.L   D7,D0               
@@ -83,17 +83,17 @@ Jump Table 190:
 000000E6: 6CC2            'l.'            BGE.S    *-$003C             ; 000000AA
 000000E8: 2F3C 0001 0001  '/<....'        MOVE.L   #$00010001,-(A7)    
 000000EE: 2F3C 0000 2AB4  '/<..*.'        MOVE.L   #$00002AB4,-(A7)    
-000000F4: 4EAD 00F2       'N...'          JSR      $00F2(A5)           
+000000F4: 4EAD 00F2       'N...'          JSR      $00F2(A5)           ; TypeNum()
 000000F8: 548F            'T.'            ADDQ.L   #$2,A7              
 000000FA: 3E80            '>.'            MOVE.W   D0,(A7)             
-000000FC: 4EAD 054A       'N..J'          JSR      $054A(A5)           
+000000FC: 4EAD 054A       'N..J'          JSR      $054A(A5)           ; MakeThing()
 00000100: 2840            '(@'            MOVEA.L  D0,A4               
 00000102: 200C            ' .'            MOVE.L   A4,D0               
 00000104: 5C8F            '\.'            ADDQ.L   #$6,A7              
 00000106: 670A            'g.'            BEQ.S    *+$000C             ; 00000112
 00000108: 3F07            '?.'            MOVE.W   D7,-(A7)            
 0000010A: 2F0C            '/.'            MOVE.L   A4,-(A7)            
-0000010C: 4EAD 053A       'N..:'          JSR      $053A(A5)           
+0000010C: 4EAD 053A       'N..:'          JSR      $053A(A5)           ; CreateThing()
 00000110: 5C8F            '\.'            ADDQ.L   #$6,A7              
 00000112: 4CDF 1080       'L...'          MOVEM.L  (A7)+,D7/A4         
 00000116: 4E75            'Nu'            RTS                          
@@ -110,9 +110,9 @@ Jump Table 191:
 00000126: 4A2C 0009       'J,..'          TST.B    $0009(A4)           
 0000012A: 6A66            'jf'            BPL.S    *+$0068             ; 00000192
 0000012C: 2F3C 0000 2ABA  '/<..*.'        MOVE.L   #$00002ABA,-(A7)    
-00000132: 4EAD 040A       'N...'          JSR      $040A(A5)           
+00000132: 4EAD 040A       'N...'          JSR      $040A(A5)           ; News()
 00000136: 2E8C            '..'            MOVE.L   A4,(A7)             
-00000138: 4EAD 0212       'N...'          JSR      $0212(A5)           
+00000138: 4EAD 0212       'N...'          JSR      $0212(A5)           ; StopAnimal()
 0000013C: 2E8C            '..'            MOVE.L   A4,(A7)             
 0000013E: 302E 0010       '0...'          MOVE.W   $0010(A6),D0        
 00000142: 48C0            'H.'            EXT.L    D0                  
@@ -120,9 +120,9 @@ Jump Table 191:
 00000146: 204D            ' M'            MOVEA.L  A5,A0               
 00000148: D1C0            '..'            ADDA.L   D0,A0               
 0000014A: 4868 C740       'Hh.@'          PEA      -$38C0(A0)          
-0000014E: 4EAD 00E2       'N...'          JSR      $00E2(A5)           
+0000014E: 4EAD 00E2       'N...'          JSR      $00E2(A5)           ; DelThing()
 00000152: 2E8C            '..'            MOVE.L   A4,(A7)             
-00000154: 4EAD 0542       'N..B'          JSR      $0542(A5)           
+00000154: 4EAD 0542       'N..B'          JSR      $0542(A5)           ; LoseThing()
 00000158: 206E 0008       ' n..'          MOVEA.L  $0008(A6),A0        
 0000015C: 2E90            '..'            MOVE.L   (A0),(A7)           
 0000015E: 302E 0010       '0...'          MOVE.W   $0010(A6),D0        
@@ -131,16 +131,16 @@ Jump Table 191:
 00000166: 224D            '"M'            MOVEA.L  A5,A1               
 00000168: D3C0            '..'            ADDA.L   D0,A1               
 0000016A: 4869 C740       'Hi.@'          PEA      -$38C0(A1)          
-0000016E: 4EAD 00DA       'N...'          JSR      $00DA(A5)           
+0000016E: 4EAD 00DA       'N...'          JSR      $00DA(A5)           ; AddThing()
 00000172: 206E 0008       ' n..'          MOVEA.L  $0008(A6),A0        
 00000176: 4290            'B.'            CLR.L    (A0)                
 00000178: 06AD 0000 01F4  '......'        ADDI.L   #$000001F4,-$698A(A5) 
           9676            '.v'    
 00000180: 4257            'BW'            CLR.W    (A7)                
-00000182: 4EAD 0462       'N..b'          JSR      $0462(A5)           
+00000182: 4EAD 0462       'N..b'          JSR      $0462(A5)           ; HeroStatus()
 00000186: 3EAD 9B4A       '>..J'          MOVE.W   -$64B6(A5),(A7)     
 0000018A: 3F2D 9B48       '?-.H'          MOVE.W   -$64B8(A5),-(A7)    
-0000018E: 4EAD 0132       'N..2'          JSR      $0132(A5)           
+0000018E: 4EAD 0132       'N..2'          JSR      $0132(A5)           ; view()
 00000192: 286E FFFC       '(n..'          MOVEA.L  -$0004(A6),A4       
 00000196: 4E5E            'N^'            UNLK     A6                  
 00000198: 4E75            'Nu'            RTS                          
@@ -162,7 +162,7 @@ Jump Table 192:
 000001AA: 0000 206E       '.. n'          ORI.B    #$206E,D0           ; 'n'
 000001AE: 0008 4A28       '..J('          ORI.B    #$4A28,A0           ; '('
 000001B2: 0006 660E       '..f.'          ORI.B    #$660E,D6           
-000001B6: 4EBA FEEE       'N...'          JSR      *-$0110             ; 000000A6
+000001B6: 4EBA FEEE       'N...'          JSR      *-$0110             ; code28-anon0()
 000001BA: 206E 0008       ' n..'          MOVEA.L  $0008(A6),A0        
 000001BE: 117C 0001 0006  '.|....'        MOVE.B   #$01,$0006(A0)      
 000001C4: 4E5E            'N^'            UNLK     A6                  

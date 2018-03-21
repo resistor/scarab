@@ -4,15 +4,15 @@ Classic Jump Table Format; Above A5 size = $670, Below A5 size = $6A68
 Jump Table length = $650, Offset from A5 = $20, 202 entries.
 Entry   A5_Offset   Seg_Offset   Code
     1:   $000020     $000008     MOVE.W    #$0001,-(A7)	_LoadSeg  	; _start
-    2:   $000028     $000130     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon16
-    3:   $000030     $000144     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon17
-    4:   $000038     $000158     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon18
-    5:   $000040     $000174     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon19
-    6:   $000048     $0001AA     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon20
-    7:   $000050     $0001CA     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon21
-    8:   $000058     $0001EC     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon22
-    9:   $000060     $00020C     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon23
-   10:   $000068     $0003EC     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1_anon24
+    2:   $000028     $000130     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1-anon16
+    3:   $000030     $000144     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1-anon17
+    4:   $000038     $000158     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1-anon18
+    5:   $000040     $000174     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1-anon19
+    6:   $000048     $0001AA     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1-anon20
+    7:   $000050     $0001CA     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1-anon21
+    8:   $000058     $0001EC     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1-anon22
+    9:   $000060     $00020C     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1-anon23
+   10:   $000068     $0003EC     MOVE.W    #$0001,-(A7)	_LoadSeg  	; code1-anon24
    11:   $000070     $0012A4     MOVE.W    #$0002,-(A7)	_LoadSeg  	; code2-anon2
    12:   $000078     $001416     MOVE.W    #$0002,-(A7)	_LoadSeg  	; Throw
    13:   $000080     $00184E     MOVE.W    #$0002,-(A7)	_LoadSeg  	; InsInven
@@ -84,8 +84,8 @@ Entry   A5_Offset   Seg_Offset   Code
    79:   $000290     $000000     MOVE.W    #$0011,-(A7)	_LoadSeg  	; plank
    80:   $000298     $000000     MOVE.W    #$0012,-(A7)	_LoadSeg  	; net
    81:   $0002A0     $000216     MOVE.W    #$0012,-(A7)	_LoadSeg  	; usenet
-   82:   $0002A8     $000000     MOVE.W    #$0013,-(A7)	_LoadSeg  	; A9F0
-   83:   $0002B0     $00008E     MOVE.W    #$0013,-(A7)	_LoadSeg  	; A9F0
+   82:   $0002A8     $000000     MOVE.W    #$0013,-(A7)	_LoadSeg  	; code19-anon0
+   83:   $0002B0     $00008E     MOVE.W    #$0013,-(A7)	_LoadSeg  	; code19-anon1
    84:   $0002B8     $000000     MOVE.W    #$0015,-(A7)	_LoadSeg  	; ShowMap
    85:   $0002C0     $0002B4     MOVE.W    #$0015,-(A7)	_LoadSeg  	; doLegend
    86:   $0002C8     $00028E     MOVE.W    #$0015,-(A7)	_LoadSeg  	; doPrintMap
@@ -96,11 +96,11 @@ Entry   A5_Offset   Seg_Offset   Code
    91:   $0002F0     $000062     MOVE.W    #$0018,-(A7)	_LoadSeg  	; gun
    92:   $0002F8     $000000     MOVE.W    #$001A,-(A7)	_LoadSeg  	; charcoal
    93:   $000300     $000126     MOVE.W    #$001E,-(A7)	_LoadSeg  	; StockMaze
-   94:   $000308     $000000     MOVE.W    #$001E,-(A7)	_LoadSeg  	; A9F0
+   94:   $000308     $000000     MOVE.W    #$001E,-(A7)	_LoadSeg  	; code30-anon0
    95:   $000310     $000000     MOVE.W    #$000A,-(A7)	_LoadSeg  	; SetUpMenus
    96:   $000318     $000230     MOVE.W    #$000A,-(A7)	_LoadSeg  	; SetUpWindows
-   97:   $000320     $0005BE     MOVE.W    #$000A,-(A7)	_LoadSeg  	; A9F0
-   98:   $000328     $000724     MOVE.W    #$000A,-(A7)	_LoadSeg  	; A9F0
+   97:   $000320     $0005BE     MOVE.W    #$000A,-(A7)	_LoadSeg  	; code10-anon0
+   98:   $000328     $000724     MOVE.W    #$000A,-(A7)	_LoadSeg  	; code10-anon1
    99:   $000330     $00074A     MOVE.W    #$000A,-(A7)	_LoadSeg  	; TrapAvailable
   100:   $000338     $000782     MOVE.W    #$000A,-(A7)	_LoadSeg  	; WNEisImplemented
   101:   $000340     $000000     MOVE.W    #$0020,-(A7)	_LoadSeg  	; pole
@@ -109,7 +109,7 @@ Entry   A5_Offset   Seg_Offset   Code
   104:   $000358     $000132     MOVE.W    #$0027,-(A7)	_LoadSeg  	; throwlantern
   105:   $000360     $000000     MOVE.W    #$002A,-(A7)	_LoadSeg  	; gold
   106:   $000368     $0000A0     MOVE.W    #$002A,-(A7)	_LoadSeg  	; throwgold
-  107:   $000370     $000248     MOVE.W    #$002D,-(A7)	_LoadSeg  	; SilentSound
+  107:   $000370     $000248     MOVE.W    #$002D,-(A7)	_LoadSeg  	; code45-anon0
   108:   $000378     $000062     MOVE.W    #$002D,-(A7)	_LoadSeg  	; trip
   109:   $000380     $00008C     MOVE.W    #$002D,-(A7)	_LoadSeg  	; speartrap
   110:   $000388     $0000DC     MOVE.W    #$002D,-(A7)	_LoadSeg  	; windtrap
@@ -126,8 +126,8 @@ Entry   A5_Offset   Seg_Offset   Code
   121:   $0003E0     $000726     MOVE.W    #$0009,-(A7)	_LoadSeg  	; SizeDestView
   122:   $0003E8     $0007A4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; SizeScrollBars
   123:   $0003F0     $00081A     MOVE.W    #$0009,-(A7)	_LoadSeg  	; myGrowDrawIcon
-  124:   $0003F8     $000CEE     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
-  125:   $000400     $000D0A     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  124:   $0003F8     $000CEE     MOVE.W    #$0009,-(A7)	_LoadSeg  	; code9-anon2
+  125:   $000400     $000D0A     MOVE.W    #$0009,-(A7)	_LoadSeg  	; code9-anon3
   126:   $000408     $000D28     MOVE.W    #$0009,-(A7)	_LoadSeg  	; News
   127:   $000410     $000F26     MOVE.W    #$0009,-(A7)	_LoadSeg  	; Nameit
   128:   $000418     $001178     MOVE.W    #$0009,-(A7)	_LoadSeg  	; burnoil
@@ -136,17 +136,17 @@ Entry   A5_Offset   Seg_Offset   Code
   131:   $000430     $00126C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; OutlineButton
   132:   $000438     $0012D4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; poison
   133:   $000440     $00131C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; PutIn
-  134:   $000448     $00145C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  134:   $000448     $00145C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; code9-anon4
   135:   $000450     $00148E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; Speed
-  136:   $000458     $001578     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  136:   $000458     $001578     MOVE.W    #$0009,-(A7)	_LoadSeg  	; code9-anon5
   137:   $000460     $0015A0     MOVE.W    #$0009,-(A7)	_LoadSeg  	; HeroStatus
   138:   $000468     $001764     MOVE.W    #$0009,-(A7)	_LoadSeg  	; UpdateTherm
   139:   $000470     $00182C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; InitStatus
   140:   $000478     $0019B4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; UpdateCompass
   141:   $000480     $0019D4     MOVE.W    #$0009,-(A7)	_LoadSeg  	; Compass
-  142:   $000488     $001A86     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  142:   $000488     $001A86     MOVE.W    #$0009,-(A7)	_LoadSeg  	; code9-anon6
   143:   $000490     $001B0E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; AddHealth
-  144:   $000498     $001BB6     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  144:   $000498     $001BB6     MOVE.W    #$0009,-(A7)	_LoadSeg  	; code9-anon7
   145:   $0004A0     $001BEA     MOVE.W    #$0009,-(A7)	_LoadSeg  	; food
   146:   $0004A8     $001D46     MOVE.W    #$0009,-(A7)	_LoadSeg  	; digest
   147:   $0004B0     $001DDA     MOVE.W    #$0009,-(A7)	_LoadSeg  	; strlen
@@ -164,19 +164,19 @@ Entry   A5_Offset   Seg_Offset   Code
   159:   $000510     $0023F0     MOVE.W    #$0009,-(A7)	_LoadSeg  	; WaitForClick
   160:   $000518     $00241E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; TellUser
   161:   $000520     $00244E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; AskUser
-  162:   $000528     $002488     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  162:   $000528     $002488     MOVE.W    #$0009,-(A7)	_LoadSeg  	; code9-anon8
   163:   $000530     $002606     MOVE.W    #$0009,-(A7)	_LoadSeg  	; Beep
   164:   $000538     $000928     MOVE.W    #$0009,-(A7)	_LoadSeg  	; CreateThing
   165:   $000540     $000B9E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; LoseThing
   166:   $000548     $000AC8     MOVE.W    #$0009,-(A7)	_LoadSeg  	; MakeThing
-  167:   $000550     $000BC0     MOVE.W    #$0009,-(A7)	_LoadSeg  	; A9F0
+  167:   $000550     $000BC0     MOVE.W    #$0009,-(A7)	_LoadSeg  	; code9-anon1
   168:   $000558     $00089A     MOVE.W    #$0009,-(A7)	_LoadSeg  	; LookForTraps
   169:   $000560     $00029C     MOVE.W    #$0009,-(A7)	_LoadSeg  	; howmuch
   170:   $000568     $0002BC     MOVE.W    #$0009,-(A7)	_LoadSeg  	; GetAmount
   171:   $000570     $00054E     MOVE.W    #$0009,-(A7)	_LoadSeg  	; WaitForMouseUp
   172:   $000578     $000036     MOVE.W    #$0009,-(A7)	_LoadSeg  	; CanPickUp
   173:   $000580     $000000     MOVE.W    #$0009,-(A7)	_LoadSeg  	; benchmark
-  174:   $000588     $000000     MOVE.W    #$000D,-(A7)	_LoadSeg  	; A9F0
+  174:   $000588     $000000     MOVE.W    #$000D,-(A7)	_LoadSeg  	; code13-anon0
   175:   $000590     $000000     MOVE.W    #$000F,-(A7)	_LoadSeg  	; pickmelon
   176:   $000598     $000098     MOVE.W    #$000F,-(A7)	_LoadSeg  	; eatmelon
   177:   $0005A0     $000000     MOVE.W    #$0017,-(A7)	_LoadSeg  	; SaveGame
@@ -192,7 +192,7 @@ Entry   A5_Offset   Seg_Offset   Code
   187:   $0005F0     $000170     MOVE.W    #$001B,-(A7)	_LoadSeg  	; doFullStatus
   188:   $0005F8     $000620     MOVE.W    #$001B,-(A7)	_LoadSeg  	; FSFilter
   189:   $000600     $000000     MOVE.W    #$001C,-(A7)	_LoadSeg  	; mummy
-  190:   $000608     $0000A6     MOVE.W    #$001C,-(A7)	_LoadSeg  	; A9F0
+  190:   $000608     $0000A6     MOVE.W    #$001C,-(A7)	_LoadSeg  	; code28-anon0
   191:   $000610     $000118     MOVE.W    #$001C,-(A7)	_LoadSeg  	; throwScarab
   192:   $000618     $0001A8     MOVE.W    #$001C,-(A7)	_LoadSeg  	; MummyMaker
   193:   $000620     $000000     MOVE.W    #$0014,-(A7)	_LoadSeg  	; pickcompass
