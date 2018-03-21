@@ -71,10 +71,10 @@ Entry   A5_Offset   Seg_Offset   Code
    66:   $000228     $0007B6     MOVE.W    #$0003,-(A7)	_LoadSeg  	; ShowScroll
    67:   $000230     $000BA0     MOVE.W    #$0003,-(A7)	_LoadSeg  	; PickFilter
    68:   $000238     $0003A8     MOVE.W    #$0003,-(A7)	_LoadSeg  	; pickup
-   69:   $000240     $0001FC     MOVE.W    #$0003,-(A7)	_LoadSeg  	; A9F0
+   69:   $000240     $0001FC     MOVE.W    #$0003,-(A7)	_LoadSeg  	; code3-anon1
    70:   $000248     $0002A0     MOVE.W    #$0003,-(A7)	_LoadSeg  	; LetGoOf
    71:   $000250     $000000     MOVE.W    #$0003,-(A7)	_LoadSeg  	; binocs
-   72:   $000258     $0001EC     MOVE.W    #$0003,-(A7)	_LoadSeg  	; A9F0
+   72:   $000258     $0001EC     MOVE.W    #$0003,-(A7)	_LoadSeg  	; code3-anon0
    73:   $000260     $000000     MOVE.W    #$0005,-(A7)	_LoadSeg  	; monkey
    74:   $000268     $000000     MOVE.W    #$0006,-(A7)	_LoadSeg  	; panther
    75:   $000270     $000000     MOVE.W    #$0007,-(A7)	_LoadSeg  	; bullwhip
