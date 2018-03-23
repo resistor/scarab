@@ -131,10 +131,9 @@ Jump Table 186:
 
 Jump Table 187:
 (func extern doFullStatus)
-// NOTE: Incorrect disassembly!!!
-00000170: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000172: 0000 206D       '.. m'          ORI.B    #$206D,D0           ; 'm'
-00000176: 9B70 2F10       '.p/.'          SUB.W    D5,(0,A0,D2.L*8)    
+00000170: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000174: 206D 9B70       ' m.p'          MOVEA.L  -$6490(A5),A0       
+00000178: 2F10            '/.'            MOVE.L   (A0),-(A7)          
 0000017A: A851            '.Q'            _SetCursor                     ; A851
 0000017C: 4EBA 001C       'N...'          JSR      *+$001E             ; PrintStatus()
 00000180: A850            '.P'            _InitCursor                     ; A850
@@ -153,9 +152,7 @@ Jump Table 187:
 00000198: 0000
 
 (func intern PrintStatus)
-// NOTE: Incorrect disassembly!!!
-0000019A: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000019C: FFFC            '..'            DC.W     $FFFC               ; ????
+0000019A: 4E56 FFFC       'NV..'          LINK     A6,#$FFFC           
 0000019E: 48E7 0F00       'H...'          MOVEM.L  D4-D7,-(A7)         
 000001A2: 7A00            'z.'            MOVEQ    #$00,D5             
 000001A4: 4AAD FAA6       'J...'          TST.L    -$055A(A5)          
@@ -474,9 +471,8 @@ Jump Table 187:
 
 
 (func intern PresLevel)
-// NOTE: Incorrect disassembly!!!
-000005D0: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000005D2: 0000 2F07       '../.'          ORI.B    #$2F07,D0           
+000005D0: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000005D4: 2F07            '/.'            MOVE.L   D7,-(A7)            
 000005D6: 7E00            '~.'            MOVEQ    #$00,D7             
 000005D8: 6014            '`.'            BRA.S    *+$0016             ; 000005EE
 000005DA: 700C            'p.'            MOVEQ    #$0C,D0             
@@ -516,10 +512,9 @@ Jump Table 187:
 
 Jump Table 188:
 (func extern FSFilter)
-// NOTE: Incorrect disassembly!!!
-00000620: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000622: 0000 422E       '..B.'          ORI.B    #$422E,D0           ; '.'
-00000626: 0014 4E5E       '..N^'          ORI.B    #$4E5E,(A4)         ; '^'
+00000620: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000624: 422E 0014       'B...'          CLR.B    $0014(A6)           
+00000628: 4E5E            'N^'            UNLK     A6                  
 0000062A: 205F            ' _'            MOVEA.L  (A7)+,A0            
 0000062C: 4FEF 000C       'O...'          LEA      $000C(A7),A7        
 00000630: 4ED0            'N.'            JMP      (A0)                
@@ -534,9 +529,7 @@ Jump Table 188:
 
 Jump Table 183:
 (func extern TopTen)
-// NOTE: Incorrect disassembly!!!)
-0000063E: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000640: FF2E            '..'            DC.W     $FF2E               ; ????
+0000063E: 4E56 FF2E       'NV..'          LINK     A6,#$FF2E           
 00000642: 2F07            '/.'            MOVE.L   D7,-(A7)            
 00000644: 7EFF            '~.'            MOVEQ    #$FF,D7             
 00000646: 1B6E 0009 FF34  '.n...4'        MOVE.B   $0009(A6),-$00CC(A5) 
@@ -1299,9 +1292,7 @@ Jump Table 184:
 
 
 (func intern Getem)
-// NOTE: Incorrect disassembly!!!
-00000EA2: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000EA4: FFCC            '..'            DC.W     $FFCC               ; ????
+00000EA2: 4E56 FFCC       'NV..'          LINK     A6,#$FFCC           
 00000EA6: 48E7 0300       'H...'          MOVEM.L  D6/D7,-(A7)         
 00000EAA: 7C00            '|.'            MOVEQ    #$00,D6             
 00000EAC: 42AE FFD8       'B...'          CLR.L    -$0028(A6)          
@@ -1392,9 +1383,7 @@ Jump Table 184:
 
 
 (func intern Putem)
-// NOTE: Incorrect disassembly!!!
-00000FC4: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000FC6: FF64            '.d'            DC.W     $FF64               ; ????
+00000FC4: 4E56 FF64       'NV.d'          LINK     A6,#$FF64           
 00000FC8: 48E7 0108       'H...'          MOVEM.L  D7/A4,-(A7)         
 00000FCC: 49EE FF64       'I..d'          LEA      -$009C(A6),A4       
 00000FD0: 42AC 000C       'B...'          CLR.L    $000C(A4)           
@@ -1490,9 +1479,7 @@ Jump Table 184:
 
 
 (func intern GetName)
-// NOTE: Incorrect disassembly!!!
-000010F8: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000010FA: FE46            '.F'            DC.W     $FE46               ; ????
+000010F8: 4E56 FE46       'NV.F'          LINK     A6,#$FE46           
 000010FC: 48E7 0138       'H..8'          MOVEM.L  D7/A2-A4,-(A7)      
 00001100: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
 00001104: 2E3C 0000 2982  '.<..).'        MOVE.L   #$00002982,D7       
@@ -1653,10 +1640,9 @@ Jump Table 184:
 
 Jump Table 185:
 (func extern TSFilter)
-// NOTE: Incorrect disassembly!!!
-000012B6: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000012B8: 0000 422E       '..B.'          ORI.B    #$422E,D0           ; '.'
-000012BC: 0014 4E5E       '..N^'          ORI.B    #$4E5E,(A4)         ; '^'
+000012B6: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000012BA: 422E 0014       'B...'          CLR.B    $0014(A6)           
+000012BE: 4E5E            'N^'            UNLK     A6                  
 000012C0: 205F            ' _'            MOVEA.L  (A7)+,A0            
 000012C2: 4FEF 000C       'O...'          LEA      $000C(A7),A7        
 000012C6: 4ED0            'N.'            JMP      (A0)                

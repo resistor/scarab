@@ -167,9 +167,8 @@ Jump Table 95:
 
 
 Jump Table 96: 
-(func extern SetUpWindows))
-// NOTE: Incorrect disassembly!!!
-00000230: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
+(func extern SetUpWindows)
+00000230: 4E56 FFE0       'NV..'          LINK     A6,#$FFE0           
 00000232: FFE0            '..'            DC.W     $FFE0               ; ????
 00000234: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 00000236: 49ED 96A2       'I...'          LEA      -$695E(A5),A4       
@@ -453,9 +452,8 @@ Jump Table 96:
 
 Jump Table 97:
 (func extern code10-anon0)
-// NOTE: Incorrect disassembly!!!
-000005BE: 48E7       '..H.'          ORI.B    #$48E7,D0           
-000005C0: 0108 7E00       '..~.'          MOVEP.W  $7E00(A0),D0        
+000005BE: 48E7 0108       'H...'          MOVEM.L  D7/A4,-(A7)         
+000005C2: 7E00            '~.'            MOVEQ    #$00,D7             
 000005C4: 600E            '`.'            BRA.S    *+$0010             ; 000005D4
 000005C6: 701C            'p.'            MOVEQ    #$1C,D0             
 000005C8: C1C7            '..'            MULS.W   D7,D0               
@@ -606,9 +604,7 @@ Jump Table 99:
 
 Jump Table 100:
 (func extern WNEisImplemented)
-// NOTE: Incorrect disassembly!!!
-00000782: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000784: FFF0            '..'            DC.W     $FFF0               ; ????
+00000782: 4E56 FFF0       'NV..'          LINK     A6,#$FFF0           
 00000786: 4267            'Bg'            CLR.W    -(A7)               
 00000788: 3F3C 0001       '?<..'          MOVE.W   #$0001,-(A7)        
 0000078C: 486E FFF0       'Hn..'          PEA      -$0010(A6)          

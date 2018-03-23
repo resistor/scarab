@@ -1134,13 +1134,13 @@ Jump Table 181:
 00000D6E: 2E8B            '..'            MOVE.L   A3,(A7)             
 00000D70: 3F3C 0190       '?<..'          MOVE.W   #$0190,-(A7)        
 00000D74: 4EBA 0208       'N...'          JSR      *+$020A             ; RestoreThings()
-00000D78: 4EBA 0352       'N..R'          JSR      *+$0354             ; code23_anon0()
+00000D78: 4EBA 0352       'N..R'          JSR      *+$0354             ; code23-anon0()
 00000D7C: 4AAD 9672       'J..r'          TST.L    -$698E(A5)          
 00000D80: 508F            'P.'            ADDQ.L   #$8,A7              
 00000D82: 6D18            'm.'            BLT.S    *+$001A             ; 00000D9C
 00000D84: 4878 001C       'Hx..'          PEA      $001C               
 00000D88: 2F2D 9672       '/-.r'          MOVE.L   -$698E(A5),-(A7)    
-00000D8C: 4EAD 0042       'N..B'          JSR      $0042(A5)           ; code1_anon19()
+00000D8C: 4EAD 0042       'N..B'          JSR      $0042(A5)           ; code1-anon19()
 00000D90: 41ED 9B78       'A..x'          LEA      -$6488(A5),A0       
 00000D94: D088            '..'            ADD.L    A0,D0               
 00000D96: 2B40 9672       '+@.r'          MOVE.L   D0,-$698E(A5)       
@@ -1252,9 +1252,8 @@ Jump Table 178:
 
 
 (func intern RestoreMaze)
-// NOTE: Incorrect disassembly!!!
-00000EB8: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000EBA: 0000 2F07       '../.'          ORI.B    #$2F07,D0           
+00000EB8: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000EBC: 2F07            '/.'            MOVE.L   D7,-(A7)            
 00000EBE: 7E00            '~.'            MOVEQ    #$00,D7             
 00000EC0: 6000 00A0       '`...'          BRA      *+$00A2             ; 00000F62
 00000EC4: 2007            ' .'            MOVE.L   D7,D0               
@@ -1338,9 +1337,8 @@ Jump Table 178:
 
 
 (func intern RestoreThings)
-// NOTE: Incorrect disassembly!!!
-00000F7E: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000F80: 0000 2F07       '../.'          ORI.B    #$2F07,D0           
+00000F7E: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000F82: 2F07            '/.'            MOVE.L   D7,-(A7)            
 00000F84: 7E00            '~.'            MOVEQ    #$00,D7             
 00000F86: 6000 0126       '`..&'          BRA      *+$0128             ; 000010AE
 00000F8A: 701C            'p.'            MOVEQ    #$1C,D0             
@@ -1473,8 +1471,7 @@ Jump Table 178:
 
 
 (func intern code23-anon0)
-// NOTE: Incorrect disassembly!!!
-000010CC: 2F07       '../.'          ORI.B    #$2F07,D0           
+000010CC: 2F07            '/.'            MOVE.L   D7,-(A7)            
 000010CE: 3E2D 9694       '>-..'          MOVE.W   -$696C(A5),D7       
 000010D2: 606C            '`l'            BRA.S    *+$006E             ; 00001140
 000010D4: 7014            'p.'            MOVEQ    #$14,D0             
@@ -1616,10 +1613,8 @@ Jump Table 178:
 
 // Jump Table 179:
 (func extern SaveErr)
-// NOTE: Incorrect disassembly!!!
-0000122E: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00001230: 0000 2F3C       '../<'          ORI.B    #$2F3C,D0           ; '<'
-00001234: 0000 1EEE       '....'          ORI.B    #$1EEE,D0           
+0000122E: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00001232: 2F3C 0000 1EEE  '/<....'        MOVE.L   #$00001EEE,-(A7)    
 00001238: 306E 000C       '0n..'          MOVEA.W  $000C(A6),A0        
 0000123C: 2F08            '/.'            MOVE.L   A0,-(A7)            
 0000123E: 4EAD 0502       'N...'          JSR      $0502(A5)           ; Pi2d()
@@ -1639,11 +1634,10 @@ Jump Table 178:
 
 Jump Table 180:
 (func extern myWrite)
-// NOTE: Incorrect disassembly!
-00001260: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00001262: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-00001266: 0108 286E       '..(n'          MOVEP.W  $286E(A0),D0        
-0000126A: 0008 4267       '..Bg'          ORI.B    #$4267,A0           ; 'g'
+00001260: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00001264: 48E7 0108       'H...'          MOVEM.L  D7/A4,-(A7)         
+00001268: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
+0000126C: 4267            'Bg'            CLR.W    -(A7)               
 0000126E: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 00001270: 4227            'B''            CLR.B    -(A7)               
 00001272: 4EAD 017A       'N..z'          JSR      $017A(A5)           ; code2-anon13()
@@ -1689,11 +1683,10 @@ Jump Table 180:
 
 Jump Table 182:
 (func extern myRead)
-// NOTE: Incorrect disassembly!!!)
-000012EA: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000012EC: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-000012F0: 0108 286E       '..(n'          MOVEP.W  $286E(A0),D0        
-000012F4: 0008 4267       '..Bg'          ORI.B    #$4267,A0           ; 'g'
+000012EA: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000012EE: 48E7 0108       'H...'          MOVEM.L  D7/A4,-(A7)         
+000012F2: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
+000012F6: 4267            'Bg'            CLR.W    -(A7)               
 000012F8: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 000012FA: 4227            'B''            CLR.B    -(A7)               
 000012FC: 4EAD 0172       'N..r'          JSR      $0172(A5)           ; code2-anon12()
@@ -1779,9 +1772,8 @@ Jump Table 182:
 
 
 (func intern myClose)
-// NOTE: Incorrect disassembly!!!
-000013D6: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000013D8: 2F07       '../.'          ORI.B    #$2F07,D0           
+000013D6: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000013DA: 2F07            '/.'            MOVE.L   D7,-(A7)         
 000013DC: 4267            'Bg'            CLR.W    -(A7)               
 000013DE: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
 000013E2: 4227            'B''            CLR.B    -(A7)               

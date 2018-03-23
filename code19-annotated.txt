@@ -239,10 +239,8 @@ Jump Table 83:
 
 
 (func intern delude)
-// NOTE: Incorrect disassembly!!!
-00000240: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000242: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-00000246: 0F00            '..'            BTST     D7,D0               
+00000240: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000244: 48E7 0F00       'H...'          MOVEM.L  D4-D7,-(A7)         
 00000248: 3E2E 0008       '>...'          MOVE.W   $0008(A6),D7        
 0000024C: 3C2E 000A       '<...'          MOVE.W   $000A(A6),D6        
 00000250: 2007            ' .'            MOVE.L   D7,D0               
@@ -431,10 +429,8 @@ Jump Table 83:
 
 
 (func intern randchoice)
-// NOTE: Incorrect disassembly!!!
-0000041A: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000041C: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-00000420: 1F00            '..'            MOVE.B   D0,-(A7)            
+0000041A: 4E56 0000       'NV..'          LINK     A6,#$0000           
+0000041E: 48E7 1F00       'H...'          MOVEM.L  D3-D7,-(A7)         
 00000422: 3E2E 0008       '>...'          MOVE.W   $0008(A6),D7        
 00000426: 7800            'x.'            MOVEQ    #$00,D4             
 00000428: 7601            'v.'            MOVEQ    #$01,D3             

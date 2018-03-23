@@ -58,13 +58,11 @@ Jump Table 175:
 
 Jump Table 176:
 (func extern eatmelon)
-// NOTE: Incorrect disassembly!!!
-00000098: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000009A: 0000 2F2E       '../.'          ORI.B    #$2F2E,D0           ; '.'
-0000009E: 0008 4EAD       '..N.'          ORI.B    #$4EAD,A0           
-000000A2: 024A 2EAE       '.J..'          ANDI.W   #$2EAE,A2           
-000000A6: 0008 4EAD       '..N.'          ORI.B    #$4EAD,A0           
-000000AA: 0542            '.B'            BCHG     D2,D2               
+00000098: 4E56 0000       'NV..'          LINK     A6,#$0000           
+0000009C: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
+000000A0: 4EAD 024A       'N..J'          JSR      $024A(A5)           ; LetGoOf()
+000000A4: 2EAE 0008       '....'          MOVE.L   $0008(A6),(A7)      
+000000A8: 4EAD 0542       'N..B'          JSR      $0542(A5)           ; LoseThing()
 000000AC: 526D 9688       'Rm..'          ADDQ.W   #$1,-$6978(A5)      
 000000B0: 4EAD 048A       'N...'          JSR      $048A(A5)           ; code9-anon6()
 000000B4: 4257            'BW'            CLR.W    (A7)                

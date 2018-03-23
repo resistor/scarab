@@ -295,11 +295,10 @@ Jump Table 58:
 
 
 (func intern BrownAnimal)
-// NOTE: Incorrect disassembly!!!
-00000318: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000031A: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-0000031E: 0108 286E       '..(n'          MOVEP.W  $286E(A0),D0        
-00000322: 0008 7E0F       '..~.'          ORI.B    #$7E0F,A0           
+00000318: 4E56 0000       'NV..'          LINK     A6,#$0000           
+0000031C: 48E7 0108       'H...'          MOVEM.L  D7/A4,-(A7)         
+00000320: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
+00000324: 7E0F            '~.'            MOVEQ    #$0F,D7             
 00000326: CE6C 000A       '.l..'          AND.W    $000A(A4),D7        
 0000032A: 302C 0004       '0,..'          MOVE.W   $0004(A4),D0        
 0000032E: 48C0            'H.'            EXT.L    D0                  
@@ -344,10 +343,8 @@ Jump Table 58:
 
 
 (func intern GoRandDir)
-// NOTE: Incorrect disassembly!!!
-00000394: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000396: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-0000039A: 0300            '..'            BTST     D1,D0               
+00000394: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000398: 48E7 0300       'H...'          MOVEM.L  D6/D7,-(A7)         
 0000039C: 7C00            '|.'            MOVEQ    #$00,D6             
 0000039E: 2F3C 0008 0000  '/<....'        MOVE.L   #$00080000,-(A7)    
 000003A4: 4EAD 03D2       'N...'          JSR      $03D2(A5)           ; randdir()
@@ -383,9 +380,8 @@ Jump Table 58:
 
 Jump Table 59:
 (func extern InitAnimal)
-// NOTE: Incorrect disassembly!!!
-000003EC: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000003EE: 0000 2F0C       '../.'          ORI.B    #$2F0C,D0           
+000003EC: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000003F0: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 000003F2: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
 000003F6: 396E 000C 0004  '9n....'        MOVE.W   $000C(A6),$0004(A4) 
 000003FC: 4A2C 0009       'J,..'          TST.B    $0009(A4)           
@@ -564,11 +560,9 @@ Jump Table 61:
 
 Jump Table 64:
 (func extern NetIt)
-// NOTE: Incorrect disassembly!!!!
-000005DC: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000005DE: 0000 206E       '.. n'          ORI.B    #$206E,D0           ; 'n'
-000005E2: 0008 117C       '...|'          ORI.B    #$117C,A0           ; '|'
-000005E6: 0002 0006       '....'          ORI.B    #$06,D2             
+000005DC: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000005E0: 206E 0008       ' n..'          MOVEA.L  $0008(A6),A0        
+000005E4: 117C 0002 0006  '.|....'        MOVE.B   #$02,$0006(A0)      
 000005EA: 2F08            '/.'            MOVE.L   A0,-(A7)            
 000005EC: 4EBA 0066       'N..f'          JSR      *+$0068             ; StopAnimal()
 000005F0: 2EAE 0008       '....'          MOVE.L   $0008(A6),(A7)      
@@ -581,9 +575,8 @@ Jump Table 64:
 00000602: 0000
 
 (func intern DropAll)
-// NOTE: Incorrect disassembly!!!
-00000604: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000606: 0000 2F0B       '../.'          ORI.B    #$2F0B,D0           
+00000604: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000608: 2F0B            '/.'            MOVE.L   A3,-(A7)            
 0000060A: 602C            '`,'            BRA.S    *+$002E             ; 00000638
 0000060C: 2F0B            '/.'            MOVE.L   A3,-(A7)            
 0000060E: 206E 0008       ' n..'          MOVEA.L  $0008(A6),A0        
@@ -614,9 +607,8 @@ Jump Table 64:
 
 Jump Table 63:
 (func extern StopAnimal)
-// NOTE: Incorrect disassembly!!!
-00000654: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000656: 0000 2F0C       '../.'          ORI.B    #$2F0C,D0           
+00000654: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000658: 2F0C            '/.'            MOVE.L   A4,-(A7)           
 0000065A: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
 0000065E: 302C 0004       '0,..'          MOVE.W   $0004(A4),D0        
 00000662: 48C0            'H.'            EXT.L    D0                  
@@ -728,9 +720,7 @@ Jump Table 63:
 
 Jump Table 53:
 (func extern code2-anon0)
-// NOTE: Incorrect disassembly!!!)
-00000786: 48E7       '..H.'          ORI.B    #$48E7,D0           
-00000788: 0300            '..'            BTST     D1,D0               
+00000786: 48E7 0300       'H...'          MOVEM.L  D6/D7,-(A7)        
 0000078A: 7E00            '~.'            MOVEQ    #$00,D7             
 0000078C: 6022            '`"'            BRA.S    *+$0024             ; 000007B0
 0000078E: 2007            ' .'            MOVE.L   D7,D0               
@@ -908,9 +898,7 @@ Jump Table 53:
 00000960: 0000
 
 (func intern DragItem)
-// NOTE: Incorrect disassembly!!!
-00000962: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000964: FFF0            '..'            DC.W     $FFF0               ; ????
+00000962: 4E56 FFF0       'NV..'          LINK     A6,#$FFF0           
 00000966: 48E7 0F38       'H..8'          MOVEM.L  D4-D7/A2-A4,-(A7)   
 0000096A: 286E 000E       '(n..'          MOVEA.L  $000E(A6),A4        
 0000096E: 7A01            'z.'            MOVEQ    #$01,D5             
@@ -1136,10 +1124,9 @@ Jump Table 53:
 00000BC8: 0000
 
 (func intern InvDashRect)
-// NOTE: Incorrect disassembly!!!
-00000BCA: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000BCC: 0000 3F3C       '..?<'          ORI.B    #$3F3C,D0           ; '<'
-00000BD0: 000A A89C       '....'          ORI.B    #$A89C,A2           
+00000BCA: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000BCE: 3F3C 000A       '?<..'          MOVE.W   #$000A,-(A7)        
+00000BD2: A89C            '..'            _PenMode                     ; A89C
 00000BD4: 486D 964E       'Hm.N'          PEA      -$69B2(A5)          
 00000BD8: A89D            '..'            _PenPat                      ; A89D
 00000BDA: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
@@ -1160,8 +1147,7 @@ Jump Table 53:
 
 Jump Table 54:
 (func extern code2-anon1)
-// NOTE: Incorrect disassembly
-00000BFE: 2F0C       '../.'          ORI.B    #$2F0C,D0           
+00000BFE: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 00000C00: 49ED 994A       'I..J'          LEA      -$66B6(A5),A4       
 00000C04: 3B7C FFFF 9692  ';|....'        MOVE.W   #$FFFF,-$696E(A5)   
 00000C0A: 2F2C 009E       '/,..'          MOVE.L   $009E(A4),-(A7)     
@@ -1649,9 +1635,8 @@ Jump Table 56:
 
 Jump Table 57:
 (func extern SetSpoor)
-// NOTE: Incorrect disassembly!!!
-000011E4: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000011E6: 0000 2F07       '../.'          ORI.B    #$2F07,D0           
+000011E4: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000011E8: 2F07            '/.'            MOVE.L   D7,-(A7)            
 000011EA: 7E00            '~.'            MOVEQ    #$00,D7             
 000011EC: 6010            '`.'            BRA.S    *+$0012             ; 000011FE
 000011EE: 2007            ' .'            MOVE.L   D7,D0               
@@ -1680,10 +1665,8 @@ Jump Table 57:
 00001228: 0000
 
 (func intern SSpoor)
-// NOTE: Incorrect disassembly!!!
-0000122A: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000122C: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-00001230: 0700            '..'            BTST     D3,D0               
+0000122A: 4E56 0000       'NV..'          LINK     A6,#$0000           
+0000122E: 48E7 0700       'H...'          MOVEM.L  D5-D7,-(A7)         
 00001232: 3E2E 0008       '>...'          MOVE.W   $0008(A6),D7        
 00001236: 2007            ' .'            MOVE.L   D7,D0               
 00001238: 48C0            'H.'            EXT.L    D0                  
@@ -1736,8 +1719,7 @@ Jump Table 57:
 
 Jump Table 11:
 (func extern code2-anon2)
-// NOTE: Incorrect disassembly!!!
-000012A4: 2F0C       '../.'          ORI.B    #$2F0C,D0           
+000012A4: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 000012A6: 302D 9B48       '0-.H'          MOVE.W   -$64B8(A5),D0       
 000012AA: 48C0            'H.'            EXT.L    D0                  
 000012AC: E988            '..'            LSL.L    #$4,D0              
@@ -2085,10 +2067,8 @@ Jump Table 12:
 00001680: 0000
 
 (func intern howfar)
-// NOTE: Incorrect disassembly???
-00001682: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00001684: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-00001688: 1F18            '..'            MOVE.B   (A0)+,-(A7)         
+00001682: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00001686: 48E7 1F18       'H...'          MOVEM.L  D3-D7/A3/A4,-(A7)   
 0000168A: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
 0000168E: 266E 000C       '&n..'          MOVEA.L  $000C(A6),A3        
 00001692: 4253            'BS'            CLR.W    (A3)                
@@ -2234,9 +2214,8 @@ Jump Table 12:
 
 Jump Table 13:
 (func extern InsInven)
-// NOTE: Incorrect disassembly???
-0000184E: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00001850: 0000 2F0C       '../.'          ORI.B    #$2F0C,D0           
+0000184E: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00001852: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 00001854: 49ED 994A       'I..J'          LEA      -$66B6(A5),A4       
 00001858: 42A7            'B.'            CLR.L    -(A7)               
 0000185A: 42A7            'B.'            CLR.L    -(A7)               
@@ -2255,6 +2234,7 @@ Jump Table 13:
 00001884: 286E FFFC       '(n..'          MOVEA.L  -$0004(A6),A4       
 00001888: 4E5E            'N^'            UNLK     A6                  
 0000188A: 4E75            'Nu'            RTS                          
+---
 0000188C: 8849            '.I'            OR.W     A1,D4               
 0000188E: 6E73            'ns'            BGT.S    *+$0075             ; 00001903
 00001890: 496E            'In'            DC.W     $496E               ; ????
@@ -2753,10 +2733,10 @@ Jump Table 37:
 00001D1C: 5247            'RG'            ADDQ.W   #$1,D7              
 00001D1E: BE6E FFF8       '.n..'          CMP.W    -$0008(A6),D7       
 00001D22: 6FF2            'o.'            BLE.S    *-$000C             ; 00001D16
-00001D24: 4EAD 0312       'N...'          JSR      $0312(A5)           ; SetupMenus()
-00001D28: 4EAD 031A       'N...'          JSR      $031A(A5)           ; SetupWindows()
+00001D24: 4EAD 0312       'N...'          JSR      $0312(A5)           ; SetUpMenus()
+00001D28: 4EAD 031A       'N...'          JSR      $031A(A5)           ; SetUpWindows()
 00001D2C: 4EAD 032A       'N..*'          JSR      $032A(A5)           ; code10-anon1()
-00001D30: 486D 031A       'Hm..'          PEA      $031A(A5)           ; SetupWindows()
+00001D30: 486D 031A       'Hm..'          PEA      $031A(A5)           ; SetUpWindows()
 00001D34: A9F1            '..'            _UnLoadSeg                     ; A9F1
 00001D36: 4EAD 0372       'N..r'          JSR      $0372(A5)           ; code45-anon0()
 00001D3A: 41ED 95E8       'A...'          LEA      -$6A18(A5),A0       
@@ -3517,10 +3497,8 @@ Jump Table 17:
 
 Jump Table 18:
 (func extern mySetScroll)
-// NOTE: Incorrect disassembly???
-000025DE: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000025E0: 0000 2B6E       '..+n'          ORI.B    #$2B6E,D0           ; 'n'
-000025E4: 0008 EA28       '...('          ORI.B    #$EA28,A0           ; '('
+000025DE: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000025E2: 2B6E 0008 EA28  '+n...('        MOVE.L   $0008(A6),-$15D8(A5) 
 000025E8: 2B6E 000C EA2C  '+n...,'        MOVE.L   $000C(A6),-$15D4(A5) 
 000025EE: 4E5E            'N^'            UNLK     A6                  
 000025F0: 4E75            'Nu'            RTS                          
@@ -3533,9 +3511,7 @@ Jump Table 18:
 
 Jump Table 19:
 (func extern myScroll)
-// NOTE: Incorrect disassembly???
-00002600: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00002602: FFFC            '..'            DC.W     $FFFC               ; ????
+00002600: 4E56 FFFC       'NV..'          LINK     A6,#$FFFC           
 00002604: 48E7 0320       'H.. '          MOVEM.L  D6/D7/A2,-(A7)      
 00002608: 206D EA28       ' m.('          MOVEA.L  -$15D8(A5),A0       
 0000260C: 2050            ' P'            MOVEA.L  (A0),A0             
@@ -3741,11 +3717,10 @@ Jump Table 19:
 
 Jump Table 21:
 (func extern mySetCtlMax)
-// NOTE: Incorrect disassembly???
-00002822: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00002824: 0000 206E       '.. n'          ORI.B    #$206E,D0           ; 'n'
-00002828: 0008 2F28       '../('          ORI.B    #$2F28,A0           ; '('
-0000282C: 00A2 2F28 009E  '../(..'        ORI.L    #$2F28009E,-(A2)    
+00002822: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00002826: 206E 0008       ' n..'          MOVEA.L  $0008(A6),A0        
+0000282A: 2F28 00A2       '/(..'          MOVE.L   $00A2(A0),-(A7)     
+0000282E: 2F28 009E       '/(..'          MOVE.L   $009E(A0),-(A7)     
 00002832: 4EBA FDAA       'N...'          JSR      *-$0254             ; mySetScroll()
 00002836: 4EBA 0014       'N...'          JSR      *+$0016             ; code2-anon25()
 0000283A: 4E5E            'N^'            UNLK     A6                  
@@ -3760,9 +3735,7 @@ Jump Table 21:
 
 Jump Table 20:
 (func extern code2-anon25) 
-// NOTE: Incorrect disassembly???
-0000284C: 48E7       '..H.'          ORI.B    #$48E7,D0           
-0000284E: 0320            '. '            BTST     D1,-(A0)            
+0000284C: 48E7 0320       'H.. '          MOVEM.L  D6/D7/A2,-(A7)      
 00002850: 4267            'Bg'            CLR.W    -(A7)               
 00002852: 2F2D EA2C       '/-.,'          MOVE.L   -$15D4(A5),-(A7)    
 00002856: A960            '.`'            _GetCtlValue                     ; A960
@@ -3843,14 +3816,13 @@ Jump Table 22:
 
 Jump Table 24:
 (func extern AddThing)
-// NOTE: Incorrect disassembly???
-00002926: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00002928: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-0000292C: 0018 286E       '..(n'          ORI.B    #$286E,(A0)+        ; 'n'
-00002930: 0008 266E       '..&n'          ORI.B    #$266E,A0           ; 'n'
-00002934: 000C 2754       '..'T'          ORI.B    #$2754,A4           ; 'T'
-00002938: 0014 42AB       '..B.'          ORI.B    #$42AB,(A4)         
-0000293C: 0018 4A94       '..J.'          ORI.B    #$4A94,(A0)+        
+00002926: 4E56 0000       'NV..'          LINK     A6,#$0000           
+0000292A: 48E7 0018       'H...'          MOVEM.L  A3/A4,-(A7)         
+0000292E: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
+00002932: 266E 000C       '&n..'          MOVEA.L  $000C(A6),A3        
+00002936: 2754 0014       ''T..'          MOVE.L   (A4),$0014(A3)      
+0000293A: 42AB 0018       'B...'          CLR.L    $0018(A3)           
+0000293E: 4A94            'J.'            TST.L    (A4)                
 00002940: 6706            'g.'            BEQ.S    *+$0008             ; 00002948
 00002942: 2054            ' T'            MOVEA.L  (A4),A0             
 00002944: 214B 0018       '!K..'          MOVE.L   A3,$0018(A0)        
@@ -3897,9 +3869,8 @@ Jump Table 24:
 
 Jump Table 25:
 (func extern DelThing)
-// NOTE: Incorrect disassembly!!!
-000029C0: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000029C2: 0000 2F0C       '../.'          ORI.B    #$2F0C,D0           
+000029C0: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000029C4: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 000029C6: 286E 000C       '(n..'          MOVEA.L  $000C(A6),A4        
 000029CA: 4AAC 0014       'J...'          TST.L    $0014(A4)           
 000029CE: 670A            'g.'            BEQ.S    *+$000C             ; 000029DA
@@ -3949,9 +3920,8 @@ Jump Table 26:
 00002A3C: 0000
 
 (func intern FlagNotList)
-// NOTE: Incorrect disassembly!!!
-00002A3E: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00002A40: 0000 2F0C       '../.'          ORI.B    #$2F0C,D0           
+00002A3E: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00002A42: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 00002A44: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
 00002A48: 6012            '`.'            BRA.S    *+$0014             ; 00002A5C
 00002A4A: 202C 0008       ' ,..'          MOVE.L   $0008(A4),D0        
@@ -4001,10 +3971,8 @@ Jump Table 23:
 
 Jump Table 27:
 (func extern TypeNum)
-// NOTE: Incorrect disassembly!!!
-00002AAC: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00002AAE: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-00002AB2: 0300            '..'            BTST     D1,D0               
+00002AAC: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00002AB0: 48E7 0300       'H...'          MOVEM.L  D6/D7,-(A7)         
 00002AB4: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
 00002AB8: 4EAD 04B2       'N...'          JSR      $04B2(A5)           ; strlen()
 00002ABC: 3C00            '<.'            MOVE.W   D0,D6               
@@ -4044,9 +4012,8 @@ Jump Table 27:
 
 Jump Table 28:
 (func extern PassTime)
-// NOTE: Incorrect disassembly
-00002B0A: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00002B0C: 0000 2F07       '../.'          ORI.B    #$2F07,D0           
+00002B0A: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00002B0E: 2F07            '/.'            MOVE.L   D7,-(A7)            
 00002B10: 422D 9698       'B-..'          CLR.B    -$6968(A5)          
 00002B14: 7E00            '~.'            MOVEQ    #$00,D7             
 00002B16: 6020            '` '            BRA.S    *+$0022             ; 00002B38
@@ -4230,9 +4197,8 @@ Jump Table 30:
 
 Jump Table 29:
 (func extern DelRAEvent)
-// NOTE: Incorrect disassembly!!!
-00002CD4: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00002CD6: 0000 2F07       '../.'          ORI.B    #$2F07,D0           
+00002CD4: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00002CD8: 2F07            '/.'            MOVE.L   D7,-(A7)            
 00002CDA: 3E2E 0008       '>...'          MOVE.W   $0008(A6),D7        
 00002CDE: 4A47            'JG'            TST.W    D7                  
 00002CE0: 6D7A            'mz'            BLT.S    *+$007C             ; 00002D5C
@@ -4300,9 +4266,8 @@ Jump Table 29:
 
 Jump Table 31:
 (func extern FuncInEvents)
-// NOTE: Incorrect disassembly!!!
-00002D70: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00002D72: 0000 2F07       '../.'          ORI.B    #$2F07,D0           
+00002D70: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00002D74: 2F07            '/.'            MOVE.L   D7,-(A7)            
 00002D76: 7E00            '~.'            MOVEQ    #$00,D7             
 00002D78: 6026            '`&'            BRA.S    *+$0028             ; 00002DA0
 00002D7A: 7014            'p.'            MOVEQ    #$14,D0             
@@ -4339,9 +4304,8 @@ Jump Table 31:
 
 Jump Table 32:
 (func extern ThingInEvents)
-// NOTE: Incorrect disassembly!!!
-00002DBE: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00002DC0: 0000 2F07       '../.'          ORI.B    #$2F07,D0           
+00002DBE: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00002DC2: 2F07            '/.'            MOVE.L   D7,-(A7)            
 00002DC4: 7E00            '~.'            MOVEQ    #$00,D7             
 00002DC6: 6026            '`&'            BRA.S    *+$0028             ; 00002DEE
 00002DC8: 7014            'p.'            MOVEQ    #$14,D0             
@@ -4633,9 +4597,7 @@ Jump Table 35:
 00003076: 0000
 
 (func intern drawcell)
-// NOTE: Incorrect disassembly!!!
-00003078: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000307A: FFF6            '..'            DC.W     $FFF6               ; ????
+00003078: 4E56 FFF6       'NV..'          LINK     A6,#$FFF6           
 0000307C: 48E7 1F00       'H...'          MOVEM.L  D3-D7,-(A7)         
 00003080: 3E2E 0008       '>...'          MOVE.W   $0008(A6),D7        
 00003084: 3C2E 000A       '<...'          MOVE.W   $000A(A6),D6        
@@ -5700,9 +5662,7 @@ Jump Table 35:
 00003B48: 0000
 
 (func intern dim)
-// NOTE: Incorrect disassembly!!!
-00003B4A: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00003B4C: FFF8            '..'            DC.W     $FFF8               ; ????
+00003B4A: 4E56 FFF8       'NV..'          LINK     A6,#$FFF8           
 00003B4E: 486E FFF8       'Hn..'          PEA      -$0008(A6)          
 00003B52: 2F3C 0054 0000  '/<.T..'        MOVE.L   #$00540000,-(A7)    
 00003B58: 2F3C 012E 012E  '/<....'        MOVE.L   #$012E012E,-(A7)    
@@ -5725,14 +5685,13 @@ Jump Table 35:
 00003B86: 0000
 
 (func intern srcOrBits)
-// NOTE: Incorrect disassembly!!!
-00003B88: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00003B8A: 0000 2F2E       '../.'          ORI.B    #$2F2E,D0           ; '.'
-00003B8E: 0016 2F2E       '../.'          ORI.B    #$2F2E,(A6)         ; '.'
-00003B92: 0012 2F2E       '../.'          ORI.B    #$2F2E,(A2)         ; '.'
-00003B96: 000E 3F3C       '..?<'          ORI.B    #$3F3C,A6           ; '<'
-00003B9A: 0001 2F2E       '../.'          ORI.B    #$2F2E,D1           ; '.'
-00003B9E: 0008 A8EB       '....'          ORI.B    #$A8EB,A0           
+00003B88: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00003B8C: 2F2E 0016       '/...'          MOVE.L   $0016(A6),-(A7)     
+00003B90: 2F2E 0012       '/...'          MOVE.L   $0012(A6),-(A7)     
+00003B94: 2F2E 000E       '/...'          MOVE.L   $000E(A6),-(A7)     
+00003B98: 3F3C 0001       '?<..'          MOVE.W   #$0001,-(A7)        
+00003B9C: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
+00003BA0: A8EB            '..'            _StdBits                     ; A8EB
 00003BA2: 4E5E            'N^'            UNLK     A6                  
 00003BA4: 205F            ' _'            MOVEA.L  (A7)+,A0            
 00003BA6: 4FEF 0012       'O...'          LEA      $0012(A7),A7        
@@ -5744,18 +5703,18 @@ Jump Table 35:
 00003BB6: 0000
 
 (func intern srcBicBits)
-// NOTE: Incorrect disassembly!!!
-00003BB8: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00003BBA: 0000 2F2E       '../.'          ORI.B    #$2F2E,D0           ; '.'
-00003BBE: 0016 2F2E       '../.'          ORI.B    #$2F2E,(A6)         ; '.'
-00003BC2: 0012 2F2E       '../.'          ORI.B    #$2F2E,(A2)         ; '.'
-00003BC6: 000E 3F3C       '..?<'          ORI.B    #$3F3C,A6           ; '<'
-00003BCA: 0003 2F2E       '../.'          ORI.B    #$2F2E,D3           ; '.'
-00003BCE: 0008 A8EB       '....'          ORI.B    #$A8EB,A0           
+00003BB8: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00003BBC: 2F2E 0016       '/...'          MOVE.L   $0016(A6),-(A7)     
+00003BC0: 2F2E 0012       '/...'          MOVE.L   $0012(A6),-(A7)     
+00003BC4: 2F2E 000E       '/...'          MOVE.L   $000E(A6),-(A7)     
+00003BC8: 3F3C 0003       '?<..'          MOVE.W   #$0003,-(A7)        
+00003BCC: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
+00003BD0: A8EB            '..'            _StdBits                     ; A8EB
 00003BD2: 4E5E            'N^'            UNLK     A6                  
 00003BD4: 205F            ' _'            MOVEA.L  (A7)+,A0            
 00003BD6: 4FEF 0012       'O...'          LEA      $0012(A7),A7        
-00003BDA: 4ED0            'N.'            JMP      (A0)                
+00003BDA: 4ED0            'N.'            JMP      (A0)               
+---
 00003BDC: 8A73 7263       '.src'          OR.W     $63(A3,D7.W*2),D5   
 00003BE0: 4269 6342       'BicB'          CLR.W    $6342(A1)           
 00003BE4: 6974            'it'            BVS.S    *+$0076             ; 00003C5A
@@ -5763,9 +5722,8 @@ Jump Table 35:
 00003BE8: 0000
 
 (func intern graffiti)
-// NOTE: Incorrect disassembly!!!
-00003BEA: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00003BEC: 0000 204D       '.. M'          ORI.B    #$204D,D0           ; 'M'
+00003BEA: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00003BEE: 204D            ' M'            MOVEA.L  A5,A0               
 00003BF0: 302E 0008       '0...'          MOVE.W   $0008(A6),D0        
 00003BF4: D0C0            '..'            ADDA.W   D0,A0               
 00003BF6: D0C0            '..'            ADDA.W   D0,A0               
@@ -6349,14 +6307,12 @@ Jump Table 35:
 0000428C: 0000
 
 (func intern SplatThing)
-// NOTE: Incorrect disassembly!!!
-0000428E: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00004290: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-00004294: 0138 3E2E       '.8>.'          BTST     D0,$3E2E            
-00004298: 000C 286E       '..(n'          ORI.B    #$286E,A4           ; 'n'
-0000429C: 0008 0C47       '...G'          ORI.B    #$0C47,A0           ; 'G'
-000042A0: 000B 6E00       '..n.'          ORI.B    #$6E00,A3           
-000042A4: 0110            '..'            BTST     D0,(A0)             
+0000428E: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00004292: 48E7 0138       'H..8'          MOVEM.L  D7/A2-A4,-(A7)      
+00004296: 3E2E 000C       '>...'          MOVE.W   $000C(A6),D7        
+0000429A: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
+0000429E: 0C47 000B       '.G..'          CMPI.W   #$000B,D7           
+000042A2: 6E00 0110       'n...'          BGT      *+$0112             ; 000043B4
 000042A6: 703C            'p<'            MOVEQ    #$3C,D0             ; '<'
 000042A8: C1D4            '..'            MULS.W   (A4),D0             
 000042AA: 204D            ' M'            MOVEA.L  A5,A0               
@@ -6565,13 +6521,12 @@ Jump Table 35:
 000044DC: 0000
 
 (func intern myDrawPic)
-// NOTE: Incorrect disassembly!!!
-000044DE: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000044E0: 0000 3F3C       '..?<'          ORI.B    #$3F3C,D0           ; '<'
-000044E4: 0001 2F2E       '../.'          ORI.B    #$2F2E,D1           ; '.'
-000044E8: 000C 2F2E       '../.'          ORI.B    #$2F2E,A4           ; '.'
-000044EC: 0008 4EBA       '..N.'          ORI.B    #$4EBA,A0           
-000044F0: 0012 4E5E       '..N^'          ORI.B    #$4E5E,(A2)         ; '^'
+000044DE: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000044E2: 3F3C 0001       '?<..'          MOVE.W   #$0001,-(A7)        
+000044E6: 2F2E 000C       '/...'          MOVE.L   $000C(A6),-(A7)     
+000044EA: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
+000044EE: 4EBA 0012       'N...'          JSR      *+$0014             ; modeDrawPic()
+000044F2: 4E5E            'N^'            UNLK     A6                  
 000044F4: 4E75            'Nu'            RTS                          
 ---
 000044F6: 896D 7944       '.myD'          OR.W     D4,$7944(A5)        
@@ -6581,11 +6536,10 @@ Jump Table 35:
 00004500: 0000
 
 (func intern modeDrawPic)
-// NOTE: Incorrect diassembly!!!
-00004502: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00004504: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-00004508: 0018 286E       '..(n'          ORI.B    #$286E,(A0)+        ; 'n'
-0000450C: 0008 2654       '..&T'          ORI.B    #$2654,A0           ; 'T'
+00004502: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00004506: 48E7 0018       'H...'          MOVEM.L  A3/A4,-(A7)         
+0000450A: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
+0000450E: 2654            '&T'            MOVEA.L  (A4),A3             
 00004510: 2893            '(.'            MOVE.L   (A3),(A4)           
 00004512: 204B            ' K'            MOVEA.L  A3,A0               
 00004514: A029            '.)'            _HLock                       ; A029
@@ -6613,9 +6567,7 @@ Jump Table 35:
 0000454A: 0000
 
 (func intern myGetPic)
-// NOTE: Incorrect disassembly!!!
-0000454C: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000454E: FFF2            '..'            DC.W     $FFF2               ; ????
+0000454C: 4E56 FFF2       'NV..'          LINK     A6,#$FFF2           
 00004550: 48E7 1F38       'H..8'          MOVEM.L  D3-D7/A2-A4,-(A7)   
 00004554: 78FF            'x.'            MOVEQ    #$FF,D4             
 00004556: 7C00            '|.'            MOVEQ    #$00,D6             
@@ -6840,10 +6792,8 @@ Jump Table 35:
 
 Jump Table 36:
 (func extern MapMe)
-// NOTE: Incorrect disassembly!!!
-0000478A: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000478C: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-00004790: 0300            '..'            BTST     D1,D0               
+0000478A: 4E56 0000       'NV..'          LINK     A6,#$0000           
+0000478E: 48E7 0300       'H...'          MOVEM.L  D6/D7,-(A7)         
 00004792: 0C6D 0006 9684  '.m....'        CMPI.W   #$0006,-$697C(A5)   
 00004798: 6C08            'l.'            BGE.S    *+$000A             ; 000047A2
 0000479A: 1B7C 0001 969A  '.|....'        MOVE.B   #$01,-$6966(A5)     
@@ -6921,9 +6871,8 @@ Jump Table 36:
 00004868: 0000
 
 (func intern farthest)
-// NOTE: Incorrect disassembly!!!)
-0000486A: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000486C: 0000 2F07       '../.'          ORI.B    #$2F07,D0           
+0000478A: 4E56 0000       'NV..'          LINK     A6,#$0000           
+0000478E: 48E7 0300       'H...'          MOVEM.L  D6/D7,-(A7)         
 00004870: 3E2E 0008       '>...'          MOVE.W   $0008(A6),D7        
 00004874: 600E            '`.'            BRA.S    *+$0010             ; 00004884
 00004876: 3F2E 000A       '?...'          MOVE.W   $000A(A6),-(A7)     

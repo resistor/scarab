@@ -81,10 +81,8 @@ Jump Table 102:
 
 Jump Table 103:
 (func extern droplantern)
-// NOTE: Incorrect disassembly!!!
-000000EC: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000000EE: 0000 4A2D       '..J-'          ORI.B    #$4A2D,D0           ; '-'
-000000F2: 9699            '..'            SUB.L    (A1)+,D3            
+000000EC: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000000F0: 4A2D 9699       'J-..'          TST.B    -$6967(A5)          
 000000F4: 672A            'g*'            BEQ.S    *+$002C             ; 00000120
 000000F6: 2F3C 0000 1424  '/<...$'        MOVE.L   #$00001424,-(A7)    
 000000FC: 4EAD 040A       'N...'          JSR      $040A(A5)           ; News()

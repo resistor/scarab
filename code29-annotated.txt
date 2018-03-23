@@ -22,9 +22,7 @@ Segment size = $99A [2458]
 
 Jump Table 199:
 (func extern HelpMenu)
-// NOTE: Incorrect disassembly!!!
-0000001A: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000001C: FEFA            '..'            DC.W     $FEFA               ; ????
+0000001A: 4E56 FEFA       'NV..'          LINK     A6,#$FEFA           
 0000001E: 48E7 0118       'H...'          MOVEM.L  D7/A3/A4,-(A7)      
 00000022: 42A7            'B.'            CLR.L    -(A7)               
 00000024: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
@@ -94,9 +92,7 @@ Jump Table 199:
 
 Jump Table 200:
 (func extern Help)
-// NOTE: Incorrect disassembly!!!)
-000000BA: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000000BC: FFE2            '..'            DC.W     $FFE2               ; ????
+000000BA: 4E56 FFE2       'NV..'          LINK     A6,#$FFE2           
 000000BE: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 000000C0: 287C 0000 2B84  '(|..+.'        MOVEA.L  #$00002B84,A4       
 000000C6: 0C6E 0001 000C  '.n....'        CMPI.W   #$0001,$000C(A6)    
@@ -256,9 +252,7 @@ Jump Table 200:
 
 
 (func intern code29-anon0)
-// NOTE: Incorrect disassembly!!!
-000002E0: 2F2D       '../-'          ORI.B    #$2F2D,D0           ; '-'
-000002E2: FF38            '.8'            DC.W     $FF38               ; ????
+000002E0: 2F2D FF38       '/-.8'          MOVE.L   -$00C8(A5),-(A7)    
 000002E4: 4267            'Bg'            CLR.W    -(A7)               
 000002E6: 4EBA 00B2       'N...'          JSR      *+$00B4             ; doHelp()
 000002EA: 4E75            'Nu'            RTS                          
@@ -322,9 +316,7 @@ Jump Table 201:
 
 
 (func intern code29-anon1)
-// NOTE: Incorrect disassembly!!!
-0000037C: 2F2D       '../-'          ORI.B    #$2F2D,D0           ; '-'
-0000037E: FFFC            '..'            DC.W     $FFFC               ; ????
+0000037C: 2F2D FFFC       '/-..'          MOVE.L   -$0004(A5),-(A7)    
 00000380: A955            '.U'            _DisposeControl                     ; A955
 00000382: 2F2D FF38       '/-.8'          MOVE.L   -$00C8(A5),-(A7)    
 00000386: A982            '..'            _CloseDialog                     ; A982
@@ -369,9 +361,7 @@ Jump Table 197:
 
 
 (func intern HelpPage)
-// NOTE: Incorrect disassembly!!!
-000003E0: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000003E2: FDF8            '..'            DC.W     $FDF8               ; ????
+0000037C: 2F2D FFFC       '/-..'          MOVE.L   -$0004(A5),-(A7)    
 000003E4: 48E7 0108       'H...'          MOVEM.L  D7/A4,-(A7)         
 000003E8: 42A7            'B.'            CLR.L    -(A7)               
 000003EA: 2F2D FF40       '/-.@'          MOVE.L   -$00C0(A5),-(A7)    
@@ -543,9 +533,7 @@ Jump Table 197:
 
 Jump Table 198:
 (func extern HDoScroll)
-// NOTE: Incorrect disassembly!!!
-000005A8: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000005AA: FFFC            '..'            DC.W     $FFFC               ; ????
+000005A8: 4E56 FFFC       'NV..'          LINK     A6,#$FFFC           
 000005AC: 48E7 0308       'H...'          MOVEM.L  D6/D7/A4,-(A7)      
 000005B0: 2F2D FFF8       '/-..'          MOVE.L   -$0008(A5),-(A7)    
 000005B4: 4EAD 01B2       'N...'          JSR      $01B2(A5)           ; code2-anon23()
@@ -697,9 +685,7 @@ Jump Table 198:
 
 
 (func intern code29-anon2)
-// NOTE: Incorrect disassembly!!!
-00000738: 48E7       '..H.'          ORI.B    #$48E7,D0           
-0000073A: 0320            '. '            BTST     D1,-(A0)            
+00000738: 48E7 0320       'H.. '          MOVEM.L  D6/D7/A2,-(A7)      
 0000073C: 4267            'Bg'            CLR.W    -(A7)               
 0000073E: 2F2D FFFC       '/-..'          MOVE.L   -$0004(A5),-(A7)    
 00000742: A960            '.`'            _GetCtlValue                     ; A960
@@ -769,10 +755,8 @@ Jump Table 202:
 
 
 (func intern MakeTitle)
-// NOTE: Incorrect disassembly!!!
-000007DA: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000007DC: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-000007E0: 0F18            '..'            BTST     D7,(A0)+            
+000007DA: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000007DE: 48E7 0F18       'H...'          MOVEM.L  D4-D7/A3/A4,-(A7)   
 000007E2: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
 000007E6: 206E 000C       ' n..'          MOVEA.L  $000C(A6),A0        
 000007EA: 2650            '&P'            MOVEA.L  (A0),A3             
@@ -824,9 +808,7 @@ Jump Table 202:
 
 
 (func intern DialogID)
-// NOTE: Incorrect disassembly!!!
-00000858: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000085A: FFFA            '..'            DC.W     $FFFA               ; ????
+00000858: 4E56 FFFA       'NV..'          LINK     A6,#$FFFA           
 0000085C: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 0000085E: 42A7            'B.'            CLR.L    -(A7)               
 00000860: 2F3C 444C 4F47  '/<DLOG'        MOVE.L   #$444C4F47,-(A7)    ; 'DLOG'
@@ -858,9 +840,7 @@ Jump Table 202:
 
 
 (func intern hintsOK)
-// NOTE: Incorrect disassembly!!!
-0000089C: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000089E: FFFC            '..'            DC.W     $FFFC               ; ????
+0000089C: 4E56 FFFC       'NV..'          LINK     A6,#$FFFC           
 000008A0: 2F3C 0000 2BD4  '/<..+.'        MOVE.L   #$00002BD4,-(A7)    
 000008A6: 2F3C 0000 2BD6  '/<..+.'        MOVE.L   #$00002BD6,-(A7)    
 000008AC: 2F3C 0000 2BD8  '/<..+.'        MOVE.L   #$00002BD8,-(A7)    

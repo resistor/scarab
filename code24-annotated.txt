@@ -39,10 +39,8 @@ Jump Table 90:
 
 Jump Table 91:
 (func intern gun)
-// NOTE: Incorrect disassembly!!!
-00000062: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000064: 0000 48E7       '..H.'          ORI.B    #$48E7,D0           
-00000068: 0718            '..'            BTST     D3,(A0)+            
+00000062: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000066: 48E7 0718       'H...'          MOVEM.L  D5-D7/A3/A4,-(A7)   
 0000006A: 286E 0008       '(n..'          MOVEA.L  $0008(A6),A4        
 0000006E: 7C01            '|.'            MOVEQ    #$01,D6             
 00000070: 4AAC 0010       'J...'          TST.L    $0010(A4)           

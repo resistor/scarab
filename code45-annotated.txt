@@ -48,11 +48,9 @@ Segment size = $314 [788]
 
 Jump Table 108:
 (func extern trip)
-// NOTE: Incorrect disassembly!!!
-00000062: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000064: 0000 206E       '.. n'          ORI.B    #$206E,D0           ; 'n'
-00000068: 0008 0068       '...h'          ORI.B    #$68,A0             ; 'h'
-0000006C: 0002 0008       '....'          ORI.B    #$08,D2             
+00000062: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000066: 206E 0008       ' n..'          MOVEA.L  $0008(A6),A0        
+0000006A: 0068 0002 0008  '.h....'        ORI.W    #$0002,$0008(A0)    
 00000070: 0268 FEFF 000A  '.h....'        ANDI.W   #$FEFF,$000A(A0)    
 00000076: 117C 0001 0006  '.|....'        MOVE.B   #$01,$0006(A0)      
 0000007C: 4EBA 0236       'N..6'          JSR      *+$0238             ; TrapSound()
@@ -68,11 +66,9 @@ Jump Table 108:
 
 Jump Table 109:
 (func extern speartrap)
-// NOTE: Incorrect disassembly!!!
-0000008C: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000008E: 0000 2F2E       '../.'          ORI.B    #$2F2E,D0           ; '.'
-00000092: 0008 4EBA       '..N.'          ORI.B    #$4EBA,A0           
-00000096: FF6A            '.j'            DC.W     $FF6A               ; ????
+0000008C: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000090: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
+00000094: 4EBA FF6A       'N..j'          JSR      *-$0094             ; springtrap()
 00000098: 4A40            'J@'            TST.W    D0                  
 0000009A: 588F            'X.'            ADDQ.L   #$4,A7              
 0000009C: 672E            'g.'            BEQ.S    *+$0030             ; 000000CC
@@ -104,15 +100,14 @@ Jump Table 109:
 
 Jump Table 110:
 (func extern windtrap)
-// NOTE: Incorrect disassembly!!!
-000000DC: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000000DE: 0000 2F0C       '../.'          ORI.B    #$2F0C,D0           
+000000DC: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000000E0: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 000000E2: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
 000000E6: 4EBA FF18       'N...'          JSR      *-$00E6             ; springtrap()
 000000EA: 4A40            'J@'            TST.W    D0                  
 000000EC: 588F            'X.'            ADDQ.L   #$4,A7              
 000000EE: 673E            'g>'            BEQ.S    *+$0040             ; 0000012E
-000000F0: 2F3C 0000 1566  '/<...f'        MOVE.L   #$00001566,-(A7)    
+000000F0: 2F3C 0000 1566  '/<...f'        MOVE.L   #$00001566,-(A7)  
 000000F6: 4EAD 040A       'N...'          JSR      $040A(A5)           ; News()
 000000FA: 2EAE 0008       '....'          MOVE.L   $0008(A6),(A7)      
 000000FE: 4EBA FF62       'N..b'          JSR      *-$009C             ; trip()
@@ -147,15 +142,13 @@ Jump Table 110:
 
 Jump Table 111:
 (func extern darttrap)
-// NOTE: Incorrect disassembly!!!
-00000140: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000142: 0000 2F2E       '../.'          ORI.B    #$2F2E,D0           ; '.'
-00000146: 0008 4EBA       '..N.'          ORI.B    #$4EBA,A0           
-0000014A: FEB6            '..'            DC.W     $FEB6               ; ????
+00000140: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000144: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
+00000148: 4EBA FEB6       'N...'          JSR      *-$0148             ; springtrap()
 0000014C: 4A40            'J@'            TST.W    D0                  
 0000014E: 588F            'X.'            ADDQ.L   #$4,A7              
 00000150: 672E            'g.'            BEQ.S    *+$0030             ; 00000180
-00000152: 2F3C 0000 1596  '/<....'        MOVE.L   #$00001596,-(A7)    
+00000152: 2F3C 0000 1596  '/<....'        MOVE.L   #$00001596,-(A7)  
 00000158: 4EAD 040A       'N...'          JSR      $040A(A5)           ; News()
 0000015C: 2EAE 0008       '....'          MOVE.L   $0008(A6),(A7)      
 00000160: 4EBA FF00       'N...'          JSR      *-$00FE             ; trip()
@@ -182,9 +175,8 @@ Jump Table 111:
 
 Jump Table 112:
 (func extern watertrap)
-// NOTE: Incorrect disassembly!!!
-00000190: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000192: 0000 2F07       '../.'          ORI.B    #$2F07,D0           
+00000190: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000194: 2F07            '/.'            MOVE.L   D7,-(A7)            
 00000196: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
 0000019A: 4EBA FE64       'N..d'          JSR      *-$019A             ; springtrap()
 0000019E: 4A40            'J@'            TST.W    D0                  
@@ -258,11 +250,9 @@ Jump Table 112:
 
 Jump Table 107:
 (func extern code45-anon0)
-// NOTE: Incorrect disassembly!!!
-00000248: 2F3C       '../<'          ORI.B    #$2F3C,D0           ; '<'
-0000024A: A805            '..'            _SndPlay                     ; A805
-0000024C: 0001 4EAD       '..N.'          ORI.B    #$4EAD,D1           
-00000250: 0332 4A40       '.2J@'          BTST     D1,$40(A2,D4.L*2)   
+00000248: 2F3C A805 0001  '/<....'        MOVE.L   #$A8050001,-(A7)    
+0000024E: 4EAD 0332       'N..2'          JSR      $0332(A5)           ; TrapAvailable()
+00000252: 4A40            'J@'            TST.W    D0                  
 00000254: 588F            'X.'            ADDQ.L   #$4,A7              
 00000256: 660E            'f.'            BNE.S    *+$0010             ; 00000266
 00000258: 4267            'Bg'            CLR.W    -(A7)               
@@ -313,9 +303,7 @@ Jump Table 107:
 
 
 (func intern TrapSound)
-// NOTE: Incorrect disassembly!!!
-000002B4: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000002B6: FFFA            '..'            DC.W     $FFFA               ; ????
+000002B4: 4E56 FFFA       'NV..'          LINK     A6,#$FFFA           
 000002B8: 4A2D 969F       'J-..'          TST.B    -$6961(A5)          
 000002BC: 6642            'fB'            BNE.S    *+$0044             ; 00000300
 000002BE: 41EE FFFA       'A...'          LEA      -$0006(A6),A0       

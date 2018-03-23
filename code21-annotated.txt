@@ -220,9 +220,7 @@ Jump Table 86:
 
 Jump Table 85:
 (func extern doLegend)
-// NOTE: Incorrect disassembly!!!
-000002B4: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000002B6: FFF2            '..'            DC.W     $FFF2               ; ????
+000002B4: 4E56 FFF2       'NV..'          LINK     A6,#$FFF2           
 000002B8: 2F2D EA0E       '/-..'          MOVE.L   -$15F2(A5),-(A7)    
 000002BC: 3F2E 0008       '?...'          MOVE.W   $0008(A6),-(A7)     
 000002C0: 486E FFF2       'Hn..'          PEA      -$000E(A6)          
@@ -561,9 +559,8 @@ Jump Table 88:
 
 
 (func intern MarkNote)
-// NOTE: Incorrect disassembly!!!
-00000674: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000676: 0000 2F07       '../.'          ORI.B    #$2F07,D0           
+00000674: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000678: 2F07            '/.'            MOVE.L   D7,-(A7)            
 0000067A: 3E2E 0008       '>...'          MOVE.W   $0008(A6),D7        
 0000067E: 2F3C 0002 0002  '/<....'        MOVE.L   #$00020002,-(A7)    
 00000684: A89B            '..'            _PenSize                     ; A89B
@@ -737,9 +734,8 @@ Jump Table 87:
 0000085A: 0000
 
 (func intern UMapMouse
-// NOTE: Incorrect disassembly!!!
-0000085C: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000085E: 0000 4267       '..Bg'          ORI.B    #$4267,D0           ; 'g'
+0000085C: 4E56 0000       'NV..'          LINK     A6,#$0000           
+00000860: 4267            'Bg'            CLR.W    -(A7)               
 00000862: 302E 000A       '0...'          MOVE.W   $000A(A6),D0        
 00000866: 0640 FF34       '.@.4'          ADDI.W   #$FF34,D0           
 0000086A: 48C0            'H.'            EXT.L    D0                  
@@ -764,9 +760,7 @@ Jump Table 87:
 
 
 (func intern UMapNotes)
-// NOTE: Incorrect disassembly!!!
-00000898: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-0000089A: FEEA            '..'            DC.W     $FEEA               ; ????
+00000898: 4E56 FEEA       'NV..'          LINK     A6,#$FEEA           
 0000089C: 2F07            '/.'            MOVE.L   D7,-(A7)            
 0000089E: 3E2E 0008       '>...'          MOVE.W   $0008(A6),D7        
 000008A2: 41ED 96A2       'A...'          LEA      -$695E(A5),A0       
@@ -838,9 +832,7 @@ Jump Table 87:
 
 
 (func intern SetNote)
-// NOTE: Incorrect disassembly!!!
-00000964: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000966: FEEE            '..'            DC.W     $FEEE               ; ????
+00000964: 4E56 FEEE       'NV..'          LINK     A6,#$FEEE           
 00000968: 2F2D EA0E       '/-..'          MOVE.L   -$15F2(A5),-(A7)    
 0000096C: 3F3C 0003       '?<..'          MOVE.W   #$0003,-(A7)        
 00000970: 486E FEEE       'Hn..'          PEA      -$0112(A6)          

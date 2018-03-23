@@ -56,10 +56,8 @@ Jump Table 189:
 
 Jump Table 190:
 (func extern code28-anon0)
-// NOTE: Incorrect disassembly!!!
-000000A6: 48E7       '..H.'          ORI.B    #$48E7,D0           
-000000A8: 0108 302D       '..0-'          MOVEP.W  $302D(A0),D0        
-000000AC: 968C            '..'            SUB.L    A4,D3               
+000000A6: 48E7 0108       'H...'          MOVEM.L  D7/A4,-(A7)         
+000000AA: 302D 968C       '0-..'          MOVE.W   -$6974(A5),D0       
 000000AE: C1ED 968E       '....'          MULS.W   -$6972(A5),D0       
 000000B2: 3F00            '?.'            MOVE.W   D0,-(A7)            
 000000B4: 4EAD 050A       'N...'          JSR      $050A(A5)           ; rand()
@@ -157,11 +155,10 @@ Jump Table 191:
 
 Jump Table 192:
 (func extern MummyMaker)
-// NOTE: Incorrect disassembly!!!
-000001A8: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000001AA: 0000 206E       '.. n'          ORI.B    #$206E,D0           ; 'n'
-000001AE: 0008 4A28       '..J('          ORI.B    #$4A28,A0           ; '('
-000001B2: 0006 660E       '..f.'          ORI.B    #$660E,D6           
+000001A8: 4E56 0000       'NV..'          LINK     A6,#$0000           
+000001AC: 206E 0008       ' n..'          MOVEA.L  $0008(A6),A0        
+000001B0: 4A28 0006       'J(..'          TST.B    $0006(A0)           
+000001B4: 660E            'f.'            BNE.S    *+$0010             ; 000001C4
 000001B6: 4EBA FEEE       'N...'          JSR      *-$0110             ; code28-anon0()
 000001BA: 206E 0008       ' n..'          MOVEA.L  $0008(A6),A0        
 000001BE: 117C 0001 0006  '.|....'        MOVE.B   #$01,$0006(A0)      

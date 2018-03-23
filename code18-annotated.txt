@@ -179,10 +179,11 @@ Jump Table 80:
 
 Jump Table 81:
 (func extern usenet)
-// NOTE: Incorrect disassembly!!!
-4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-00000218: 0000 4EAD       '..N.'          ORI.B    #$4EAD,D0           
-0000021C: 007A 4E5E 4E75  '.zN^Nu'        ORI.W    #$4E5E,*+$4E79      ; 00005095
+00000216: 4E56 0000       'NV..'          LINK     A6,#$0000           
+0000021A: 4EAD 007A       'N..z'          JSR      $007A(A5)           ; Throw()
+0000021E: 4E5E            'N^'            UNLK     A6                  
+00000220: 4E75            'Nu'            RTS                          
+---
 00000222: 8675            '.u'            DC.W     $8675               ; ????
 00000224: 7365            'se'            DC.W     $7365               ; ????
 00000226: 6E65            'ne'            BGT.S    *+$0067             ; 0000028D
