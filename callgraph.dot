@@ -1,0 +1,353 @@
+digraph callgraph {
+	rankdir= "LR"
+
+	"main"
+	"code2-anon20"
+	"code2-anon21"
+	"code2-anon22"
+	"SetUpMenus"
+	"SetUpWindows"
+	"code10-anon1"
+	"code45-anon0"
+	"StockMaze"
+	"CanPickUp"
+	"code2-anon0"
+	"SetSpoor"
+	"HeroStatus"
+	"News"
+	"code2-anon2"
+	"ResumeGame"
+	"InsInven"
+	"code9-anon5"
+	"youfound"
+	"WNEisImplemented"
+	"MainEvent"
+	"HelpMenu"
+	"SizeDestView"
+	"SizeScrollBars"
+	"myTEInsert"
+	"code2-anon31"
+	"InitStatus"
+	"TrapAvailable"
+	"TypeNum"[color=red]
+	"MakeThing"[color=red]
+	"rand"[color=red]
+	"AddThing"[color=red]
+	"TypeInList"[color=red]
+	"code9-anon1"[color=red]
+	"CreateThing"[color=red]	
+	"GoDir"[color=red]
+	"SSpoor"[color=red]
+	"Pi2d"[color=red]
+	"Thermometer"[color=red]
+	"Display"[color=red]
+	"code2-anon10"[color=red]
+	"myRead"[color=red]
+	"myClose"[color=red]
+	"TellUser"[color=red]
+	"RestoreMaze"[color=red]
+	"RestoreThings"[color=red]
+	"code23-anon0"[color=red]
+	"Cleanup"[color=red]
+	"code1-anon19"[color=red]
+	"Nameit"[color=red]
+	"mySetCtlMax"[color=red]
+	"FlagNotList"[color=red]
+	"code2-anon6"[color=red]
+	"myGrowDrawIcon"[color=red]
+	"code2-anon1"[color=red]
+	"code9-anon2"[color=red]
+	"MenuCommand"[color=red]
+	"MapKeyPad"[color=red]
+	"MoveHero"[color=red]
+	"HelpButtons"[color=red]
+	"GotAClick"[color=red]
+	"MyGrowWindow"[color=red]
+	"Beep"[color=red]
+	"code1-anon22"[color=red]
+	"PrintMap"[color=red]
+	"view"[color=red]
+	"code9-anon3"[color=red]
+	"strlen"[color=red]
+	"code2-anon9"[color=red]
+
+
+
+	"_FlushEvents"[color=blue]
+	"_InitWindows"[color=blue]
+	"_TEInit"[color=blue]
+	"_InitDialogs"[color=blue]
+	"_InitCursor"[color=blue]
+	"_MaxApplZone"[color=blue]
+	"_MoreMasters"[color=blue]
+	"_GetCursor"[color=blue]
+	"_HNoPurge"[color=blue]
+	"_UnLoadSeg"[color=blue]
+	"_SelectWindow"[color=blue]
+	"_GetHandleSize"[color=blue]
+	"_BlockMove"[color=blue]
+	"_NewMenu"[color=blue]
+	"_AppendMenu"[color=blue]
+	"_AddResMenu"[color=blue]
+	"_CheckItem"[color=blue]
+	"_DisableItem"[color=blue]
+	"_InsertMenu"[color=blue]
+	"_DrawMenuBar"[color=blue]
+	"_SetRect"[color=blue]
+	"_NewWindow"[color=blue]
+	"_SetPort"[color=blue]
+	"_TextFont"[color=blue]
+	"_TextSize"[color=blue]
+	"_TENew"[color=blue]
+	"_NewControl"[color=blue]
+	"_SetOrigin"[color=blue]
+	"_GetNewDialog"[color=blue]
+	"_ShowWindow"[color=blue]
+	"_GetResource"[color=blue]
+	"_StopAlert"[color=blue]
+	"_ExitToShell"[color=blue]
+	"_GetDItem"[color=blue]
+	"_HiliteControl"[color=blue]
+	"_SetIText"[color=blue]
+	"_TESetSelect"[color=blue]
+	"_TEInsert"[color=blue]
+	"_EnableItem"[color=blue]
+	"_GetPort"[color=blue]
+	"_SetDItem"[color=blue]
+	"_SystemTask"[color=blue]
+	"_WaitNextEvent"[color=blue]
+	"_GetNextEvent"[color=blue]
+	"_FrontWindow"[color=blue]
+	"_DrawControls"[color=blue]
+	"_TEDeactivate"[color=blue]
+	"_IsDialogEvent"[color=blue]
+	"_MenuKey"[color=blue]
+	"_DialogSelect"[color=blue]
+	"_FindWindow"[color=blue]
+	"_MenuSelect"[color=blue]
+	"_SystemClick"[color=blue]
+	"_TrackGoAway"[color=blue]
+	"_HideWindow"[color=blue]
+	"_SelectWindow"[color=blue]
+	"_DragWindow"[color=blue]
+	"_InvalRect"[color=blue]
+	"_BeginUpDate"[color=blue]
+	"_EraseRect"[color=blue]
+	"_ShowControl"[color=blue]
+	"_DrawControls"[color=blue]
+	"_TEUpdate"[color=blue]
+	"_EndUpDate"[color=blue]
+	"_SizeRsrc"[color=blue]
+	"_GetResInfo"[color=blue]
+	"_InsetRect"[color=blue]
+	"_NewPtr"[color=blue]
+	"_GetTrapAddress"[color=blue]
+
+
+
+	"main" -> "code2-anon20"
+	"main" -> "code2-anon21"
+	"main" -> "code2-anon22"
+	"main" -> "SetUpMenus"
+	"main" -> "SetUpWindows"
+	"main" -> "code10-anon1"
+	"main" -> "code45-anon0"
+	"main" -> "StockMaze"
+	"main" -> "CanPickUp"
+	"main" -> "code2-anon0"
+	"main" -> "SetSpoor"
+	"main" -> "HeroStatus"
+	"main" -> "News"
+	"main" -> "code2-anon2"
+	"main" -> "ResumeGame"
+	"main" -> "InsInven"
+	"main" -> "code9-anon5"
+	"main" -> "youfound"
+	"main" -> "WNEisImplemented"
+	"main" -> "MainEvent"
+
+	"main" -> "_FlushEvents"[style=dashed]
+	"main" -> "_InitWindows"[style=dashed]
+	"main" -> "_TEInit"[style=dashed]
+	"main" -> "_InitDialogs"[style=dashed]
+	"main" -> "_InitCursor"[style=dashed]
+	"main" -> "_MaxApplZone"[style=dashed]
+	"main" -> "_MoreMasters"[style=dashed]
+	"main" -> "_GetCursor"[style=dashed]
+	"main" -> "_HNoPurge"[style=dashed]
+	"main" -> "_UnLoadSeg"[style=dashed]
+	"main" -> "_SelectWindow"[style=dashed]
+
+
+	"code2-anon20" -> "_GetHandleSize"[style=dashed]
+
+	"code2-anon21" -> "_GetHandleSize"[style=dashed]
+	"code2-anon21" -> "_BlockMove"[style=dashed]
+
+	"code2-anon22" -> "_GetHandleSize"[style=dashed]
+
+	"SetUpMenus" -> "HelpMenu"
+
+	"SetUpMenus" -> "_NewMenu"[style=dashed]
+	"SetUpMenus" -> "_AppendMenu"[style=dashed]
+	"SetUpMenus" -> "_AddResMenu"[style=dashed]
+	"SetUpMenus" -> "_CheckItem"[style=dashed]
+	"SetUpMenus" -> "_DisableItem"[style=dashed]
+	"SetUpMenus" -> "_InsertMenu"[style=dashed]
+	"SetUpMenus" -> "_DrawMenuBar"[style=dashed]
+
+	"SetUpWindows" -> "SizeDestView"
+	"SetUpWindows" -> "SizeScrollBars"
+	"SetUpWindows" -> "myTEInsert"
+	"SetUpWindows" -> "code2-anon31"
+	"SetUpWindows" -> "InitStatus"
+
+	"SetUpWindows" -> "_SetRect"[style=dashed]
+	"SetUpWindows" -> "_NewWindow"[style=dashed]
+	"SetUpWindows" -> "_SetPort"[style=dashed]
+	"SetUpWindows" -> "_TextFont"[style=dashed]
+	"SetUpWindows" -> "_TextSize"[style=dashed]
+	"SetUpWindows" -> "_TENew"[style=dashed]
+	"SetUpWindows" -> "_NewControl"[style=dashed]
+	"SetUpWindows" -> "_SetOrigin"[style=dashed]
+	"SetUpWindows" -> "_GetNewDialog"[style=dashed]
+	"SetUpWindows" -> "_ShowWindow"[style=dashed]
+
+	"code10-anon1" -> "_GetResource"[style=dashed]
+
+	"code45-anon0" -> "TrapAvailable"
+
+	"code45-anon0" -> "_StopAlert"[style=dashed]
+	"code45-anon0" -> "_ExitToShell"[style=dashed]
+
+
+	"StockMaze" -> "TypeNum"
+	"StockMaze" -> "MakeThing"
+	"StockMaze" -> "rand"
+	"StockMaze" -> "AddThing"
+	"StockMaze" -> "TypeInList"
+	"StockMaze" -> "code9-anon1"
+	"StockMaze" -> "CreateThing"	
+
+
+	"CanPickUp" -> "FlagInList"
+
+	"CanPickUp" -> "_GetDItem"[style=dashed]
+	"CanPickUp" -> "_HiliteControl"[style=dashed]
+
+	"code2-anon0" -> "GoDir"
+
+	"SetSpoor" -> "SSpoor"
+
+	"HeroStatus" -> "Pi2d"
+	"HeroStatus" -> "Thermometer"
+
+	"HeroStatus" -> "_SetPort"[style=dashed]
+	"HeroStatus" -> "_GetPort"[style=dashed]
+	"HeroStatus" -> "_SetDItem"[style=dashed]
+	"HeroStatus" -> "_SetIText"[style=dashed]
+
+	"News" -> "Display"
+	
+	"code2-anon2" -> "_UnLoadSeg"[style=dashed]
+
+	"ResumeGame" -> "code2-anon10"
+	"ResumeGame" -> "myRead"
+	"ResumeGame" -> "myClose"
+	"ResumeGame" -> "TellUser"
+	"ResumeGame" -> "RestoreMaze"
+	"ResumeGame" -> "RestoreThings"
+	"ResumeGame" -> "code23-anon0"
+	"ResumeGame" -> "Cleanup"
+	"ResumeGame" -> "code1-anon19"
+
+	"ResumeGame" -> "_ExitToShell"[style=dashed]
+
+	"InsInven" -> "Nameit"
+	"InsInven" -> "mySetCtlMax"
+
+	"InsInven" -> "_TESetSelect"[style=dashed]
+	"InsInven" -> "_TEInsert"[style=dashed]
+
+	"code9-anon5" -> "_EnableItem"[style=dashed]
+	"code9-anon5" -> "_DisableItem"[style=dashed]
+
+	"youfound" -> "FlagNotList"
+	"youfound" -> "News"
+	"youfound" -> "Nameit"
+	
+	"WNEisImplemented" -> "code2-anon6"
+	"WNEisImplemented" -> "TrapAvailable"
+
+	"MainEvent" -> "myGrowDrawIcon"
+	"MainEvent" -> "code2-anon1"
+	"MainEvent" -> "code9-anon2"
+	"MainEvent" -> "MenuCommand"
+	"MainEvent" -> "MapKeyPad"
+	"MainEvent" -> "MoveHero"
+	"MainEvent" -> "HelpButtons"
+	"MainEvent" -> "GotAClick"
+	"MainEvent" -> "MyGrowWindow"
+	"MainEvent" -> "Beep"
+	"MainEvent" -> "code1-anon22"
+	"MainEvent" -> "PrintMap"
+	"MainEvent" -> "view"
+	"MainEvent" -> "HeroStatus"
+	"MainEvent" -> "code9-anon3"
+
+	"MainEvent" -> "_SystemTask"[style=dashed]
+	"MainEvent" -> "_WaitNextEvent"[style=dashed]
+	"MainEvent" -> "_GetNextEvent"[style=dashed]
+	"MainEvent" -> "_FrontWindow"[style=dashed]
+	"MainEvent" -> "_DrawControls"[style=dashed]
+	"MainEvent" -> "_TEDeactivate"[style=dashed]
+	"MainEvent" -> "_DisableItem"[style=dashed]
+	"MainEvent" -> "_DrawMenuBar"[style=dashed]
+	"MainEvent" -> "_EnableItem"[style=dashed]
+	"MainEvent" -> "_IsDialogEvent"[style=dashed]
+	"MainEvent" -> "_MenuKey"[style=dashed]
+	"MainEvent" -> "_DialogSelect"[style=dashed]
+	"MainEvent" -> "_FindWindow"[style=dashed]
+	"MainEvent" -> "_MenuSelect"[style=dashed]
+	"MainEvent" -> "_SystemClick"[style=dashed]
+	"MainEvent" -> "_TrackGoAway"[style=dashed]
+	"MainEvent" -> "_HideWindow"[style=dashed]
+	"MainEvent" -> "_SelectWindow"[style=dashed]
+	"MainEvent" -> "_SetRect"[style=dashed]
+	"MainEvent" -> "_DragWindow"[style=dashed]
+	"MainEvent" -> "_GetPort"[style=dashed]
+	"MainEvent" -> "_SetPort"[style=dashed]
+	"MainEvent" -> "_InvalRect"[style=dashed]
+	"MainEvent" -> "_BeginUpDate"[style=dashed]
+	"MainEvent" -> "_EraseRect"[style=dashed]
+	"MainEvent" -> "_ShowControl"[style=dashed]
+	"MainEvent" -> "_DrawControls"[style=dashed]
+	"MainEvent" -> "_TEUpdate"[style=dashed]
+	"MainEvent" -> "_EndUpDate"[style=dashed]
+	"MainEvent" -> "_UnLoadSeg"[style=dashed]
+
+
+	"HelpMenu" -> "_GetResource"[style=dashed]
+	"HelpMenu" -> "_SizeRsrc"[style=dashed]
+	"HelpMenu" -> "_NewMenu"[style=dashed]
+	"HelpMenu" -> "_GetResInfo"[style=dashed]
+	"HelpMenu" -> "_AppendMenu"[style=dashed]
+
+	"SizeDestView" -> "_InsetRect"[style=dashed]
+
+	"myTEInsert" -> "strlen"
+
+	"myTEInsert" -> "_TEInsert"[style=dashed]
+
+	"code2-anon31" -> "_NewPtr"[style=dashed]
+	"code2-anon31" -> "_SetRect"[style=dashed]
+
+	"InitStatus" -> "_GetDItem"[style=dashed]
+	"InitStatus" -> "_SetDItem"[style=dashed]
+	"InitStatus" -> "_ShowWindow"[style=dashed]
+
+	"TrapAvailable" -> "code2-anon9"
+
+	"TrapAvailable" -> "_GetTrapAddress"[style=dashed]
+}
+
