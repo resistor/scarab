@@ -29,31 +29,31 @@ digraph callgraph {
 	"code2-anon31"
 	"InitStatus"
 	"TrapAvailable"
-	"TypeNum"[color=red]
-	"MakeThing"[color=red]
-	"rand"[color=red]
-	"AddThing"[color=red]
-	"TypeInList"[color=red]
-	"code9-anon1"[color=red]
-	"CreateThing"[color=red]	
-	"GoDir"[color=red]
-	"SSpoor"[color=red]
-	"Pi2d"[color=red]
-	"Thermometer"[color=red]
-	"Display"[color=red]
-	"code2-anon10"[color=red]
-	"myRead"[color=red]
-	"myClose"[color=red]
-	"TellUser"[color=red]
-	"RestoreMaze"[color=red]
-	"RestoreThings"[color=red]
-	"code23-anon0"[color=red]
-	"Cleanup"[color=red]
-	"code1-anon19"[color=red]
-	"Nameit"[color=red]
-	"mySetCtlMax"[color=red]
-	"FlagNotList"[color=red]
-	"code2-anon6"[color=red]
+	"TypeNum"
+	"MakeThing"
+	"rand"
+	"AddThing"
+	"TypeInList"
+	"code9-anon1"
+	"CreateThing"	
+	"GoDir"
+	"SSpoor"
+	"Pi2d"
+	"Thermometer"
+	"Display"
+	"code2-anon10"
+	"myRead"
+	"myClose"
+	"TellUser"
+	"RestoreMaze"
+	"RestoreThings"
+	"code23-anon0"
+	"Cleanup"
+	"code1-anon19"
+	"Nameit"
+	"mySetCtlMax"
+	"FlagNotList"
+	"code2-anon6"
 	"myGrowDrawIcon"[color=red]
 	"code2-anon1"[color=red]
 	"code9-anon2"[color=red]
@@ -70,6 +70,24 @@ digraph callgraph {
 	"code9-anon3"[color=red]
 	"strlen"[color=red]
 	"code2-anon9"[color=red]
+	"strncmp"[color=red]
+	"code9-anon0"[color=red]
+	"randdir"[color=red]
+	"leftof"[color=red]
+	"LoseThing"[color=red]
+	"randmess"[color=red]
+	"InitAnimal"[color=red]
+	"code1-anon23"[color=red]
+	"tprintf"[color=red]
+	"code2-anon12"[color=red]
+	"SaveErr"[color=red]
+	"code2-anon11"[color=red]
+	"GetDiskStr"[color=red]
+	"saynumber"[color=red]
+	"mySetScroll"[color=red]
+	"code2-anon25"[color=red]
+	"code2-anon16"[color=red]
+	"code2-anon14"[color=red]
 
 
 
@@ -142,6 +160,17 @@ digraph callgraph {
 	"_InsetRect"[color=blue]
 	"_NewPtr"[color=blue]
 	"_GetTrapAddress"[color=blue]
+	"_Random"[color=blue]
+	"_FrameRect"[color=blue]
+	"_FillRect"[color=blue]
+	"_TEDelete"[color=blue]
+	"_GetCtlValue"[color=blue]
+	"_TEScroll"[color=blue]
+	"_SetCtlValue"[color=blue]
+	"_Open"[color=blue]
+	"_ParamText"[color=blue]
+	"_Alert"[color=blue]
+	"_SysEnvirons"[color=blue]
 
 
 
@@ -349,5 +378,87 @@ digraph callgraph {
 	"TrapAvailable" -> "code2-anon9"
 
 	"TrapAvailable" -> "_GetTrapAddress"[style=dashed]
+
+	"TypeNum" -> "strlen"
+	"TypeNum" -> "strncmp"
+
+	"MakeThing" -> "code9-anon0"
+
+	"rand" -> "_Random"[style=dashed]
+
+	"code9-anon1" -> "rand"
+
+	"CreateThing" -> "randdir"
+	"CreateThing" -> "leftof"
+	"CreateThing" -> "LoseThing"
+	"CreateThing" -> "strncmp"
+	"CreateThing" -> "randmess"
+	"CreateThing" -> "rand"
+	"CreateThing" -> "FlagInList"
+	"CreateThing" -> "AddThing"
+	"CreateThing" -> "InitAnimal"
+
+	"SSpoor" -> "GoDir"
+	"SSpoor" -> "SSpoor"
+
+	"Pi2d" -> "code1-anon23"
+	"Pi2d" -> "code1-anon22"
+
+	"Thermometer" -> "code1-anon23"
+
+	"Thermometer" -> "_FrameRect"[style=dashed]
+	"Thermometer" -> "_InsetRect"[style=dashed]
+	"Thermometer" -> "_FillRect"[style=dashed]
+
+	"Display" -> "tprintf"
+	"Display" -> "mySetCtlMax"
+
+	"Display" -> "_TEDeactivate"[style=dashed]
+	"Display" -> "_TEDelete"[style=dashed]
+	"Display" -> "_GetCtlValue"[style=dashed]
+	"Display" -> "_TEScroll"[style=dashed]
+	"Display" -> "_SetCtlValue"[style=dashed]
+
+	"code2-anon10" -> "_Open"[style=dashed]
+
+	"myRead" -> "code2-anon12"
+	"myRead" -> "SaveErr"
+	"myRead" -> "Pi2d"
+	"myRead" -> "TellUser"
+
+	"myClose" -> "code2-anon11"
+	"myClose" -> "SaveErr"
+
+	"TellUser" -> "_ParamText"[style=dashed]
+	"TellUser" -> "_Alert"[style=dashed]
+	
+	"RestoreMaze" -> "code1-anon19"
+	"RestoreMaze" -> "GetDiskStr"
+	"RestoreMaze" -> "myClose"
+
+	"RestoreMaze" -> "_ExitToShell"[style=dashed]
+
+	"RestoreThings" -> "code1-anon19"
+	"RestoreThings" -> "GetDiskStr"
+	"RestoreThings" -> "myClose"
+	
+	"RestoreThings" -> "_ExitToShell"[style=dashed]
+
+	"code23-anon0" -> "code1-anon19"
+
+	"Cleanup" -> "code2-anon1"
+	"Cleanup" -> "SaveErr"
+	"Cleanup" -> "code2-anon16"
+	"Cleanup" -> "code2-anon14"
+
+	"Nameit" -> "Display"
+	"Nameit" -> "saynumber"
+
+	"mySetCtlMax" -> "mySetScroll"
+	"mySetCtlMax" -> "code2-anon25"
+
+	"code2-anon6" -> "_GetTrapAddress"[style=dashed]
+	"code2-anon6" -> "_SysEnvirons"[style=dashed]
 }
+
 
