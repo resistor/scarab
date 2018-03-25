@@ -54,15 +54,15 @@ digraph callgraph {
 	"mySetCtlMax"
 	"FlagNotList"
 	"code2-anon6"
-	"myGrowDrawIcon"[color=red]
-	"code2-anon1"[color=red]
-	"code9-anon2"[color=red]
-	"MenuCommand"[color=red]
-	"MapKeyPad"[color=red]
-	"MoveHero"[color=red]
-	"HelpButtons"[color=red]
-	"GotAClick"[color=red]
-	"MyGrowWindow"[color=red]
+	"myGrowDrawIcon"
+	"code2-anon1"
+	"code9-anon2"
+	"MenuCommand"[color=purple]
+	"MapKeyPad"[color=purple]
+	"MoveHero"[color=purple]
+	"HelpButtons"
+	"GotAClick"
+	"MyGrowWindow"
 	"Beep"[color=red]
 	"code1-anon22"[color=red]
 	"PrintMap"[color=red]
@@ -88,89 +88,137 @@ digraph callgraph {
 	"code2-anon25"[color=red]
 	"code2-anon16"[color=red]
 	"code2-anon14"[color=red]
+	"Notice"[color=red]
+	"FlipTopStat"[color=red]
+	"SaveGame"[color=red]
+	"ShowMap"[color=red]
+	"MapMe"[color=red]
+	"code9-anon8"[color=red]
+	"Speed"[color=red]
+	"code9-anon4"[color=red]
+	"code2-anon3"[color=red]
+	"code3-anon1"[color=red]
+	"code2-anon4"[color=red]
+	"Throw"[color=red]
+	"Help"[color=red]
+	"FlashButton"[color=red]
+	"Compass"[color=red]
+	"LookForTraps"[color=red]
+	"PassTime"[color=red]
+	"rightof"[color=red]
+	"reverseof"[color=red]
+	"pickup"[color=red]
+	"WaitForMouseUp"[color=red]
+	"doHelp"[color=red]
+	"code29-anon1"[color=red]
+	"Hscroll"[color=red]
 
 
 
-	"_FlushEvents"[color=blue]
-	"_InitWindows"[color=blue]
-	"_TEInit"[color=blue]
-	"_InitDialogs"[color=blue]
-	"_InitCursor"[color=blue]
-	"_MaxApplZone"[color=blue]
-	"_MoreMasters"[color=blue]
-	"_GetCursor"[color=blue]
-	"_HNoPurge"[color=blue]
-	"_UnLoadSeg"[color=blue]
-	"_SelectWindow"[color=blue]
-	"_GetHandleSize"[color=blue]
-	"_BlockMove"[color=blue]
-	"_NewMenu"[color=blue]
-	"_AppendMenu"[color=blue]
-	"_AddResMenu"[color=blue]
-	"_CheckItem"[color=blue]
-	"_DisableItem"[color=blue]
-	"_InsertMenu"[color=blue]
-	"_DrawMenuBar"[color=blue]
-	"_SetRect"[color=blue]
-	"_NewWindow"[color=blue]
-	"_SetPort"[color=blue]
-	"_TextFont"[color=blue]
-	"_TextSize"[color=blue]
-	"_TENew"[color=blue]
-	"_NewControl"[color=blue]
-	"_SetOrigin"[color=blue]
-	"_GetNewDialog"[color=blue]
-	"_ShowWindow"[color=blue]
-	"_GetResource"[color=blue]
-	"_StopAlert"[color=blue]
-	"_ExitToShell"[color=blue]
-	"_GetDItem"[color=blue]
-	"_HiliteControl"[color=blue]
-	"_SetIText"[color=blue]
-	"_TESetSelect"[color=blue]
-	"_TEInsert"[color=blue]
-	"_EnableItem"[color=blue]
-	"_GetPort"[color=blue]
-	"_SetDItem"[color=blue]
-	"_SystemTask"[color=blue]
-	"_WaitNextEvent"[color=blue]
-	"_GetNextEvent"[color=blue]
-	"_FrontWindow"[color=blue]
-	"_DrawControls"[color=blue]
-	"_TEDeactivate"[color=blue]
-	"_IsDialogEvent"[color=blue]
-	"_MenuKey"[color=blue]
-	"_DialogSelect"[color=blue]
-	"_FindWindow"[color=blue]
-	"_MenuSelect"[color=blue]
-	"_SystemClick"[color=blue]
-	"_TrackGoAway"[color=blue]
-	"_HideWindow"[color=blue]
-	"_SelectWindow"[color=blue]
-	"_DragWindow"[color=blue]
-	"_InvalRect"[color=blue]
-	"_BeginUpDate"[color=blue]
-	"_EraseRect"[color=blue]
-	"_ShowControl"[color=blue]
-	"_DrawControls"[color=blue]
-	"_TEUpdate"[color=blue]
-	"_EndUpDate"[color=blue]
-	"_SizeRsrc"[color=blue]
-	"_GetResInfo"[color=blue]
-	"_InsetRect"[color=blue]
-	"_NewPtr"[color=blue]
-	"_GetTrapAddress"[color=blue]
-	"_Random"[color=blue]
-	"_FrameRect"[color=blue]
-	"_FillRect"[color=blue]
-	"_TEDelete"[color=blue]
-	"_GetCtlValue"[color=blue]
-	"_TEScroll"[color=blue]
-	"_SetCtlValue"[color=blue]
-	"_Open"[color=blue]
-	"_ParamText"[color=blue]
-	"_Alert"[color=blue]
-	"_SysEnvirons"[color=blue]
+//	"_FlushEvents"[color=blue]
+//	"_InitWindows"[color=blue]
+//	"_TEInit"[color=blue]
+//	"_InitDialogs"[color=blue]
+//	"_InitCursor"[color=blue]
+//	"_MaxApplZone"[color=blue]
+//	"_MoreMasters"[color=blue]
+//	"_GetCursor"[color=blue]
+//	"_HNoPurge"[color=blue]
+//	"_UnLoadSeg"[color=blue]
+//	"_SelectWindow"[color=blue]
+//	"_GetHandleSize"[color=blue]
+//	"_BlockMove"[color=blue]
+//	"_NewMenu"[color=blue]
+//	"_AppendMenu"[color=blue]
+//	"_AddResMenu"[color=blue]
+//	"_CheckItem"[color=blue]
+//	"_DisableItem"[color=blue]
+//	"_InsertMenu"[color=blue]
+//	"_DrawMenuBar"[color=blue]
+//	"_SetRect"[color=blue]
+//	"_NewWindow"[color=blue]
+//	"_SetPort"[color=blue]
+//	"_TextFont"[color=blue]
+//	"_TextSize"[color=blue]
+//	"_TENew"[color=blue]
+//	"_NewControl"[color=blue]
+//	"_SetOrigin"[color=blue]
+//	"_GetNewDialog"[color=blue]
+//	"_ShowWindow"[color=blue]
+//	"_GetResource"[color=blue]
+//	"_StopAlert"[color=blue]
+//	"_ExitToShell"[color=blue]
+//	"_GetDItem"[color=blue]
+//	"_HiliteControl"[color=blue]
+//	"_SetIText"[color=blue]
+//	"_TESetSelect"[color=blue]
+//	"_TEInsert"[color=blue]
+//	"_EnableItem"[color=blue]
+//	"_GetPort"[color=blue]
+//	"_SetDItem"[color=blue]
+//	"_SystemTask"[color=blue]
+//	"_WaitNextEvent"[color=blue]
+//	"_GetNextEvent"[color=blue]
+//	"_FrontWindow"[color=blue]
+//	"_DrawControls"[color=blue]
+//	"_TEDeactivate"[color=blue]
+//	"_IsDialogEvent"[color=blue]
+//	"_MenuKey"[color=blue]
+//	"_DialogSelect"[color=blue]
+//	"_FindWindow"[color=blue]
+//	"_MenuSelect"[color=blue]
+//	"_SystemClick"[color=blue]
+//	"_TrackGoAway"[color=blue]
+//	"_HideWindow"[color=blue]
+//	"_SelectWindow"[color=blue]
+//	"_DragWindow"[color=blue]
+//	"_InvalRect"[color=blue]
+//	"_BeginUpDate"[color=blue]
+//	"_EraseRect"[color=blue]
+//	"_ShowControl"[color=blue]
+//	"_DrawControls"[color=blue]
+//	"_TEUpdate"[color=blue]
+//	"_EndUpDate"[color=blue]
+//	"_SizeRsrc"[color=blue]
+//	"_GetResInfo"[color=blue]
+//	"_InsetRect"[color=blue]
+//	"_NewPtr"[color=blue]
+//	"_GetTrapAddress"[color=blue]
+//	"_Random"[color=blue]
+//	"_FrameRect"[color=blue]
+//	"_FillRect"[color=blue]
+//	"_TEDelete"[color=blue]
+//	"_GetCtlValue"[color=blue]
+//	"_TEScroll"[color=blue]
+//	"_SetCtlValue"[color=blue]
+//	"_Open"[color=blue]
+//	"_ParamText"[color=blue]
+//	"_Alert"[color=blue]
+//	"_SysEnvirons"[color=blue]
+//	"_NewRgn"[color=blue]
+//	"_GetClip"[color=blue]
+//	"_ClipRect"[color=blue]
+//	"_DrawGrowIcon"[color=blue]
+//	"_SetClip"[color=blue]
+//	"_DisposeRgn"[color=blue]
+//	"_LoWord"[color=blue]
+//	"_HiWord"[color=blue]
+//	"_GetItem"[color=blue]
+//	"_OpenDeskAcc"[color=blue]
+//	"_SysEdit"[color=blue]
+//	"_HiliteMenu"[color=blue]
+//	"_FlushEvents"[color=blue]
+//	"_GetMaxCtl"[color=blue]
+//	"_GlobalToLocal"[color=blue]
+//	"_FindControl"[color=blue]
+//	"_TrackControl"[color=blue]
+//	"_GrowWindow"[color=blue]
+//	"_SizeWindow"[color=blue]
+//	"_TECalText"[color=blue]
+//	"_HideControl"[color=blue]
+//	"_MoveControl"[color=blue]
+//	"_SizeControl"[color=blue]
+
 
 
 
@@ -194,36 +242,36 @@ digraph callgraph {
 	"main" -> "youfound"
 	"main" -> "WNEisImplemented"
 	"main" -> "MainEvent"
+//
+//	"main" -> "_FlushEvents"[style=dashed]
+//	"main" -> "_InitWindows"[style=dashed]
+//	"main" -> "_TEInit"[style=dashed]
+//	"main" -> "_InitDialogs"[style=dashed]
+//	"main" -> "_InitCursor"[style=dashed]
+//	"main" -> "_MaxApplZone"[style=dashed]
+//	"main" -> "_MoreMasters"[style=dashed]
+//	"main" -> "_GetCursor"[style=dashed]
+//	"main" -> "_HNoPurge"[style=dashed]
+//	"main" -> "_UnLoadSeg"[style=dashed]
+//	"main" -> "_SelectWindow"[style=dashed]
+//
 
-	"main" -> "_FlushEvents"[style=dashed]
-	"main" -> "_InitWindows"[style=dashed]
-	"main" -> "_TEInit"[style=dashed]
-	"main" -> "_InitDialogs"[style=dashed]
-	"main" -> "_InitCursor"[style=dashed]
-	"main" -> "_MaxApplZone"[style=dashed]
-	"main" -> "_MoreMasters"[style=dashed]
-	"main" -> "_GetCursor"[style=dashed]
-	"main" -> "_HNoPurge"[style=dashed]
-	"main" -> "_UnLoadSeg"[style=dashed]
-	"main" -> "_SelectWindow"[style=dashed]
+//	"code2-anon20" -> "_GetHandleSize"[style=dashed]
 
+//	"code2-anon21" -> "_GetHandleSize"[style=dashed]
+//	"code2-anon21" -> "_BlockMove"[style=dashed]
 
-	"code2-anon20" -> "_GetHandleSize"[style=dashed]
-
-	"code2-anon21" -> "_GetHandleSize"[style=dashed]
-	"code2-anon21" -> "_BlockMove"[style=dashed]
-
-	"code2-anon22" -> "_GetHandleSize"[style=dashed]
-
+//	"code2-anon22" -> "_GetHandleSize"[style=dashed]
+//
 	"SetUpMenus" -> "HelpMenu"
 
-	"SetUpMenus" -> "_NewMenu"[style=dashed]
-	"SetUpMenus" -> "_AppendMenu"[style=dashed]
-	"SetUpMenus" -> "_AddResMenu"[style=dashed]
-	"SetUpMenus" -> "_CheckItem"[style=dashed]
-	"SetUpMenus" -> "_DisableItem"[style=dashed]
-	"SetUpMenus" -> "_InsertMenu"[style=dashed]
-	"SetUpMenus" -> "_DrawMenuBar"[style=dashed]
+//	"SetUpMenus" -> "_NewMenu"[style=dashed]
+//	"SetUpMenus" -> "_AppendMenu"[style=dashed]
+//	"SetUpMenus" -> "_AddResMenu"[style=dashed]
+//	"SetUpMenus" -> "_CheckItem"[style=dashed]
+//	"SetUpMenus" -> "_DisableItem"[style=dashed]
+//	"SetUpMenus" -> "_InsertMenu"[style=dashed]
+//	"SetUpMenus" -> "_DrawMenuBar"[style=dashed]
 
 	"SetUpWindows" -> "SizeDestView"
 	"SetUpWindows" -> "SizeScrollBars"
@@ -231,23 +279,23 @@ digraph callgraph {
 	"SetUpWindows" -> "code2-anon31"
 	"SetUpWindows" -> "InitStatus"
 
-	"SetUpWindows" -> "_SetRect"[style=dashed]
-	"SetUpWindows" -> "_NewWindow"[style=dashed]
-	"SetUpWindows" -> "_SetPort"[style=dashed]
-	"SetUpWindows" -> "_TextFont"[style=dashed]
-	"SetUpWindows" -> "_TextSize"[style=dashed]
-	"SetUpWindows" -> "_TENew"[style=dashed]
-	"SetUpWindows" -> "_NewControl"[style=dashed]
-	"SetUpWindows" -> "_SetOrigin"[style=dashed]
-	"SetUpWindows" -> "_GetNewDialog"[style=dashed]
-	"SetUpWindows" -> "_ShowWindow"[style=dashed]
+//	"SetUpWindows" -> "_SetRect"[style=dashed]
+//	"SetUpWindows" -> "_NewWindow"[style=dashed]
+//	"SetUpWindows" -> "_SetPort"[style=dashed]
+//	"SetUpWindows" -> "_TextFont"[style=dashed]
+//	"SetUpWindows" -> "_TextSize"[style=dashed]
+//	"SetUpWindows" -> "_TENew"[style=dashed]
+//	"SetUpWindows" -> "_NewControl"[style=dashed]
+//	"SetUpWindows" -> "_SetOrigin"[style=dashed]
+//	"SetUpWindows" -> "_GetNewDialog"[style=dashed]
+//	"SetUpWindows" -> "_ShowWindow"[style=dashed]
 
-	"code10-anon1" -> "_GetResource"[style=dashed]
+//	"code10-anon1" -> "_GetResource"[style=dashed]
 
 	"code45-anon0" -> "TrapAvailable"
 
-	"code45-anon0" -> "_StopAlert"[style=dashed]
-	"code45-anon0" -> "_ExitToShell"[style=dashed]
+//	"code45-anon0" -> "_StopAlert"[style=dashed]
+//	"code45-anon0" -> "_ExitToShell"[style=dashed]
 
 
 	"StockMaze" -> "TypeNum"
@@ -261,8 +309,8 @@ digraph callgraph {
 
 	"CanPickUp" -> "FlagInList"
 
-	"CanPickUp" -> "_GetDItem"[style=dashed]
-	"CanPickUp" -> "_HiliteControl"[style=dashed]
+//	"CanPickUp" -> "_GetDItem"[style=dashed]
+//	"CanPickUp" -> "_HiliteControl"[style=dashed]
 
 	"code2-anon0" -> "GoDir"
 
@@ -271,14 +319,14 @@ digraph callgraph {
 	"HeroStatus" -> "Pi2d"
 	"HeroStatus" -> "Thermometer"
 
-	"HeroStatus" -> "_SetPort"[style=dashed]
-	"HeroStatus" -> "_GetPort"[style=dashed]
-	"HeroStatus" -> "_SetDItem"[style=dashed]
-	"HeroStatus" -> "_SetIText"[style=dashed]
+//	"HeroStatus" -> "_SetPort"[style=dashed]
+//	"HeroStatus" -> "_GetPort"[style=dashed]
+//	"HeroStatus" -> "_SetDItem"[style=dashed]
+//	"HeroStatus" -> "_SetIText"[style=dashed]
 
 	"News" -> "Display"
 	
-	"code2-anon2" -> "_UnLoadSeg"[style=dashed]
+//	"code2-anon2" -> "_UnLoadSeg"[style=dashed]
 
 	"ResumeGame" -> "code2-anon10"
 	"ResumeGame" -> "myRead"
@@ -290,16 +338,16 @@ digraph callgraph {
 	"ResumeGame" -> "Cleanup"
 	"ResumeGame" -> "code1-anon19"
 
-	"ResumeGame" -> "_ExitToShell"[style=dashed]
+//	"ResumeGame" -> "_ExitToShell"[style=dashed]
 
 	"InsInven" -> "Nameit"
 	"InsInven" -> "mySetCtlMax"
 
-	"InsInven" -> "_TESetSelect"[style=dashed]
-	"InsInven" -> "_TEInsert"[style=dashed]
+//	"InsInven" -> "_TESetSelect"[style=dashed]
+//	"InsInven" -> "_TEInsert"[style=dashed]
 
-	"code9-anon5" -> "_EnableItem"[style=dashed]
-	"code9-anon5" -> "_DisableItem"[style=dashed]
+//	"code9-anon5" -> "_EnableItem"[style=dashed]
+//	"code9-anon5" -> "_DisableItem"[style=dashed]
 
 	"youfound" -> "FlagNotList"
 	"youfound" -> "News"
@@ -324,67 +372,67 @@ digraph callgraph {
 	"MainEvent" -> "HeroStatus"
 	"MainEvent" -> "code9-anon3"
 
-	"MainEvent" -> "_SystemTask"[style=dashed]
-	"MainEvent" -> "_WaitNextEvent"[style=dashed]
-	"MainEvent" -> "_GetNextEvent"[style=dashed]
-	"MainEvent" -> "_FrontWindow"[style=dashed]
-	"MainEvent" -> "_DrawControls"[style=dashed]
-	"MainEvent" -> "_TEDeactivate"[style=dashed]
-	"MainEvent" -> "_DisableItem"[style=dashed]
-	"MainEvent" -> "_DrawMenuBar"[style=dashed]
-	"MainEvent" -> "_EnableItem"[style=dashed]
-	"MainEvent" -> "_IsDialogEvent"[style=dashed]
-	"MainEvent" -> "_MenuKey"[style=dashed]
-	"MainEvent" -> "_DialogSelect"[style=dashed]
-	"MainEvent" -> "_FindWindow"[style=dashed]
-	"MainEvent" -> "_MenuSelect"[style=dashed]
-	"MainEvent" -> "_SystemClick"[style=dashed]
-	"MainEvent" -> "_TrackGoAway"[style=dashed]
-	"MainEvent" -> "_HideWindow"[style=dashed]
-	"MainEvent" -> "_SelectWindow"[style=dashed]
-	"MainEvent" -> "_SetRect"[style=dashed]
-	"MainEvent" -> "_DragWindow"[style=dashed]
-	"MainEvent" -> "_GetPort"[style=dashed]
-	"MainEvent" -> "_SetPort"[style=dashed]
-	"MainEvent" -> "_InvalRect"[style=dashed]
-	"MainEvent" -> "_BeginUpDate"[style=dashed]
-	"MainEvent" -> "_EraseRect"[style=dashed]
-	"MainEvent" -> "_ShowControl"[style=dashed]
-	"MainEvent" -> "_DrawControls"[style=dashed]
-	"MainEvent" -> "_TEUpdate"[style=dashed]
-	"MainEvent" -> "_EndUpDate"[style=dashed]
-	"MainEvent" -> "_UnLoadSeg"[style=dashed]
+//	"MainEvent" -> "_SystemTask"[style=dashed]
+//	"MainEvent" -> "_WaitNextEvent"[style=dashed]
+//	"MainEvent" -> "_GetNextEvent"[style=dashed]
+//	"MainEvent" -> "_FrontWindow"[style=dashed]
+//	"MainEvent" -> "_DrawControls"[style=dashed]
+//	"MainEvent" -> "_TEDeactivate"[style=dashed]
+//	"MainEvent" -> "_DisableItem"[style=dashed]
+//	"MainEvent" -> "_DrawMenuBar"[style=dashed]
+//	"MainEvent" -> "_EnableItem"[style=dashed]
+//	"MainEvent" -> "_IsDialogEvent"[style=dashed]
+//	"MainEvent" -> "_MenuKey"[style=dashed]
+//	"MainEvent" -> "_DialogSelect"[style=dashed]
+//	"MainEvent" -> "_FindWindow"[style=dashed]
+//	"MainEvent" -> "_MenuSelect"[style=dashed]
+//	"MainEvent" -> "_SystemClick"[style=dashed]
+//	"MainEvent" -> "_TrackGoAway"[style=dashed]
+//	"MainEvent" -> "_HideWindow"[style=dashed]
+//	"MainEvent" -> "_SelectWindow"[style=dashed]
+//	"MainEvent" -> "_SetRect"[style=dashed]
+//	"MainEvent" -> "_DragWindow"[style=dashed]
+//	"MainEvent" -> "_GetPort"[style=dashed]
+//	"MainEvent" -> "_SetPort"[style=dashed]
+//	"MainEvent" -> "_InvalRect"[style=dashed]
+//	"MainEvent" -> "_BeginUpDate"[style=dashed]
+//	"MainEvent" -> "_EraseRect"[style=dashed]
+//	"MainEvent" -> "_ShowControl"[style=dashed]
+//	"MainEvent" -> "_DrawControls"[style=dashed]
+//	"MainEvent" -> "_TEUpdate"[style=dashed]
+//	"MainEvent" -> "_EndUpDate"[style=dashed]
+//	"MainEvent" -> "_UnLoadSeg"[style=dashed]
 
 
-	"HelpMenu" -> "_GetResource"[style=dashed]
-	"HelpMenu" -> "_SizeRsrc"[style=dashed]
-	"HelpMenu" -> "_NewMenu"[style=dashed]
-	"HelpMenu" -> "_GetResInfo"[style=dashed]
-	"HelpMenu" -> "_AppendMenu"[style=dashed]
+//	"HelpMenu" -> "_GetResource"[style=dashed]
+//	"HelpMenu" -> "_SizeRsrc"[style=dashed]
+//	"HelpMenu" -> "_NewMenu"[style=dashed]
+//	"HelpMenu" -> "_GetResInfo"[style=dashed]
+//	"HelpMenu" -> "_AppendMenu"[style=dashed]
 
-	"SizeDestView" -> "_InsetRect"[style=dashed]
+//	"SizeDestView" -> "_InsetRect"[style=dashed]
 
 	"myTEInsert" -> "strlen"
 
-	"myTEInsert" -> "_TEInsert"[style=dashed]
+//	"myTEInsert" -> "_TEInsert"[style=dashed]
 
-	"code2-anon31" -> "_NewPtr"[style=dashed]
-	"code2-anon31" -> "_SetRect"[style=dashed]
+//	"code2-anon31" -> "_NewPtr"[style=dashed]
+//	"code2-anon31" -> "_SetRect"[style=dashed]
 
-	"InitStatus" -> "_GetDItem"[style=dashed]
-	"InitStatus" -> "_SetDItem"[style=dashed]
-	"InitStatus" -> "_ShowWindow"[style=dashed]
+//	"InitStatus" -> "_GetDItem"[style=dashed]
+//	"InitStatus" -> "_SetDItem"[style=dashed]
+//	"InitStatus" -> "_ShowWindow"[style=dashed]
 
 	"TrapAvailable" -> "code2-anon9"
 
-	"TrapAvailable" -> "_GetTrapAddress"[style=dashed]
+//	"TrapAvailable" -> "_GetTrapAddress"[style=dashed]
 
 	"TypeNum" -> "strlen"
 	"TypeNum" -> "strncmp"
 
 	"MakeThing" -> "code9-anon0"
 
-	"rand" -> "_Random"[style=dashed]
+//	"rand" -> "_Random"[style=dashed]
 
 	"code9-anon1" -> "rand"
 
@@ -406,20 +454,20 @@ digraph callgraph {
 
 	"Thermometer" -> "code1-anon23"
 
-	"Thermometer" -> "_FrameRect"[style=dashed]
-	"Thermometer" -> "_InsetRect"[style=dashed]
-	"Thermometer" -> "_FillRect"[style=dashed]
+//	"Thermometer" -> "_FrameRect"[style=dashed]
+//	"Thermometer" -> "_InsetRect"[style=dashed]
+//	"Thermometer" -> "_FillRect"[style=dashed]
 
 	"Display" -> "tprintf"
 	"Display" -> "mySetCtlMax"
 
-	"Display" -> "_TEDeactivate"[style=dashed]
-	"Display" -> "_TEDelete"[style=dashed]
-	"Display" -> "_GetCtlValue"[style=dashed]
-	"Display" -> "_TEScroll"[style=dashed]
-	"Display" -> "_SetCtlValue"[style=dashed]
+//	"Display" -> "_TEDeactivate"[style=dashed]
+//	"Display" -> "_TEDelete"[style=dashed]
+//	"Display" -> "_GetCtlValue"[style=dashed]
+//	"Display" -> "_TEScroll"[style=dashed]
+//	"Display" -> "_SetCtlValue"[style=dashed]
 
-	"code2-anon10" -> "_Open"[style=dashed]
+//	"code2-anon10" -> "_Open"[style=dashed]
 
 	"myRead" -> "code2-anon12"
 	"myRead" -> "SaveErr"
@@ -429,20 +477,20 @@ digraph callgraph {
 	"myClose" -> "code2-anon11"
 	"myClose" -> "SaveErr"
 
-	"TellUser" -> "_ParamText"[style=dashed]
-	"TellUser" -> "_Alert"[style=dashed]
+//	"TellUser" -> "_ParamText"[style=dashed]
+//	"TellUser" -> "_Alert"[style=dashed]
 	
 	"RestoreMaze" -> "code1-anon19"
 	"RestoreMaze" -> "GetDiskStr"
 	"RestoreMaze" -> "myClose"
 
-	"RestoreMaze" -> "_ExitToShell"[style=dashed]
+//	"RestoreMaze" -> "_ExitToShell"[style=dashed]
 
 	"RestoreThings" -> "code1-anon19"
 	"RestoreThings" -> "GetDiskStr"
 	"RestoreThings" -> "myClose"
 	
-	"RestoreThings" -> "_ExitToShell"[style=dashed]
+//	"RestoreThings" -> "_ExitToShell"[style=dashed]
 
 	"code23-anon0" -> "code1-anon19"
 
@@ -456,9 +504,110 @@ digraph callgraph {
 
 	"mySetCtlMax" -> "mySetScroll"
 	"mySetCtlMax" -> "code2-anon25"
+//
+//	"code2-anon6" -> "_GetTrapAddress"[style=dashed]
+//	"code2-anon6" -> "_SysEnvirons"[style=dashed]
 
-	"code2-anon6" -> "_GetTrapAddress"[style=dashed]
-	"code2-anon6" -> "_SysEnvirons"[style=dashed]
+//	"myGrowDrawIcon" -> "_GetPort"[style=dashed]
+//	"myGrowDrawIcon" -> "_SetPort"[style=dashed]
+//	"myGrowDrawIcon" -> "_NewRgn"[style=dashed]
+//	"myGrowDrawIcon" -> "_GetClip"[style=dashed]
+//	"myGrowDrawIcon" -> "_ClipRect"[style=dashed]
+//	"myGrowDrawIcon" -> "_DrawGrowIcon"[style=dashed]
+//	"myGrowDrawIcon" -> "_SetClip"[style=dashed]
+//	"myGrowDrawIcon" -> "_DisposeRgn"[style=dashed]
+
+//	"code2-anon1" -> "_TEDeactivate"[style=dashed]
+//	"code2-anon1" -> "_TESetSelect"[style=dashed]
+//	"code2-anon1" -> "_DisableItem"[style=dashed]
+
+//	"code9-anon2" -> "_TEDeactivate"[style=dashed]
+
+	"MenuCommand" -> "Notice"
+	"MenuCommand" -> "FlipTopStat"
+	"MenuCommand" -> "SaveGame"
+	"MenuCommand" -> "Beep"
+	"MenuCommand" -> "ShowMap"
+	"MenuCommand" -> "MapMe"
+	"MenuCommand" -> "code9-anon8"
+	"MenuCommand" -> "Speed"
+	"MenuCommand" -> "code9-anon4"
+	"MenuCommand" -> "code2-anon3"
+	"MenuCommand" -> "code3-anon1"
+	"MenuCommand" -> "code2-anon4"
+	"MenuCommand" -> "Throw"
+	"MenuCommand" -> "Help"
+	
+//	"MenuCommand" -> "_LoWord"[style=dashed]
+//	"MenuCommand" -> "_HiWord"[style=dashed]
+//	"MenuCommand" -> "_UnLoadSeg"[style=dashed]
+//	"MenuCommand" -> "_GetPort"[style=dashed]
+//	"MenuCommand" -> "_GetItem"[style=dashed]
+//	"MenuCommand" -> "_OpenDeskAcc"[style=dashed]
+//	"MenuCommand" -> "_SetPort"[style=dashed]
+//	"MenuCommand" -> "_CheckItem"[style=dashed]
+//	"MenuCommand" -> "_SysEdit"[style=dashed]
+//	"MenuCommand" -> "_HiliteMenu"[style=dashed]
+
+	"MapKeyPad" -> "MoveHero"
+
+	"MoveHero" -> "FlashButton"
+	"MoveHero" -> "leftof"
+	"MoveHero" -> "code2-anon0"
+	"MoveHero" -> "Compass"
+	"MoveHero" -> "LookForTraps"
+	"MoveHero" -> "view"
+	"MoveHero" -> "PassTime"
+	"MoveHero" -> "GoDir"
+	"MoveHero" -> "SetSpoor"
+	"MoveHero" -> "youfound"
+	"MoveHero" -> "Beep"
+	"MoveHero" -> "rightof"
+	"MoveHero" -> "reverseof"
+	"MoveHero" -> "pickup"
+	"MoveHero" -> "WaitForMouseUp"
+	"MoveHero" -> "CanPickUp"
+	"MoveHero" -> "MapMe"
+	"MoveHero" -> "code2-anon2"
+
+//	"MoveHero" -> "_FlushEvents"[style=dashed]
+//	"MoveHero" -> "_HiliteMenu"[style=dashed]
+
+	"HelpButtons" -> "doHelp"
+	"HelpButtons" -> "code29-anon1"
+	"HelpButtons" -> "Hscroll"
+	"HelpButtons" -> "Beep"
+	
+//	"HelpButtons" -> "_GetMaxCtl"[style=dashed]
+
+	"GotAClick" -> "SelectInven"
+	"GotAClick" -> "mySetScroll"
+	"GotAClick" -> "myThumb"
+	"GotAClick" -> "News"
+	"GotAClick" -> "Beep"
+
+//	"GotAClick" -> "_GetPort"[style=dashed]
+//	"GotAClick" -> "_SetPort"[style=dashed]
+//	"GotAClick" -> "_GlobalToLocal"[style=dashed]
+//	"GotAClick" -> "_FindControl"[style=dashed]
+//	"GotAClick" -> "_TrackControl"[style=dashed]
+//	"GotAClick" -> "_GetCtlValue"[style=dashed]
+
+	"MyGrowWindow" -> "SizeDestView"
+	"MyGrowWindow" -> "SizeScrollBars"
+	"MyGrowWindow" -> "mySetCtlMax"
+
+//	"MyGrowWindow" -> "_SetRect"[style=dashed]
+//	"MyGrowWindow" -> "_GrowWindow"[style=dashed]
+//	"MyGrowWindow" -> "_LoWord"[style=dashed]
+//	"MyGrowWindow" -> "_HiWord"[style=dashed]
+//	"MyGrowWindow" -> "_SizeWindow"[style=dashed]
+//	"MyGrowWindow" -> "_TECalText"[style=dashed]
+//	"MyGrowWindow" -> "_HideControl"[style=dashed]
+//	"MyGrowWindow" -> "_MoveControl"[style=dashed]
+//	"MyGrowWindow" -> "_SizeControl"[style=dashed]
+//	"MyGrowWindow" -> "_GetCtlValue"[style=dashed]
+	
 }
 
 
