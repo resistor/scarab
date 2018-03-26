@@ -4343,8 +4343,7 @@ Jump Table 32:
 00002E0A: 0000
 
 (func intern code2-anon28)
-// NOTE: Incorrect diassembly!
-00002E0C: 2F07       '../.'          ORI.B    #$2F07,D0           
+00002E0C: 2F07            '/.'            MOVE.L   D7,-(A7)            
 00002E0E: 7E00            '~.'            MOVEQ    #$00,D7             
 00002E10: 6016            '`.'            BRA.S    *+$0018             ; 00002E28
 00002E12: 7014            'p.'            MOVEQ    #$14,D0             
@@ -6787,6 +6786,7 @@ Jump Table 35:
 00004776: 4CDF 1CF8       'L...'          MOVEM.L  (A7)+,D3-D7/A2-A4   
 0000477A: 4E5E            'N^'            UNLK     A6                  
 0000477C: 4E75            'Nu'            RTS                          
+---
 0000477E: 886D 7947       '.myG'          OR.W     $7947(A5),D4        
 00004782: 6574            'et'            BCS.S    *+$0076             ; 000047F8
 00004784: 5069 6300       'Pic.'          ADDQ.W   #$8,$6300(A1)       

@@ -90,49 +90,104 @@ digraph callgraph {
 	"code2-anon14"
 	"Notice"
 	"FlipTopStat"
-	"SaveGame"[color=red]
-	"ShowMap"[color=red]
-	"MapMe"[color=red]
-	"code9-anon8"[color=red]
-	"Speed"[color=red]
-	"code9-anon4"[color=red]
-	"code2-anon3"[color=red]
-	"code3-anon1"[color=red]
-	"code2-anon4"[color=red]
-	"Throw"[color=red]
-	"Help"[color=red]
-	"FlashButton"[color=red]
-	"Compass"[color=red]
-	"LookForTraps"[color=red]
-	"PassTime"[color=red]
+	"SaveGame"
+	"ShowMap"
+	"MapMe"
+	"code9-anon8"
+	"Speed"
+	"code9-anon4"
+	"code2-anon3"
+	"code3-anon1"
+	"code2-anon4"
+	"Throw"
+	"Help"
+	"FlashButton"
+	"Compass"
+	"LookForTraps"
+	"PassTime"
 	"rightof"
 	"reverseof"
-	"pickup"[color=red]
-	"WaitForMouseUp"[color=red]
-	"doHelp"[color=red]
-	"code29-anon1"[color=red]
-	"Hscroll"[color=red]
-	"code1-anon4"[color=red]
-	"MarkNote"[color=red]
-	"InvertCell"[color=red]
-	"InBounds"[color=red]
-	"drawcell"[color=red]
-	"drawthing"[color=red]
-	"shade"[color=red]
-	"dim"[color=red]
-	"AddRAEvent"[color=red]
-	"i2d"[color=red]
-	"strcat"[color=red]
-	"WaitForClick"[color=red]
-	"FullStatus"[color=red]
-	"TopTen"[color=red]
-	"MakeAFile"[color=red]
-	"myWrite"[color=red]
-	"DiskStr"[color=red]
-	"myThumb"[color=red]
-	"SelectInven"[color=red]
-
-
+	"pickup"
+	"WaitForMouseUp"
+	"doHelp"
+	"code29-anon1"
+	"Hscroll"
+	"code1-anon4"
+	"MarkNote"
+	"InvertCell"
+	"InBounds"
+	"drawcell"
+	"drawthing"
+	"shade"
+	"dim"
+	"AddRAEvent"
+	"i2d"
+	"strcat"
+	"WaitForClick"
+	"FullStatus"
+	"TopTen"
+	"MakeAFile"
+	"myWrite"
+	"DiskStr"
+	"myThumb"
+	"SelectInven"
+	"UMapNotes"
+	"SetNote"
+	"UMapMouse"
+	"GetAmount"
+	"LetGoOf"
+	"howfar"
+	"NewInven"
+	"code9-anon6"
+	"WakeyTime"
+	"hintsOK"
+	"DialogID"
+	"code2-anon26"
+	"PickMany"
+	"pickone"
+	"HelpPage"
+	"myGetPic"
+	"myDrawPic"
+	"graffiti"
+	"SplatThing"
+	"modeDrawPic"
+	"code2-anon28"
+	"SaveStats"
+	"code2-anon8"
+	"TTScroll"
+	"code2-anon15"
+	"code2-anon17"
+	"code2-anon18"
+	"code2-anon13"
+	"ClickItem"
+	"DragItem"
+	"Pstrcpy"
+	"PstrEqual"
+	"OutlineButton"
+	"SetDefAmount"
+	"atoi"
+	"howmuch"
+	"code2-anon5"
+	"DelThing"
+	"AskUser"
+	"code3-anon2"
+	"pickscroll"
+	"pickselect"
+	"AddIn"
+	"MakeTitle"
+	"code29-anon2"
+	"SplatP"
+	"Getem"
+	"code1_anon19"
+	"code1_anon22"
+	"GetName"
+	"Putem"
+	"InvDashRect"
+	"myScroll"
+	"InsHeroThings"
+	"pNameit"
+	"code3-anon3"
+	"mystrncat"
 
 
 //	"_FlushEvents"[color=blue]
@@ -260,6 +315,55 @@ digraph callgraph {
 //	"_CloseWindow"[color=blue]
 //	"_Pack3"[color=blue]
 //	"_SetCursor"[color=blue]
+//	"_BringToFront"[color=blue]
+//	"_ModalDialog"[color=blue]
+//	"_GetMouse"[color=blue]
+//	"_CloseDialog"[color=blue]
+//	"_InverRoundRect"[color=blue]
+//	"_DrawPicture"[color=blue]
+//	"_TickCount"[color=blue]
+//	"_StillDown"[color=blue]
+//	"_DisposeControl"[color=blue]
+//	"_HSetState"[color=blue]
+//	"_InvertOval"[color=blue]
+//	"_Move"[color=blue]
+//	"_PenPat"[color=blue]
+//	"_PenMode"[color=blue]
+//	"_PaintRect"[color=blue]
+//	"_HLock"[color=blue]
+//	"_HUnlock"[color=blue]
+//	"_SetIText"[color=blue]
+//	"_GetIText"[color=blue]
+//	"_DisposePtr"[color=blue]
+//	"_InitCursor"[color=blue]
+//	"_Delay"[color=blue]
+//	"_GetNamedResource"[color=blue]
+//	"_SetWTitle"[color=blue]
+//	"_CountResources"[color=blue]
+//	"_OffsetRect"[color=blue]
+//	"_StringWidth"[color=blue]
+//	"_DrawString"[color=blue]
+//	"_CharWidth"[color=blue]
+//	"_DrawChar"[color=blue]
+//	"_HPurge"[color=blue]
+//	"_Create"[color=blue]
+//	"_Write"[color=blue]
+//	"_GetFileInfo"[color=blue]
+//	"_SetFileInfo"[color=blue]
+//	"_TECopy"[color=blue]
+//	"_TEPaste"[color=blue]
+//	"_TECut"[color=blue]
+//	"_FrameRoundRect"[color=blue]
+//	"_SelIText"[color=blue]
+//	"_OpenResFile"[color=blue]
+//	"_ResError"[color=blue]
+//	"_CreateResFile"[color=blue]
+//	"_ChangedResource"[color=blue]
+//	"_WriteResource"[color=blue]
+//	"_NewHandle"[color=blue]
+//	"_AddResource"[color=blue]
+
+
 
 
 
@@ -763,6 +867,592 @@ digraph callgraph {
 //	"SaveGame" -> "_SetCursor"[style=dashed]
 //	"SaveGame" -> "_ExitToShell"[style=dashed]
 
+	"ShowMap" -> "UMapNotes"
+	"ShowMap" -> "SetNote"
+	"ShowMap" -> "UMapMouse"
+
+//	"ShowMap" -> "_GetNewDialog"[style=dashed]
+//	"ShowMap" -> "_GetPort"[style=dashed]
+//	"ShowMap" -> "_SetPort"[style=dashed]
+//	"ShowMap" -> "_GetDItem"[style=dashed]
+//	"ShowMap" -> "_SetDItem"[style=dashed]
+//	"ShowMap" -> "_ParamText"[style=dashed]
+//	"ShowMap" -> "_ShowWindow"[style=dashed]
+//	"ShowMap" -> "_BringToFront"[style=dashed]
+//	"ShowMap" -> "_ModalDialog"[style=dashed]
+//	"ShowMap" -> "_GetMouse"[style=dashed]
+//	"ShowMap" -> "_CloseDialog"[style=dashed]
+	
+	"MapMe" -> "GoDir"
+
+	"code9-anon8" -> "News"
+	"code9-anon8" -> "leftof"
+	"code9-anon8" -> "rightof"
+
+	"Speed" -> "TellUser"
+	"Speed" -> "Pi2d"
+	"Speed" -> "HeroStatus"
+	"Speed" -> "MapMe"
+	"Speed" -> "code9-anon5"
+
+	"code9-anon4" -> "GetAmount"
+	"code9-anon4" -> "Speed"
+
+	"code2-anon3" -> "Beep"
+	"code2-anon3" -> "News"
+
+//	"code2-anon3" -> "_UnLoadSeg"[style=dashed]
+
+	"code3-anon1" -> "Beep"
+	"code3-anon1" -> "LetGoOf"
+	"code3-anon1" -> "AddThing"
+	"code3-anon1" -> "HeroStatus"
+	"code3-anon1" -> "code2-anon1"
+	"code3-anon1" -> "CanPickUp"
+	"code3-anon1" -> "PassTime"
+
+//	"code3-anon1" -> "_UnLoadSeg"[style=dashed]
+
+	"code2-anon4" -> "Beep"
+	"code2-anon4" -> "News"
+	"code2-anon4" -> "Nameit"
+
+	"Throw" -> "Beep"
+	"Throw" -> "howfar"
+	"Throw" -> "LetGoOf"
+	"Throw" -> "NewInven"
+	"Throw" -> "code9-anon6"
+	"Throw" -> "GoDir"
+	"Throw" -> "FlagInList"
+	"Throw" -> "WakeyTime"
+	"Throw" -> "rand"
+	"Throw" -> "News"
+	"Throw" -> "AddThing"
+	"Throw" -> "LoseThing"
+	"Throw" -> "PassTime"
+	"Throw" -> "view"
+
+//	"Throw" -> "_UnLoadSeg"[style=dashed]
+
+	"Help" -> "hintsOK"
+	"Help" -> "DialogID"
+	"Help" -> "TellUser"
+	"Help" -> "doHelp"
+
+//	"Help" -> "_GetNewDialog"[style=dashed]
+//	"Help" -> "_SetPort"[style=dashed]
+//	"Help" -> "_GetDItem"[style=dashed]
+//	"Help" -> "_InsetRect"[style=dashed]
+//	"Help" -> "_TENew"[style=dashed]
+//	"Help" -> "_CloseDialog"[style=dashed]
+//	"Help" -> "_SetDItem"[style=dashed]
+//	"Help" -> "_NewControl"[style=dashed]
+//	"Help" -> "_TEDispose"[style=dashed]
+//	"Help" -> "_HideControl"[style=dashed]
+//	"Help" -> "_ShowWindow"[style=dashed]
+//	"Help" -> "_SelectWindow"[style=dashed]
+
+//	"FlashButton" -> "_GetPort"[style=dashed]
+//	"FlashButton" -> "_GetDItem"[style=dashed]
+//	"FlashButton" -> "_SetPort"[style=dashed]
+//	"FlashButton" -> "_InverRoundRect"[style=dashed]
+
+//	"Compass" -> "_GetDItem"[style=dashed]
+//	"Compass" -> "_GetPort"[style=dashed]
+//	"Compass" -> "_SetPort"[style=dashed]
+//	"Compass" -> "_GetResource"[style=dashed]
+//	"Compass" -> "_DrawPicture"[style=dashed]
+//	"Compass" -> "_FillRect"[style=dashed]
+
+	"LookForTraps" -> "GoDir"
+	"LookForTraps" -> "FlagInList"
+	"LookForTraps" -> "rand"
+
+	"PassTime" -> "code2-anon26"
+
+	"pickup" -> "FlagInList"
+	"pickup" -> "PickMany"
+	"pickup" -> "pickone"
+
+//	"WaitForMouseUp" -> "_TickCount"[style=dashed]
+//	"WaitForMouseUp" -> "_SystemTask"[style=dashed]
+//	"WaitForMouseUp" -> "_WaitNextEvent"[style=dashed]
+//	"WaitForMouseUp" -> "_GetNextEvent"[style=dashed]
+//	"WaitForMouseUp" -> "_StillDown"[style=dashed]
+
+	"doHelp" -> "HelpPage"
+
+//	"doHelp" -> "_GetPort"[style=dashed]
+//	"doHelp" -> "_SetPort"[style=dashed]
+//	"doHelp" -> "_TEUpdate"[style=dashed]
+
+//	"code29-anon1" -> "_DisposeControl"[style=dashed]
+//	"code29-anon1" -> "_CloseDialog"[style=dashed]
+//	"code29-anon1" -> "_TEDispose"[style=dashed]
+
+//	"Hscroll" -> "_GetPort"[style=dashed]
+//	"Hscroll" -> "_SetPort"[style=dashed]
+//	"Hscroll" -> "_GetMouse"[style=dashed]
+//	"Hscroll" -> "_FindControl"[style=dashed]
+//	"Hscroll" -> "_TrackControl"[style=dashed]
+//	"Hscroll" -> "_GetCtlValue"[style=dashed]
+//	"Hscroll" -> "_TEScroll"[style=dashed]
+
+//	"code1-anon4" -> "_HSetState"[style=dashed]
+
+//	"MarkNote" -> "_PenSize"[style=dashed]
+//	"MarkNote" -> "_MoveTo"[style=dashed]
+//	"MarkNote" -> "_Line"[style=dashed]
+
+//	"InvertCell" -> "_SetPt"[style=dashed]
+//	"InvertCell" -> "_SetRect"[style=dashed]
+//	"InvertCell" -> "_InsetRect"[style=dashed]
+//	"InvertCell" -> "_InvertOval"[style=dashed]
+
+	"drawcell" -> "GoDir"
+	"drawcell" -> "leftof"
+	"drawcell" -> "rightof"
+	"drawcell" -> "reverseof"
+
+//	"drawcell" -> "_MoveTo"[style=dashed]
+//	"drawcell" -> "_Line"[style=dashed]
+//	"drawcell" -> "_Move"[style=dashed]
+
+	"drawthing" -> "FlagInList"
+	"drawthing" -> "TypeNum"
+	"drawthing" -> "myGetPic"
+	"drawthing" -> "leftof"
+	"drawthing" -> "myDrawPic"
+	"drawthing" -> "rightof"
+	"drawthing" -> "graffiti"
+	"drawthing" -> "SplatThing"
+
+	"shade" -> "myGetPic"
+	"shade" -> "modeDrawPic"
+
+//	"dim" -> "_SetRect"[style=dashed]
+//	"dim" -> "_PenPat"[style=dashed]
+//	"dim" -> "_PenMode"[style=dashed]
+//	"dim" -> "_PaintRect"[style=dashed]
+
+	"AddRAEvent" -> "code2-anon28"
+	"AddRAEvent" -> "TellUser"
+
+	"i2d" -> "code1-anon23"
+	"i2d" -> "code1-anon22"
+
+//	"WaitForClick" -> "_GetNextEvent"[style=dashed]
+
+	"FullStatus" -> "SaveStats"
+
+//	"FullStatus" -> "_GetNewDialog"[style=dashed]
+//	"FullStatus" -> "_GetPort"[style=dashed]
+//	"FullStatus" -> "_SetPort"[style=dashed]
+//	"FullStatus" -> "_GetDItem"[style=dashed]
+//	"FullStatus" -> "_InsetRect"[style=dashed]
+//	"FullStatus" -> "_TENew"[style=dashed]
+//	"FullStatus" -> "_TESetJust"[style=dashed]
+//	"FullStatus" -> "_SetDItem"[style=dashed]
+//	"FullStatus" -> "_HiliteControl"[style=dashed]
+//	"FullStatus" -> "_ShowWindow"[style=dashed]
+//	"FullStatus" -> "_BringToFront"[style=dashed]
+//	"FullStatus" -> "_ModalDialog"[style=dashed]
+//	"FullStatus" -> "_CloseDialog"[style=dashed]
+//	"FullStatus" -> "_TEDispose"[style=dashed]
+//	"FullStatus" -> "_HiliteMenu"[style=dashed]
+//	"FullStatus" -> "_SetCursor"[style=dashed]
+//	"FullStatus" -> "_ExitToShell"[style=dashed]
+
+	"TopTen" -> "TellUser"
+	"TopTen" -> "mySetScroll"
+	"TopTen" -> "TTScroll"
+	"TopTen" -> "code2-anon8"
+	"TopTen" -> "SaveStats"
+
+//	"TopTen" -> "_GetPort"[style=dashed]
+//	"TopTen" -> "_GetNewDialog"[style=dashed]
+//	"TopTen" -> "_SetPort"[style=dashed]
+//	"TopTen" -> "_GetDItem"[style=dashed]
+//	"TopTen" -> "_SetDItem"[style=dashed]
+//	"TopTen" -> "_InsetRect"[style=dashed]
+//	"TopTen" -> "_TENew"[style=dashed]
+//	"TopTen" -> "_NewControl"[style=dashed]
+//	"TopTen" -> "_HiliteControl"[style=dashed]
+//	"TopTen" -> "_ShowWindow"[style=dashed]
+//	"TopTen" -> "_ModalDialog"[style=dashed]
+//	"TopTen" -> "_GetMaxCtl"[style=dashed]
+//	"TopTen" -> "_GetCtlValue"[style=dashed]
+//	"TopTen" -> "_DisposeControl"[style=dashed]
+//	"TopTen" -> "_CloseDialog"[style=dashed]
+//	"TopTen" -> "_DisposeHandle"[style=dashed]
+//	"TopTen" -> "_NewHandle"[style=dashed]
+//	"TopTen" -> "_HNoPurge"[style=dashed]
+//	"TopTen" -> "_BlockMove"[style=dashed]
+//	"TopTen" -> "_TEDispose"[style=dashed]
+//	"TopTen" -> "_SetCursor"[style=dashed]
+//	"TopTen" -> "_ExitToShell"[style=dashed]
+
+	"MakeAFile" -> "code2-anon15"
+	"MakeAFile" -> "code2-anon16"
+	"MakeAFile" -> "SaveErr"
+	"MakeAFile" -> "code2-anon17"
+	"MakeAFile" -> "Cleanup"
+	"MakeAFile" -> "code2-anon18"
+
+	"myWrite" -> "code2-anon13"
+	"myWrite" -> "SaveErr"
+	"myWrite" -> "Pi2d"
+	"myWrite" -> "TellUser"
+
+	"DiskStr" -> "code2-anon19"
+	"DiskStr" -> "myWrite"
+
+//	"myThumb" -> "_GetCtlMaxValue"[style=dashed]
+//	"myThumb" -> "_TEScroll"[style=dashed]
+
+	"SelectInven" -> "ClickItem"
+	"SelectInven" -> "code2-anon1"
+	"SelectInven" -> "code2-anon3"
+	"SelectInven" -> "DragItem"
+
+//	"SelectInven" -> "_GetPort"[style=dashed]
+//	"SelectInven" -> "_SetPort"[style=dashed]
+//	"SelectInven" -> "_HLock"[style=dashed]
+//	"SelectInven" -> "_TickCount"[style=dashed]
+//	"SelectInven" -> "_HiliteMenu"[style=dashed]
+//	"SelectInven" -> "_TESetSelect"[style=dashed]
+//	"SelectInven" -> "_TEActivate"[style=dashed]
+//	"SelectInven" -> "_EnableItem"[style=dashed]
+//	"SelectInven" -> "_HUnlock"[style=dashed]
+
+
+	"UMapNotes" -> "Beep"
+	"UMapNotes" -> "InvertCell"
+	
+//	"UMapNotes" -> "_GetDItem"[style=dashed]
+//	"UMapNotes" -> "_SetIText"[style=dashed]
+//	"UMapNotes" -> "_SelIText"[style=dashed]
+//	"UMapNotes" -> "_BringToFront"[style=dashed]
+
+	"SetNote" -> "PstrEqual"
+	"SetNote" -> "Pstrcpy"
+	"SetNote" -> "MarkNote"
+	"SetNote" -> "InvertCell"
+
+//	"SetNote" -> "_GetDItem"[style=dashed]
+//	"SetNote" -> "_GetIText"[style=dashed]
+//	"SetNote" -> "_DisposePtr"[style=dashed]
+//	"SetNote" -> "_NewPtr"[style=dashed]
+
+	"UMapMouse" -> "UMapNotes"
+
+	"GetAmount" -> "OutlineButton"
+	"GetAmount" -> "SetDefAmount"
+	"GetAmount" -> "atoi"
+	"GetAmount" -> "FlashButton"
+	"GetAmount" -> "WaitForMouseUp"
+
+//	"GetAmount" -> "_ParamText"[style=dashed]
+//	"GetAmount" -> "_GetNewDialog"[style=dashed]
+//	"GetAmount" -> "_GetDItem"[style=dashed]
+//	"GetAmount" -> "_ModalDialog"[style=dashed]
+//	"GetAmount" -> "_GetIText"[style=dashed]
+//	"GetAmount" -> "_CloseDialog"[style=dashed]
+
+	"LetGoOf" -> "howmuch"
+	"LetGoOf" -> "TellUser"
+	"LetGoOf" -> "MakeThing"
+	"LetGoOf" -> "NewInven"
+	"LetGoOf" -> "code2-anon5"
+	"LetGoOf" -> "DelThing"
+	"LetGoOf" -> "code9-anon6"
+
+	"howfar" -> "howmuch"
+	"howfar" -> "TellUser"
+	"howfar" -> "GoDir"
+	"howfar" -> "InBounds"
+	"howfar" -> "GetAmount"
+	"howfar" -> "MakeThing"
+
+	"NewInven" -> "Nameit"
+
+//	"NewInven" -> "_TEDeactivate"[style=dashed]
+//	"NewInven" -> "_TESetSelect"[style=dashed]
+//	"NewInven" -> "_TEDelete"[style=dashed]
+
+	"code9-anon6" -> "HeroStatus"
+
+	"WakeyTime" -> "AddRAEvent"
+	"WakeyTime" -> "rand"
+
+	"hintsOK" -> "AskUser"
+
+//	"hintsOK" -> "_SetCursor"[style=dashed]
+//	"hintsOK" -> "_InitCursor"[style=dashed]
+//	"hintsOK" -> "_Delay"[style=dashed]
+
+//	"DialogID" -> "_GetNamedResource"[style=dashed]
+//	"DialogID" -> "_GetResInfo"[style=dashed]
+
+	"PickMany" -> "TellUser"
+	"PickMany" -> "mySetScroll"
+	"PickMany" -> "code3-anon2"
+	"PickMany" -> "pickscroll"
+	"PickMany" -> "pickselect"
+
+//	"PickMany" -> "_GetNewDialog"[style=dashed]
+//	"PickMany" -> "_GetPort"[style=dashed]
+//	"PickMany" -> "_SetPort"[style=dashed]
+//	"PickMany" -> "_GetDItem"[style=dashed]
+//	"PickMany" -> "_InsetRect"[style=dashed]
+//	"PickMany" -> "_TENew"[style=dashed]
+//	"PickMany" -> "_SetDItem"[style=dashed]
+//	"PickMany" -> "_NewControl"[style=dashed]
+//	"PickMany" -> "_HiliteControl"[style=dashed]
+//	"PickMany" -> "_ShowWindow"[style=dashed]
+//	"PickMany" -> "_BringToFront"[style=dashed]
+//	"PickMany" -> "_ModalDialog"[style=dashed]
+//	"PickMany" -> "_GetMaxCtl"[style=dashed]
+//	"PickMany" -> "_CloseDialog"[style=dashed]
+
+	"pickone" -> "TellUser"
+	"pickone" -> "howmuch"
+	"pickone" -> "MakeThing"
+	"pickone" -> "DelThing"
+	"pickone" -> "AddIn"
+	"pickone" -> "InsInven"
+	"pickone" -> "NewInven"
+	"pickone" -> "code9-anon6"
+	"pickone" -> "code2-anon1"
+	"pickone" -> "CanPickUp"
+	"pickone" -> "PassTime"
+
+	"HelpPage" -> "MakeTitle"
+	"HelpPage" -> "code29-anon2"
+
+//	"HelpPage" -> "_GetResource"[style=dashed]
+//	"HelpPage" -> "_GetResInfo"[style=dashed]
+//	"HelpPage" -> "_TESetSelect"[style=dashed]
+//	"HelpPage" -> "_TEDelete"[style=dashed]
+//	"HelpPage" -> "_InsetRect"[style=dashed]
+//	"HelpPage" -> "_SetCtlValue"[style=dashed]
+//	"HelpPage" -> "_SizeRsrc"[style=dashed]
+//	"HelpPage" -> "_TEInsert"[style=dashed]
+//	"HelpPage" -> "_SetWTitle"[style=dashed]
+//	"HelpPage" -> "_CountResources"[style=dashed]
+//	"HelpPage" -> "_HiliteControl"[style=dashed]
+
+//	"myGetPic" -> "_GetResource"[style=dashed]
+//	"myGetPic" -> "_OffsetRect"[style=dashed]
+//	"myGetPic" -> "_NewHandle"[style=dashed]
+//	"myGetPic" -> "_HLock"[style=dashed]
+//	"myGetPic" -> "_DrawPicture"[style=dashed]
+//	"myGetPic" -> "_DisposeHandle"[style=dashed]
+//	"myGetPic" -> "_HUnlock"[style=dashed]
+//	"myGetPic" -> "_HNoPurge"[style=dashed]
+
+	"myDrawPic" -> "modeDrawPic"
+
+//	"graffiti" -> "_TextSize"[style=dashed]
+//	"graffiti" -> "_StringWidth"[style=dashed]
+//	"graffiti" -> "_MoveTo"[style=dashed]
+//	"graffiti" -> "_DrawString"[style=dashed]
+
+	"SplatThing" -> "myGetPic"
+	"SplatThing" -> "SplatP"
+
+//	"SplatThing" -> "_TextFont"[style=dashed]
+//	"SplatThing" -> "_TextSize"[style=dashed]
+//	"SplatThing" -> "_CharWidth"[style=dashed]
+//	"SplatThing" -> "_MoveTo"[style=dashed]
+//	"SplatThing" -> "_DrawChar"[style=dashed]
+
+//	"modeDrawPic" -> "_HLock"[style=dashed]
+//	"modeDrawPic" -> "_CopyBits"[style=dashed]
+//	"modeDrawPic" -> "_HUnlock"[style=dashed]
+//	"modeDrawPic" -> "_HPurge"[style=dashed]
+
+	"SaveStats" -> "Getem"
+	"SaveStats" -> "code1_anon19"
+	"SaveStats" -> "code1_anon22"
+	"SaveStats" -> "GetName"
+	"SaveStats" -> "TypeNum"
+	"SaveStats" -> "TypeInList"
+	"SaveStats" -> "Putem"
+	"SaveStats" -> "TopTen"
+
+//	"SaveStats" -> "_InitCursor"[style=dashed]
+//	"SaveStats" -> "_SetCursor"[style=dashed]
+//	"SaveStats" -> "_DisposeHandle"[style=dashed]
+
+//	"code2-anon8" -> "_GetHandleSize"[style=dashed]
+
+//	"TTScroll" -> "_GetMouse"[style=dashed]
+//	"TTScroll" -> "_FindControl"[style=dashed]
+//	"TTScroll" -> "_TrackControl"[style=dashed]
+//	"TTScroll" -> "_GetCtlValue"[style=dashed]
+//	"TTScroll" -> "_TEScroll"[style=dashed]
+
+//	"code2-anon15" -> "_Create"[style=dashed]
+
+//	"code2-anon17" -> "_GetFileInfo"[style=dashed]
+
+//	"code2-anon18" -> "_SetFileInfo"[style=dashed]
+
+//	"code2-anon13" -> "_Write"[style=dashed]
+
+//	"ClickItem" -> "_GetCtlValue"[style=dashed]
+
+	"DragItem" -> "mySetScroll"
+	"DragItem" -> "InvDashRect"
+	"DragItem" -> "myScroll"
+	"DragItem" -> "WaitForMouseUp"
+	"DragItem" -> "ClickItem"
+	"DragItem" -> "DelThing"
+	"DragItem" -> "InsHeroThings"
+
+//	"DragItem" -> "_GetMouse"[style=dashed]
+//	"DragItem" -> "_StillDown"[style=dashed]
+//	"DragItem" -> "_TEDeactivate"[style=dashed]
+//	"DragItem" -> "_TECopy"[style=dashed]
+//	"DragItem" -> "_TESetSelect"[style=dashed]
+//	"DragItem" -> "_TEPaste"[style=dashed]
+//	"DragItem" -> "_TEDelete"[style=dashed]
+//	"DragItem" -> "_TEDeactivate"[style=dashed]
+//	"DragItem" -> "_TECut"[style=dashed]
+
+//	"OutlineButton" -> "_GetPort"[style=dashed]
+//	"OutlineButton" -> "_GetDItem"[style=dashed]
+//	"OutlineButton" -> "_SetPort"[style=dashed]
+//	"OutlineButton" -> "_PenSize"[style=dashed]
+//	"OutlineButton" -> "_InsetRect"[style=dashed]
+//	"OutlineButton" -> "_FrameRoundRect"[style=dashed]
+
+	"SetDefAmount" -> "i2d"
+	"SetDefAmount" -> "strcat"
+	"SetDefAmount" -> "strlen"
+
+//	"SetDefAmount" -> "_SetIText"[style=dashed]
+//	"SetDefAmount" -> "_SelIText"[style=dashed]
+
+	"howmuch" -> "GetAmount"
+
+	"code2-anon5" -> "mySetCtlMax"
+	"code2-anon5" -> "code2-anon1"
+
+//	"code2-anon5" -> "_TEDelete"[style=dashed]
+
+//	"AskUser" -> "_ParamText"[style=dashed]
+//	"AskUser" -> "_Alert"[style=dashed]
+
+	"code3-anon2" -> "pickone"
+	"code3-anon2" -> "pNameit"
+	"code3-anon2" -> "code3-anon3"
+	"code3-anon2" -> "code2-anon25"
+
+//	"code3-anon2" -> "_TEDeactivate"[style=dashed]
+//	"code3-anon2" -> "_TESetSelect"[style=dashed]
+//	"code3-anon2" -> "_TEDelete"[style=dashed]
+
+	"pickscroll" -> "News"
+	"pickscroll" -> "Beep"
+
+//	"pickscroll" -> "_GetMouse"[style=dashed]
+//	"pickscroll" -> "_FindControl"[style=dashed]
+//	"pickscroll" -> "_TrackControl"[style=dashed]
+//	"pickscroll" -> "_GetCtlValue"[style=dashed]
+//	"pickscroll" -> "_TEScroll"[style=dashed]
+
+	"pickselect" -> "code3-anon2"
+	
+//	"pickselect" -> "_HLock"[style=dashed]
+//	"pickselect" -> "_GetMouse"[style=dashed]
+//	"pickselect" -> "_GetDItem"[style=dashed]
+//	"pickselect" -> "_GetCtlValue"[style=dashed]
+//	"pickselect" -> "_TEDeactivate"[style=dashed]
+//	"pickselect" -> "_TESetSelect"[style=dashed]
+//	"pickselect" -> "_HiliteControl"[style=dashed]
+//	"pickselect" -> "_TickCount"[style=dashed]
+//	"pickselect" -> "_HUnlock"[style=dashed]
+
+	"AddIn" -> "TypeInList"
+	"AddIn" -> "LoseThing"
+	"AddIn" -> "AddThing"
+
+//	"MakeTitle" -> "_SizeRsrc"[style=dashed]
+
+//	"code29-anon2" -> "_GetCtlValue"[style=dashed]
+//	"code29-anon2" -> "_SetMaxCtl"[style=dashed]
+
+//	"SplatP" -> "_HLock"[style=dashed]
+//	"SplatP" -> "_CopyBits"[style=dashed]
+//	"SplatP" -> "_HUnlock"[style=dashed]
+//	"SplatP" -> "_HPurge"[style=dashed]
+
+	"Getem" -> "code2-anon10"
+	"Getem" -> "TellUser"
+	"Getem" -> "Putem"
+	"Getem" -> "myRead"
+	"Getem" -> "code2-anon11"
+	"Getem" -> "SaveErr"
+
+//	"Getem" -> "_OpenResFile"[style=dashed]
+//	"Getem" -> "_ResError"[style=dashed]
+//	"Getem" -> "_CreateResFile"[style=dashed]
+
+	"Putem" -> "code2-anon10"
+	"Putem" -> "TellUser"
+	"Putem" -> "Pstrcpy"
+	"Putem" -> "MakeAFile"
+	"Putem" -> "myWrite"
+	"Putem" -> "code2-anon1"
+	"Putem" -> "SaveErr"
+
+	"code1-anon22" -> "code1-anon4"
+
+	"GetName" -> "Pstrcpy"
+	"GetName" -> "TellUser"
+	"GetName" -> "OutlineButton"
+	"GetName" -> "PstrEqual"
+	"GetName" -> "mystrncat"
+
+//	"GetName" -> "_GetResource"[style=dashed]
+//	"GetName" -> "_ResError"[style=dashed]
+//	"GetName" -> "_HNoPurge"[style=dashed]
+//	"GetName" -> "_SizeRsrc"[style=dashed]
+//	"GetName" -> "_BlockMove"[style=dashed]
+//	"GetName" -> "_GetNewDialog"[style=dashed]
+//	"GetName" -> "_HPurge"[style=dashed]
+//	"GetName" -> "_GetDItem"[style=dashed]
+//	"GetName" -> "_SetIText"[style=dashed]
+//	"GetName" -> "_SelIText"[style=dashed]
+//	"GetName" -> "_ShowWindow"[style=dashed]
+//	"GetName" -> "_ModalDialog"[style=dashed]
+//	"GetName" -> "_SetHandleSize"[style=dashed]
+//	"GetName" -> "_ChangedResource"[style=dashed]
+//	"GetName" -> "_WriteResource"[style=dashed]
+//	"GetName" -> "_NewHandle"[style=dashed]
+//	"GetName" -> "_AddResource"[style=dashed]
+//	"GetName" -> "_CloseDialog"[style=dashed]
+
+//	"InvDashRect" -> "_PenMode"[style=dashed]
+//	"InvDashRect" -> "_PenPat"[style=dashed]
+//	"InvDashRect" -> "_FrameRect"[style=dashed]
+
+	"myScroll" -> "Beep"
+	"myScroll" -> "code2-anon25"
+
+//	"myScroll" -> "_GetCtlValue"[style=dashed]
+//	"myScroll" -> "_TEScroll"[style=dashed]
+//	"myScroll" -> "_SetCtlValue"[style=dashed]
+//	"myScroll" -> "_Delay"[style=dashed]
+
+	"pNameit" -> "tprintf"
+
+//	"code3-anon3" -> "_TESetSelect"[style=dashed]
+//	"code3-anon3" -> "_TEActivate"[style=dashed]
+//	"code3-anon3" -> "_HiliteControl"[style=dashed]
+//	"code3-anon3" -> "_TEDeactivate"[style=dashed]
+
+
 }
-
-
