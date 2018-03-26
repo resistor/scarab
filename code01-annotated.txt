@@ -11,11 +11,11 @@ Jump Table 1:
 00000008: 4278 0A4A       'Bx.J'          CLR.W    $0A4A               
 0000000C: 9DCE            '..'            SUBA.L   A6,A6               
 0000000E: 2C3C 5354 5253  ',<STRS'        MOVE.L   #$53545253,D6       ; 'STRS'
-00000014: 4EBA 02B0       'N...'          JSR      *+$02B2             ; 000002C6
+00000014: 4EBA 02B0       'N...'          JSR      *+$02B2             ; code1-anon11()
 00000018: 41FA FFE6       'A...'          LEA      *-$0018,A0          ; 00000000
 0000001C: 208C            ' .'            MOVE.L   A4,(A0)             
-0000001E: 4EBA 007C       'N..|'          JSR      *+$007E             ; 0000009C
-00000022: 4EBA 0372       'N..r'          JSR      *+$0374             ; 00000396
+0000001E: 4EBA 007C       'N..|'          JSR      *+$007E             ; code1-anon25()
+00000022: 4EBA 0372       'N..r'          JSR      *+$0374             ; code1-anon15()
 00000026: 4267            'Bg'            CLR.W    -(A7)               
 00000028: 4879 0000 FFFF  'Hy....'        PEA      $0000FFFF           
 0000002E: 486F 0004       'Ho..'          PEA      $0004(A7)           
@@ -40,17 +40,17 @@ Jump Table 1:
 0000006A: 2453            '$S'            MOVEA.L  (A3),A2             
 0000006C: 0892 0007       '....'          BCLR     #$07,(A2)           
 00000070: 6720            'g '            BEQ.S    *+$0022             ; 00000092
-00000072: 4EBA 0098       'N...'          JSR      *+$009A             ; 0000010C
+00000072: 4EBA 0098       'N...'          JSR      *+$009A             ; code1-anon1()
 00000076: A029            '.)'            _HLock                       ; A029
 00000078: 598F            'Y.'            SUBQ.L   #$4,A7              
 0000007A: 2F3C 4352 454C  '/<CREL'        MOVE.L   #$4352454C,-(A7)    ; 'CREL'
 00000080: 3F07            '?.'            MOVE.W   D7,-(A7)            
 00000082: A9A0            '..'            _GetResource                     ; A9A0
-00000084: 4EBA 0098       'N...'          JSR      *+$009A             ; 0000011E
+00000084: 4EBA 0098       'N...'          JSR      *+$009A             ; code1-anon3()
 00000088: 201F            ' .'            MOVE.L   (A7)+,D0            
 0000008A: 670C            'g.'            BEQ.S    *+$000E             ; 00000098
 0000008C: 2040            ' @'            MOVEA.L  D0,A0               
-0000008E: 4EBA 0058       'N..X'          JSR      *+$005A             ; 000000E8
+0000008E: 4EBA 0058       'N..X'          JSR      *+$005A             ; code1-anon26()
 00000092: 4CDF 1FFF       'L...'          MOVEM.L  (A7)+,D0-D7/A0-A4   
 00000096: 4E75            'Nu'            RTS                          
 
@@ -90,6 +90,9 @@ Jump Table 1:
 000000E2: A9A0            '..'            _GetResource                     ; A9A0
 000000E4: 205F            ' _'            MOVEA.L  (A7)+,A0            
 000000E6: 244D            '$M'            MOVEA.L  A5,A2               
+
+
+(func intern code1-anon26)
 000000E8: A025            '.%'            _GetHandleSize                     ; A025
 000000EA: 2F08            '/.'            MOVE.L   A0,-(A7)            
 000000EC: 2050            ' P'            MOVEA.L  (A0),A0             
@@ -197,7 +200,7 @@ Jump Table 6:
 000001B2: 222F 0008       '"/..'          MOVE.L   $0008(A7),D1        
 000001B6: 2F5F 0004       '/_..'          MOVE.L   (A7)+,$0004(A7)     
 000001BA: 48E7 3100       'H.1.'          MOVEM.L  D2/D3/D7,-(A7)      
-000001BE: 4EBA 009C       'N...'          JSR      *+$009E             ; 0000025C
+000001BE: 4EBA 009C       'N...'          JSR      *+$009E             ; code1-anon7()
 000001C2: 4CDF 008C       'L...'          MOVEM.L  (A7)+,D2/D3/D7      
 000001C6: 221F            '".'            MOVE.L   (A7)+,D1            
 000001C8: 4E75            'Nu'            RTS                          
@@ -209,7 +212,7 @@ Jump Table 7:
 000001D2: 222F 0008       '"/..'          MOVE.L   $0008(A7),D1        
 000001D6: 2F5F 0004       '/_..'          MOVE.L   (A7)+,$0004(A7)     
 000001DA: 48E7 3100       'H.1.'          MOVEM.L  D2/D3/D7,-(A7)      
-000001DE: 4EBA 007C       'N..|'          JSR      *+$007E             ; 0000025C
+000001DE: 4EBA 007C       'N..|'          JSR      *+$007E             ; code1-anon7()
 000001E2: 2001            ' .'            MOVE.L   D1,D0               
 000001E4: 4CDF 008C       'L...'          MOVEM.L  (A7)+,D2/D3/D7      
 000001E8: 221F            '".'            MOVE.L   (A7)+,D1            
@@ -222,7 +225,7 @@ Jump Table 8:
 000001F4: 222F 0008       '"/..'          MOVE.L   $0008(A7),D1        
 000001F8: 2F5F 0004       '/_..'          MOVE.L   (A7)+,$0004(A7)     
 000001FC: 48E7 3100       'H.1.'          MOVEM.L  D2/D3/D7,-(A7)      
-00000200: 4EBA 002C       'N..,'          JSR      *+$002E             ; 0000022E
+00000200: 4EBA 002C       'N..,'          JSR      *+$002E             ; code1-anon4()
 00000204: 4CDF 008C       'L...'          MOVEM.L  (A7)+,D2/D3/D7      
 00000208: 221F            '".'            MOVE.L   (A7)+,D1            
 0000020A: 4E75            'Nu'            RTS                          
@@ -234,7 +237,7 @@ Jump Table 9:
 00000214: 222F 0008       '"/..'          MOVE.L   $0008(A7),D1        
 00000218: 2F5F 0004       '/_..'          MOVE.L   (A7)+,$0004(A7)     
 0000021C: 48E7 3100       'H.1.'          MOVEM.L  D2/D3/D7,-(A7)      
-00000220: 4EBA 000C       'N...'          JSR      *+$000E             ; 0000022E
+00000220: 4EBA 000C       'N...'          JSR      *+$000E             ; code1-anon4()
 00000224: 2001            ' .'            MOVE.L   D1,D0               
 00000226: 4CDF 008C       'L...'          MOVEM.L  (A7)+,D2/D3/D7      
 0000022A: 221F            '".'            MOVE.L   (A7)+,D1            
@@ -247,22 +250,22 @@ Jump Table 9:
 00000234: 6A0C            'j.'            BPL.S    *+$000E             ; 00000242
 00000236: 4480            'D.'            NEG.L    D0                  
 00000238: 4481            'D.'            NEG.L    D1                  
-0000023A: 4EBA 0020       'N.. '          JSR      *+$0022             ; 0000025C
+0000023A: 4EBA 0020       'N.. '          JSR      *+$0022             ; code1-anon7()
 0000023E: 4481            'D.'            NEG.L    D1                  
 00000240: 4E75            'Nu'            RTS                          
 
 (func intern code1-anon5)
 00000242: 4480            'D.'            NEG.L    D0                  
-00000244: 4EBA 0016       'N...'          JSR      *+$0018             ; 0000025C
+00000244: 4EBA 0016       'N...'          JSR      *+$0018             ; code1-anon7()
 00000248: 4480            'D.'            NEG.L    D0                  
 0000024A: 4481            'D.'            NEG.L    D1                  
 0000024C: 4E75            'Nu'            RTS                          
 
 (func intern code1-anon6)
 0000024E: 4A81            'J.'            TST.L    D1                  
-00000250: 6A0A            'j.'            BPL.S    *+$000C             ; 0000025C
+00000250: 6A0A            'j.'            BPL.S    *+$000C             ; code1-anon7()
 00000252: 4481            'D.'            NEG.L    D1                  
-00000254: 4EBA 0006       'N...'          JSR      *+$0008             ; 0000025C
+00000254: 4EBA 0006       'N...'          JSR      *+$0008             ; code1-anon7()
 00000258: 4480            'D.'            NEG.L    D0                  
 0000025A: 4E75            'Nu'            RTS                          
 
@@ -322,10 +325,10 @@ Jump Table 9:
 000002BC: 6204            'b.'            BHI.S    *+$0006             ; 000002C2
 000002BE: 4481            'D.'            NEG.L    D1                  
 000002C0: 4E75            'Nu'            RTS                          
-
-(func intern code1-anon11)
 000002C2: 5340            'S@'            SUBQ.W   #$1,D0              
 000002C4: 60E4            '`.'            BRA.S    *-$001A             ; 000002AA
+
+(func intern code1-anon11)
 000002C6: 7E00            '~.'            MOVEQ    #$00,D7             
 000002C8: 51F8 0A5E       'Q..^'          SF       $0A5E               
 000002CC: 598F            'Y.'            SUBQ.L   #$4,A7              

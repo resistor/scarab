@@ -1563,8 +1563,7 @@ Jump Table 178:
 
 
 (func intern GetDiskStr)
-000011AE: 4E56       '..NV'          ORI.B    #$4E56,D0           ; 'V'
-000011B0: FFFC            '..'            DC.W     $FFFC               ; ????
+000011AE: 4E56 FFFC       'NV..'          LINK     A6,#$FFFC           
 000011B2: 48E7 0018       'H...'          MOVEM.L  A3/A4,-(A7)         
 000011B6: 286E 000C       '(n..'          MOVEA.L  $000C(A6),A4        
 000011BA: 41EE FFFD       'A...'          LEA      -$0003(A6),A0       
@@ -1624,6 +1623,7 @@ Jump Table 178:
 0000124E: 4EAD 051A       'N...'          JSR      $051A(A5)           ; TellUser()
 00001252: 4E5E            'N^'            UNLK     A6                  
 00001254: 4E75            'Nu'            RTS                          
+---
 00001256: 8753            '.S'            OR.W     D3,(A3)             
 00001258: 6176            'av'            BSR.S    *+$0078             ; 000012D0
 0000125A: 6545            'eE'            BCS.S    *+$0047             ; 000012A1

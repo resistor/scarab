@@ -63,33 +63,33 @@ digraph callgraph {
 	"HelpButtons"
 	"GotAClick"
 	"MyGrowWindow"
-	"Beep"[color=red]
-	"code1-anon22"[color=red]
-	"PrintMap"[color=red]
-	"view"[color=red]
-	"code9-anon3"[color=red]
-	"strlen"[color=red]
-	"code2-anon9"[color=red]
-	"strncmp"[color=red]
-	"code9-anon0"[color=red]
-	"randdir"[color=red]
-	"leftof"[color=red]
-	"LoseThing"[color=red]
-	"randmess"[color=red]
-	"InitAnimal"[color=red]
-	"code1-anon23"[color=red]
-	"tprintf"[color=red]
-	"code2-anon12"[color=red]
-	"SaveErr"[color=red]
-	"code2-anon11"[color=red]
-	"GetDiskStr"[color=red]
-	"saynumber"[color=red]
-	"mySetScroll"[color=red]
-	"code2-anon25"[color=red]
-	"code2-anon16"[color=red]
-	"code2-anon14"[color=red]
-	"Notice"[color=red]
-	"FlipTopStat"[color=red]
+	"Beep"
+	"code1-anon22"
+	"PrintMap"
+	"view"
+	"code9-anon3"
+	"strlen"
+	"code2-anon9"
+	"strncmp"
+	"code9-anon0"
+	"randdir"
+	"leftof"
+	"LoseThing"
+	"randmess"
+	"InitAnimal"
+	"code1-anon23"
+	"tprintf"
+	"code2-anon12"
+	"SaveErr"
+	"code2-anon11"
+	"GetDiskStr"
+	"saynumber"
+	"mySetScroll"
+	"code2-anon25"
+	"code2-anon16"
+	"code2-anon14"
+	"Notice"
+	"FlipTopStat"
 	"SaveGame"[color=red]
 	"ShowMap"[color=red]
 	"MapMe"[color=red]
@@ -105,13 +105,33 @@ digraph callgraph {
 	"Compass"[color=red]
 	"LookForTraps"[color=red]
 	"PassTime"[color=red]
-	"rightof"[color=red]
-	"reverseof"[color=red]
+	"rightof"
+	"reverseof"
 	"pickup"[color=red]
 	"WaitForMouseUp"[color=red]
 	"doHelp"[color=red]
 	"code29-anon1"[color=red]
 	"Hscroll"[color=red]
+	"code1-anon4"[color=red]
+	"MarkNote"[color=red]
+	"InvertCell"[color=red]
+	"InBounds"[color=red]
+	"drawcell"[color=red]
+	"drawthing"[color=red]
+	"shade"[color=red]
+	"dim"[color=red]
+	"AddRAEvent"[color=red]
+	"i2d"[color=red]
+	"strcat"[color=red]
+	"WaitForClick"[color=red]
+	"FullStatus"[color=red]
+	"TopTen"[color=red]
+	"MakeAFile"[color=red]
+	"myWrite"[color=red]
+	"DiskStr"[color=red]
+	"myThumb"[color=red]
+	"SelectInven"[color=red]
+
 
 
 
@@ -218,7 +238,28 @@ digraph callgraph {
 //	"_HideControl"[color=blue]
 //	"_MoveControl"[color=blue]
 //	"_SizeControl"[color=blue]
-
+//	"_SysBeep"[color=blue]
+//	"_PenSize"[color=blue]
+//	"_MoveTo"[color=blue]
+//	"_Line"[color=blue]
+//	"_SetPt"[color=blue]
+//	"_FrameOval"[color=blue]
+//	"_CopyBits"[color=blue]
+//	"_TEActivate"[color=blue]
+//	"_Read"[color=blue]
+//	"_Close"[color=blue]
+//	"_SetMaxCtl"[color=blue]
+//	"_Delete"[color=blue]
+//	"_FlushVol"[color=blue]
+//	"_GetIcon"[color=blue]
+//	"_TextFace"[color=blue]
+//	"_TextBox"[color=blue]
+//	"_TESetJust"[color=blue]
+//	"_PlotIcon"[color=blue]
+//	"_TEDispose"[color=blue]
+//	"_CloseWindow"[color=blue]
+//	"_Pack3"[color=blue]
+//	"_SetCursor"[color=blue]
 
 
 
@@ -608,6 +649,120 @@ digraph callgraph {
 //	"MyGrowWindow" -> "_SizeControl"[style=dashed]
 //	"MyGrowWindow" -> "_GetCtlValue"[style=dashed]
 	
+//	"Beep" -> "_SysBeep"[style=dashed]
+	
+	"code1-anon22" -> "code1-anon4"
+
+	"PrintMap" -> "MarkNote"
+	"PrintMap" -> "InvertCell"
+
+//	"PrintMap" -> "_SetRect"[style=dashed]
+//	"PrintMap" -> "_FillRect"[style=dashed]
+//	"PrintMap" -> "_PenSize"[style=dashed]
+//	"PrintMap" -> "_MoveTo"[style=dashed]
+//	"PrintMap" -> "_Line"[style=dashed]
+//	"PrintMap" -> "_SetPt"[style=dashed]
+//	"PrintMap" -> "_FrameOval"[style=dashed]
+
+	"view" -> "GoDir"
+	"view" -> "InBounds"
+	"view" -> "drawcell"
+	"view" -> "FlagInList"
+	"view" -> "reverseof"
+	"view" -> "drawthing"
+	"view" -> "shade"
+	"view" -> "dim"
+
+//	"view" -> "_GetPort"[style=dashed]
+//	"view" -> "_SetPort"[style=dashed]
+//	"view" -> "_SetRect"[style=dashed]
+//	"view" -> "_EraseRect"[style=dashed]
+//	"view" -> "_CopyBits"[style=dashed]
+
+//	"code9-anon3" -> "_TEActivate"[style=dashed]
+
+//	"code2-anon9" -> "_GetTrapAddress"[style=dashed]
+
+	"randdir" -> "rand"
+
+	"randmess" -> "rand"
+
+	"InitAnimal" -> "rand"
+	"InitAnimal" -> "AddRAEvent"
+
+	"code1-anon23" -> "code1-anon4"
+
+	"tprintf" -> "i2d"
+	"tprintf" -> "strlen"
+
+//	"tprintf" -> "_TEInsert"[style=dashed]
+
+//	"code2-anon12" -> "_Read"[style=dashed]
+
+	"SaveErr" -> "Pi2d"
+	"SaveErr" -> "TellUser"
+
+//	"code2-anon11" -> "_Close"[style=dashed]
+	
+	"GetDiskStr" -> "myRead"
+
+//	"GetDiskStr" -> "_NewPtr"[style=dashed]
+
+	"saynumber" -> "strcat"
+	
+//	"code2-anon25" -> "_GetCtlValue"[style=dashed]
+//	"code2-anon25" -> "_SetMaxCtl"[style=dashed]
+
+//	"code2-anon16" -> "_Delete"[style=dashed]
+	
+//	"code2-anon14" -> "_FlushVol"[style=dashed]
+
+	"Notice" -> "strlen"
+	"Notice" -> "tprintf"
+	"Notice" -> "WaitForClick"
+
+//	"Notice" -> "_GetIcon"[style=dashed]
+//	"Notice" -> "_GetPort"[style=dashed]
+//	"Notice" -> "_SetRect"[style=dashed]
+//	"Notice" -> "_NewWindow"[style=dashed]
+//	"Notice" -> "_SetPort"[style=dashed]
+//	"Notice" -> "_TextFont"[style=dashed]
+//	"Notice" -> "_TextSize"[style=dashed]
+//	"Notice" -> "_InsetRect"[style=dashed]
+//	"Notice" -> "_TENew"[style=dashed]
+//	"Notice" -> "_TextFace"[style=dashed]
+//	"Notice" -> "_TextBox"[style=dashed]
+//	"Notice" -> "_TESetJust"[style=dashed]
+//	"Notice" -> "_PlotIcon"[style=dashed]
+//	"Notice" -> "_TEDispose"[style=dashed]
+//	"Notice" -> "_EraseRect"[style=dashed]
+//	"Notice" -> "_PenSize"[style=dashed]
+//	"Notice" -> "_FrameRect"[style=dashed]
+//	"Notice" -> "_CloseWindow"[style=dashed]
+
+	"FlipTopStat" -> "FullStatus"
+	"FlipTopStat" -> "TopTen"
+
+//	"FlipTopStat" -> "_UnLoadSeg"[style=dashed]
+
+	"SaveGame" -> "MakeAFile"
+	"SaveGame" -> "code2-anon10"
+	"SaveGame" -> "SaveErr"
+	"SaveGame" -> "Cleanup"
+	"SaveGame" -> "code1-anon22"
+	"SaveGame" -> "myWrite"
+	"SaveGame" -> "DiskStr"
+	"SaveGame" -> "RestoreMaze"
+	"SaveGame" -> "RestoreThings"
+	"SaveGame" -> "myClose"
+	"SaveGame" -> "code2-anon14"
+	"SaveGame" -> "code23-anon0"
+	"SaveGame" -> "code1-anon19"
+
+//	"SaveGame" -> "_Pack3"[style=dashed]
+//	"SaveGame" -> "_SetCursor"[style=dashed]
+//	"SaveGame" -> "_ExitToShell"[style=dashed]
+
 }
 
 
