@@ -61,7 +61,7 @@ Jump Table 102:
 000000BE: 4EAD 0132       'N..2'          JSR      $0132(A5)           ; view()
 000000C2: 3EBC 0096       '>...'          MOVE.W   #$0096,(A7)         
 000000C6: 2F0C            '/.'            MOVE.L   A4,-(A7)            
-000000C8: 486D 041A       'Hm..'          PEA      $041A(A5)           
+000000C8: 486D 041A       'Hm..'          PEA      $041A(A5)           ; &burnoil()
 000000CC: 42A7            'B.'            CLR.L    -(A7)               
 000000CE: 4EAD 010A       'N...'          JSR      $010A(A5)           ; AddRAEvent()
 000000D2: 4257            'BW'            CLR.W    (A7)                

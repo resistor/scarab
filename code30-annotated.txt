@@ -23,7 +23,7 @@ Jump Table 94:
 0000003C: 3B7C 0014 968E  ';|....'        MOVE.W   #$0014,-$6972(A5)   
 00000042: 4EAD 02AA       'N...'          JSR      $02AA(A5)           ; code19-anon0()
 00000046: 4EAD 02B2       'N...'          JSR      $02B2(A5)           ; code19-anon1()
-0000004A: 486D 02B2       'Hm..'          PEA      $02B2(A5)           ; code19-anon1()
+0000004A: 486D 02B2       'Hm..'          PEA      $02B2(A5)           ; &code19-anon1()
 0000004E: A9F1            '..'            _UnLoadSeg                     ; A9F1
 00000050: 3F2D 9B48       '?-.H'          MOVE.W   -$64B8(A5),-(A7)    
 00000054: 4EAD 01E2       'N...'          JSR      $01E2(A5)           ; SetSpoor()

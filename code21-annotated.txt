@@ -38,7 +38,7 @@ Jump Table 84:
 00000062: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 00000064: 3F3C 0004       '?<..'          MOVE.W   #$0004,-(A7)        
 00000068: 3F2E FFEC       '?...'          MOVE.W   -$0014(A6),-(A7)    
-0000006C: 486D 02CA       'Hm..'          PEA      $02CA(A5)           
+0000006C: 486D 02CA       'Hm..'          PEA      $02CA(A5)           ; &doPrintMap()
 00000070: 486E FFF4       'Hn..'          PEA      -$000C(A6)          
 00000074: A98E            '..'            _SetDItem                     ; A98E
 00000076: 2F0C            '/.'            MOVE.L   A4,-(A7)            
@@ -50,7 +50,7 @@ Jump Table 84:
 0000008A: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 0000008C: 3F3C 000A       '?<..'          MOVE.W   #$000A,-(A7)        
 00000090: 3F2E FFEC       '?...'          MOVE.W   -$0014(A6),-(A7)    
-00000094: 486D 02C2       'Hm..'          PEA      $02C2(A5)           
+00000094: 486D 02C2       'Hm..'          PEA      $02C2(A5)           ; &doLegend()
 00000098: 486E FFF4       'Hn..'          PEA      -$000C(A6)          
 0000009C: A98E            '..'            _SetDItem                     ; A98E
 0000009E: 2F0C            '/.'            MOVE.L   A4,-(A7)            
@@ -62,7 +62,7 @@ Jump Table 84:
 000000B2: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 000000B4: 3F3C 000B       '?<..'          MOVE.W   #$000B,-(A7)        
 000000B8: 3F2E FFEC       '?...'          MOVE.W   -$0014(A6),-(A7)    
-000000BC: 486D 02C2       'Hm..'          PEA      $02C2(A5)           
+000000BC: 486D 02C2       'Hm..'          PEA      $02C2(A5)           ; &doLegend()
 000000C0: 486E FFF4       'Hn..'          PEA      -$000C(A6)          
 000000C4: A98E            '..'            _SetDItem                     ; A98E
 000000C6: 2F0C            '/.'            MOVE.L   A4,-(A7)            
@@ -74,7 +74,7 @@ Jump Table 84:
 000000DA: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 000000DC: 3F3C 000C       '?<..'          MOVE.W   #$000C,-(A7)        
 000000E0: 3F2E FFEC       '?...'          MOVE.W   -$0014(A6),-(A7)    
-000000E4: 486D 02C2       'Hm..'          PEA      $02C2(A5)           
+000000E4: 486D 02C2       'Hm..'          PEA      $02C2(A5)           ; &doLegend()
 000000E8: 486E FFF4       'Hn..'          PEA      -$000C(A6)          
 000000EC: A98E            '..'            _SetDItem                     ; A98E
 000000EE: 2F0C            '/.'            MOVE.L   A4,-(A7)            
@@ -86,7 +86,7 @@ Jump Table 84:
 00000102: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 00000104: 3F3C 000D       '?<..'          MOVE.W   #$000D,-(A7)        
 00000108: 3F2E FFEC       '?...'          MOVE.W   -$0014(A6),-(A7)    
-0000010C: 486D 02C2       'Hm..'          PEA      $02C2(A5)           
+0000010C: 486D 02C2       'Hm..'          PEA      $02C2(A5)           ; &doLegend()
 00000110: 486E FFF4       'Hn..'          PEA      -$000C(A6)          
 00000114: A98E            '..'            _SetDItem                     ; A98E
 00000116: 2F0C            '/.'            MOVE.L   A4,-(A7)            
@@ -98,7 +98,7 @@ Jump Table 84:
 0000012A: 2F0C            '/.'            MOVE.L   A4,-(A7)            
 0000012C: 3F3C 000E       '?<..'          MOVE.W   #$000E,-(A7)        
 00000130: 3F2E FFEC       '?...'          MOVE.W   -$0014(A6),-(A7)    
-00000134: 486D 02C2       'Hm..'          PEA      $02C2(A5)           
+00000134: 486D 02C2       'Hm..'          PEA      $02C2(A5)           ; &doLegend()
 00000138: 486E FFF4       'Hn..'          PEA      -$000C(A6)          
 0000013C: A98E            '..'            _SetDItem                     ; A98E
 0000013E: 4A2D 969E       'J-..'          TST.B    -$6962(A5)          
@@ -152,7 +152,7 @@ Jump Table 84:
 00000206: 3F2D 9690       '?-..'          MOVE.W   -$6970(A5),-(A7)    
 0000020A: 4EBA 068C       'N...'          JSR      *+$068E             ; UMapNotes()
 0000020E: 588F            'X.'            ADDQ.L   #$4,A7              
-00000210: 486D 02D2       'Hm..'          PEA      $02D2(A5)           
+00000210: 486D 02D2       'Hm..'          PEA      $02D2(A5)           ; &MapFilter()
 00000214: 486E FFEE       'Hn..'          PEA      -$0012(A6)          
 00000218: A991            '..'            _ModalDialog                     ; A991
 0000021A: 0C6E 0002 FFEE  '.n....'        CMPI.W   #$0002,-$0012(A6)   

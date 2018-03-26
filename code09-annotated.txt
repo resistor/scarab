@@ -1719,7 +1719,7 @@ Jump Table 128:
 000011AC: 6018            '`.'            BRA.S    *+$001A             ; 000011C6
 000011AE: 3F3C 0096       '?<..'          MOVE.W   #$0096,-(A7)        
 000011B2: 2F2E 000C       '/...'          MOVE.L   $000C(A6),-(A7)     
-000011B6: 486D 041A       'Hm..'          PEA      $041A(A5)           
+000011B6: 486D 041A       'Hm..'          PEA      $041A(A5)           ; &burnoil()
 000011BA: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
 000011BE: 4EAD 010A       'N...'          JSR      $010A(A5)           ; AddRAEvent()
 000011C2: 4FEF 000E       'O...'          LEA      $000E(A7),A7        
@@ -1839,7 +1839,7 @@ Jump Table 132:
 000012F8: 9240            '.@'            SUB.W    D0,D1               
 000012FA: 3E81            '>.'            MOVE.W   D1,(A7)             
 000012FC: 42A7            'B.'            CLR.L    -(A7)               
-000012FE: 486D 043A       'Hm.:'          PEA      $043A(A5)           
+000012FE: 486D 043A       'Hm.:'          PEA      $043A(A5)           ; &poison()
 00001302: 42A7            'B.'            CLR.L    -(A7)               
 00001304: 4EAD 010A       'N...'          JSR      $010A(A5)           ; AddRAEvent()
 00001308: 4FEF 000E       'O...'          LEA      $000E(A7),A7        
@@ -2287,7 +2287,7 @@ Jump Table 139:
 0000184A: 2F2D E960       '/-.`'          MOVE.L   -$16A0(A5),-(A7)    
 0000184E: 3F3C 0003       '?<..'          MOVE.W   #$0003,-(A7)        
 00001852: 3F2E FFF2       '?...'          MOVE.W   -$000E(A6),-(A7)    
-00001856: 486D 046A       'Hm.j'          PEA      $046A(A5)           
+00001856: 486D 046A       'Hm.j'          PEA      $046A(A5)           ; &UpdateTherm()
 0000185A: 486E FFF4       'Hn..'          PEA      -$000C(A6)          
 0000185E: A98E            '..'            _SetDItem                     ; A98E
 00001860: 2F2D E960       '/-.`'          MOVE.L   -$16A0(A5),-(A7)    
@@ -2299,7 +2299,7 @@ Jump Table 139:
 00001876: 2F2D E960       '/-.`'          MOVE.L   -$16A0(A5),-(A7)    
 0000187A: 3F3C 0004       '?<..'          MOVE.W   #$0004,-(A7)        
 0000187E: 3F2E FFF2       '?...'          MOVE.W   -$000E(A6),-(A7)    
-00001882: 486D 046A       'Hm.j'          PEA      $046A(A5)           
+00001882: 486D 046A       'Hm.j'          PEA      $046A(A5)           ; &UpdateTherm()
 00001886: 486E FFF4       'Hn..'          PEA      -$000C(A6)          
 0000188A: A98E            '..'            _SetDItem                     ; A98E
 0000188C: 2F2D E960       '/-.`'          MOVE.L   -$16A0(A5),-(A7)    
@@ -2311,7 +2311,7 @@ Jump Table 139:
 000018A2: 2F2D E960       '/-.`'          MOVE.L   -$16A0(A5),-(A7)    
 000018A6: 3F3C 0006       '?<..'          MOVE.W   #$0006,-(A7)        
 000018AA: 3F2E FFF2       '?...'          MOVE.W   -$000E(A6),-(A7)    
-000018AE: 486D 046A       'Hm.j'          PEA      $046A(A5)           
+000018AE: 486D 046A       'Hm.j'          PEA      $046A(A5)           ; &UpdateTherm()
 000018B2: 486E FFF4       'Hn..'          PEA      -$000C(A6)          
 000018B6: A98E            '..'            _SetDItem                     ; A98E
 000018B8: 2F2D E960       '/-.`'          MOVE.L   -$16A0(A5),-(A7)    
@@ -2323,7 +2323,7 @@ Jump Table 139:
 000018CE: 2F2D E960       '/-.`'          MOVE.L   -$16A0(A5),-(A7)    
 000018D2: 3F3C 000D       '?<..'          MOVE.W   #$000D,-(A7)        
 000018D6: 3F2E FFF2       '?...'          MOVE.W   -$000E(A6),-(A7)    
-000018DA: 486D 047A       'Hm.z'          PEA      $047A(A5)           
+000018DA: 486D 047A       'Hm.z'          PEA      $047A(A5)           ; &UpdateCompass()
 000018DE: 486E FFF4       'Hn..'          PEA      -$000C(A6)          
 000018E2: A98E            '..'            _SetDItem                     ; A98E
 000018E4: 2F2D E960       '/-.`'          MOVE.L   -$16A0(A5),-(A7)    
@@ -2358,7 +2358,7 @@ Jump Table 139:
 00001930: 906E FFFA       '.n..'          SUB.W    -$0006(A6),D0       
 00001934: C1EE 000C       '....'          MULS.W   $000C(A6),D0        
 00001938: 2F00            '/.'            MOVE.L   D0,-(A7)            
-0000193A: 4EAD 005A       'N..Z'          JSR      $005A(A5)           ; code1_anon22()
+0000193A: 4EAD 005A       'N..Z'          JSR      $005A(A5)           ; code1-anon22()
 0000193E: D06E FFFA       '.n..'          ADD.W    -$0006(A6),D0       
 00001942: 3D40 FFFE       '=@..'          MOVE.W   D0,-$0002(A6)       
 00001946: 486E FFF8       'Hn..'          PEA      -$0008(A6)          
@@ -2597,7 +2597,7 @@ Jump Table 144:
 00001BD2: 9240            '.@'            SUB.W    D0,D1               
 00001BD4: 3E81            '>.'            MOVE.W   D1,(A7)             
 00001BD6: 42A7            'B.'            CLR.L    -(A7)               
-00001BD8: 486D 049A       'Hm..'          PEA      $049A(A5)           
+00001BD8: 486D 049A       'Hm..'          PEA      $049A(A5)           ; &code9-anon7()
 00001BDC: 42A7            'B.'            CLR.L    -(A7)               
 00001BDE: 4EAD 010A       'N...'          JSR      $010A(A5)           ; AddRAEvent()
 00001BE2: 7000            'p.'            MOVEQ    #$00,D0             
@@ -2688,7 +2688,7 @@ Jump Table 145:
 00001CE8: BE6C 0002       '.l..'          CMP.W    $0002(A4),D7        
 00001CEC: 661A            'f.'            BNE.S    *+$001C             ; 00001D08
 00001CEE: 2F0C            '/.'            MOVE.L   A4,-(A7)            
-00001CF0: 4EAD 008A       'N...'          JSR      $008A(A5)           ; code2_anon5()
+00001CF0: 4EAD 008A       'N...'          JSR      $008A(A5)           ; code2-anon5()
 00001CF4: 2E8C            '..'            MOVE.L   A4,(A7)             
 00001CF6: 486D 9672       'Hm.r'          PEA      -$698E(A5)          
 00001CFA: 4EAD 00E2       'N...'          JSR      $00E2(A5)           ; DelThing()
@@ -2751,7 +2751,7 @@ Jump Table 146:
 00001DB2: 4EBA F7EC       'N...'          JSR      *-$0812             ; HeroStatus()
 00001DB6: 3EBC 00C8       '>...'          MOVE.W   #$00C8,(A7)         
 00001DBA: 2F2E 000C       '/...'          MOVE.L   $000C(A6),-(A7)     
-00001DBE: 486D 04AA       'Hm..'          PEA      $04AA(A5)           
+00001DBE: 486D 04AA       'Hm..'          PEA      $04AA(A5)           ; &digest()
 00001DC2: 2F2E 0008       '/...'          MOVE.L   $0008(A6),-(A7)     
 00001DC6: 4EAD 010A       'N...'          JSR      $010A(A5)           ; AddRAEvent()
 00001DCA: 7000            'p.'            MOVEQ    #$00,D0             
@@ -3066,7 +3066,7 @@ Jump Table 153:
 0000206C: 4878 000A       'Hx..'          PEA      $000A               
 00002070: 2F06            '/.'            MOVE.L   D6,-(A7)            
 00002072: 2200            '".'            MOVE.L   D0,D1               
-00002074: 4EAD 0042       'N..B'          JSR      $0042(A5)           ; code1_anon19()
+00002074: 4EAD 0042       'N..B'          JSR      $0042(A5)           ; code1-anon19()
 00002078: C141            '.A'            EXG      D0,D1               
 0000207A: 7CD0            '|.'            MOVEQ    #$D0,D6             
 0000207C: DC40            '.@'            ADD.W    D0,D6               
@@ -3311,7 +3311,7 @@ Jump Table 156:
 000022C6: 6044            '`D'            BRA.S    *+$0046             ; 0000230C
 000022C8: 4878 000A       'Hx..'          PEA      $000A               
 000022CC: 2F07            '/.'            MOVE.L   D7,-(A7)            
-000022CE: 4EAD 0062       'N..b'          JSR      $0062(A5)           ; code1_anon23()
+000022CE: 4EAD 0062       'N..b'          JSR      $0062(A5)           ; code1-anon23()
 000022D2: 0600 0030       '...0'          ADDI.B   #$30,D0             ; '0'
 000022D6: 3206            '2.'            MOVE.W   D6,D1               
 000022D8: 5346            'SF'            SUBQ.W   #$1,D6              
@@ -3320,7 +3320,7 @@ Jump Table 156:
 000022DE: 1140 FA44       '.@.D'          MOVE.B   D0,-$05BC(A0)       
 000022E2: 4878 000A       'Hx..'          PEA      $000A               
 000022E6: 2F07            '/.'            MOVE.L   D7,-(A7)            
-000022E8: 4EAD 005A       'N..Z'          JSR      $005A(A5)           ; code1_anon22()
+000022E8: 4EAD 005A       'N..Z'          JSR      $005A(A5)           ; code1-anon22()
 000022EC: 2E00            '..'            MOVE.L   D0,D7               
 000022EE: 4A87            'J.'            TST.L    D7                  
 000022F0: 6ED6            'n.'            BGT.S    *-$0028             ; 000022C8

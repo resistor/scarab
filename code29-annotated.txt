@@ -162,7 +162,7 @@ Jump Table 200:
 000001B6: 2F2D FF38       '/-.8'          MOVE.L   -$00C8(A5),-(A7)    
 000001BA: 3F3C 0003       '?<..'          MOVE.W   #$0003,-(A7)        
 000001BE: 3F2E FFE2       '?...'          MOVE.W   -$001E(A6),-(A7)    
-000001C2: 486D 0642       'Hm.B'          PEA      $0642(A5)           
+000001C2: 486D 0642       'Hm.B'          PEA      $0642(A5)           ; &doHelp()
 000001C6: 486E FFE4       'Hn..'          PEA      -$001C(A6)          
 000001CA: A98E            '..'            _SetDItem                     ; A98E
 000001CC: 2F2D FF38       '/-.8'          MOVE.L   -$00C8(A5),-(A7)    
@@ -198,7 +198,7 @@ Jump Table 200:
 00000234: 2F2D FF38       '/-.8'          MOVE.L   -$00C8(A5),-(A7)    
 00000238: 3F3C 0004       '?<..'          MOVE.W   #$0004,-(A7)        
 0000023C: 3F2E FFE2       '?...'          MOVE.W   -$001E(A6),-(A7)    
-00000240: 486D 066A       'Hm.j'          PEA      $066A(A5)           
+00000240: 486D 066A       'Hm.j'          PEA      $066A(A5)           ; &HelpButtons()
 00000244: 486E FFE4       'Hn..'          PEA      -$001C(A6)          
 00000248: A98E            '..'            _SetDItem                     ; A98E
 0000024A: 2F2D FF38       '/-.8'          MOVE.L   -$00C8(A5),-(A7)    
@@ -493,7 +493,7 @@ Jump Table 197:
 00000546: 4267            'Bg'            CLR.W    -(A7)               
 00000548: 2F2E FFF8       '/...'          MOVE.L   -$0008(A6),-(A7)    
 0000054C: 2F2E FFFC       '/...'          MOVE.L   -$0004(A6),-(A7)    
-00000550: 486D 064A       'Hm.J'          PEA      $064A(A5)           
+00000550: 486D 064A       'Hm.J'          PEA      $064A(A5)           ; &HelpButtons()
 00000554: A968            '.h'            _TrackControl                     ; A968
 00000556: 548F            'T.'            ADDQ.L   #$2,A7              
 00000558: 6038            '`8'            BRA.S    *+$003A             ; 00000592

@@ -550,7 +550,7 @@ Jump Table 68:
 00000686: 2F2D F912       '/-..'          MOVE.L   -$06EE(A5),-(A7)    
 0000068A: 3F3C 0003       '?<..'          MOVE.W   #$0003,-(A7)        
 0000068E: 3F2E FFE4       '?...'          MOVE.W   -$001C(A6),-(A7)    
-00000692: 486D 0222       'Hm."'          PEA      $0222(A5)           
+00000692: 486D 0222       'Hm."'          PEA      $0222(A5)           ; &ShowThings()
 00000696: 486E FFF4       'Hn..'          PEA      -$000C(A6)          
 0000069A: A98E            '..'            _SetDItem                     ; A98E
 0000069C: 2F2D F912       '/-..'          MOVE.L   -$06EE(A5),-(A7)    
@@ -580,7 +580,7 @@ Jump Table 68:
 000006F4: 2F2D F912       '/-..'          MOVE.L   -$06EE(A5),-(A7)    
 000006F8: 3F3C 0004       '?<..'          MOVE.W   #$0004,-(A7)        
 000006FC: 3F2E FFE4       '?...'          MOVE.W   -$001C(A6),-(A7)    
-00000700: 486D 022A       'Hm.*'          PEA      $022A(A5)           
+00000700: 486D 022A       'Hm.*'          PEA      $022A(A5)           ; &ShowScroll()
 00000704: 486E FFF4       'Hn..'          PEA      -$000C(A6)          
 00000708: A98E            '..'            _SetDItem                     ; A98E
 0000070A: 2F2D F912       '/-..'          MOVE.L   -$06EE(A5),-(A7)    
@@ -599,7 +599,7 @@ Jump Table 68:
 0000073A: A915            '..'            _ShowWindow                     ; A915
 0000073C: 2EAD F912       '....'          MOVE.L   -$06EE(A5),(A7)     
 00000740: A920            '. '            _BringToFront                     ; A920
-00000742: 486D 0232       'Hm.2'          PEA      $0232(A5)           
+00000742: 486D 0232       'Hm.2'          PEA      $0232(A5)           ; &PickFilter()
 00000746: 486E FFE6       'Hn..'          PEA      -$001A(A6)          
 0000074A: A991            '..'            _ModalDialog                     ; A991
 0000074C: 0C6E 0002 FFE6  '.n....'        CMPI.W   #$0002,-$001A(A6)   
@@ -739,7 +739,7 @@ Jump Table 65:
 000008B0: 4267            'Bg'            CLR.W    -(A7)               
 000008B2: 2F2E FFF8       '/...'          MOVE.L   -$0008(A6),-(A7)    
 000008B6: 2F2E FFFC       '/...'          MOVE.L   -$0004(A6),-(A7)    
-000008BA: 486D 00B2       'Hm..'          PEA      $00B2(A5)           
+000008BA: 486D 00B2       'Hm..'          PEA      $00B2(A5)           ; &myScroll()
 000008BE: A968            '.h'            _TrackControl                     ; A968
 000008C0: 548F            'T.'            ADDQ.L   #$2,A7              
 000008C2: 604E            '`N'            BRA.S    *+$0050             ; 00000912

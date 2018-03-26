@@ -156,7 +156,7 @@ Jump Table 111:
 00000168: 4EAD 0492       'N...'          JSR      $0492(A5)           ; AddHealth()
 0000016C: 3EBC 004B       '>..K'          MOVE.W   #$004B,(A7)         
 00000170: 42A7            'B.'            CLR.L    -(A7)               
-00000172: 486D 043A       'Hm.:'          PEA      $043A(A5)           
+00000172: 486D 043A       'Hm.:'          PEA      $043A(A5)           ; &poison()
 00000176: 42A7            'B.'            CLR.L    -(A7)               
 00000178: 4EAD 010A       'N...'          JSR      $010A(A5)           ; AddRAEvent()
 0000017C: 4FEF 0010       'O...'          LEA      $0010(A7),A7        

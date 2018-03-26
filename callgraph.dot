@@ -188,6 +188,50 @@ digraph callgraph {
 	"pNameit"
 	"code3-anon3"
 	"mystrncat"
+	"AnimalMove"
+	"ShowThings"
+	"ShowScroll"
+	"Adder"
+	"burnoil"
+	"poison"
+	"UpdateTherm"
+	"UpdateCompass"
+	"code9-anon7"
+	"digest"
+	"code10-anon0"
+	"doPrintMap"
+	"doLegend"
+	"MapFilter"
+	"doFullStatus"
+	"FSFilter"
+	"doTopTen"
+	"TSFilter"
+	"lantern"
+	"darttrap"
+	"springtrap"
+	"trip"
+	"AddHealth"
+	"TrackHero"
+	"BrownAnimal"
+	"TrotTo"
+	"DropAll"
+	"PrintStatus"
+	"FormatTopTen"
+	"TrapSound"
+	"GoRandDir"
+	"code3-anon0"
+	"atol"
+	"PresLevel"
+	"SilentSound"
+	"code2-anon29"
+	"code19-anon0"
+	"code19-anon1"
+	"code19-anon2"
+	"makefalsepaths"
+	"randchoice"
+	"nowayout"
+	"delude"
+
 
 
 //	"_FlushEvents"[color=blue]
@@ -374,6 +418,12 @@ digraph callgraph {
 	"main" -> "SetUpWindows"
 	"main" -> "code10-anon1"
 	"main" -> "code45-anon0"
+
+	"main" -> "code2-anon29"
+	"main" -> "code19-anon0"
+	"main" -> "code19-anon1"
+	"main" -> "code10-anon0"
+
 	"main" -> "StockMaze"
 	"main" -> "CanPickUp"
 	"main" -> "code2-anon0"
@@ -564,6 +614,9 @@ digraph callgraph {
 //	"code2-anon31" -> "_NewPtr"[style=dashed]
 //	"code2-anon31" -> "_SetRect"[style=dashed]
 
+	"InitStatus" -> "UpdateTherm"[style=dotted]
+	"InitStatus" -> "UpdateCompass"[style=dotted]
+
 //	"InitStatus" -> "_GetDItem"[style=dashed]
 //	"InitStatus" -> "_SetDItem"[style=dashed]
 //	"InitStatus" -> "_ShowWindow"[style=dashed]
@@ -731,6 +784,8 @@ digraph callgraph {
 	"GotAClick" -> "News"
 	"GotAClick" -> "Beep"
 
+	"GotAClick" -> "myScroll"[style=dotted]
+
 //	"GotAClick" -> "_GetPort"[style=dashed]
 //	"GotAClick" -> "_SetPort"[style=dashed]
 //	"GotAClick" -> "_GlobalToLocal"[style=dashed]
@@ -793,6 +848,8 @@ digraph callgraph {
 
 	"InitAnimal" -> "rand"
 	"InitAnimal" -> "AddRAEvent"
+
+	"InitAnimal" -> "AnimalMove"[style=dotted]
 
 	"code1-anon23" -> "code1-anon4"
 
@@ -871,6 +928,10 @@ digraph callgraph {
 	"ShowMap" -> "SetNote"
 	"ShowMap" -> "UMapMouse"
 
+	"ShowMap" -> "doPrintMap"[style=dotted]
+	"ShowMap" -> "doLegend"[style=dotted]
+	"ShowMap" -> "MapFilter"[style=dotted]
+
 //	"ShowMap" -> "_GetNewDialog"[style=dashed]
 //	"ShowMap" -> "_GetPort"[style=dashed]
 //	"ShowMap" -> "_SetPort"[style=dashed]
@@ -939,6 +1000,9 @@ digraph callgraph {
 	"Help" -> "TellUser"
 	"Help" -> "doHelp"
 
+	"Help" -> "doHelp"[style=dotted]
+	"Help" -> "HelpButtons"[style=dotted]
+
 //	"Help" -> "_GetNewDialog"[style=dashed]
 //	"Help" -> "_SetPort"[style=dashed]
 //	"Help" -> "_GetDItem"[style=dashed]
@@ -989,6 +1053,8 @@ digraph callgraph {
 //	"code29-anon1" -> "_DisposeControl"[style=dashed]
 //	"code29-anon1" -> "_CloseDialog"[style=dashed]
 //	"code29-anon1" -> "_TEDispose"[style=dashed]
+
+	"Hscroll" -> "HelpButtons"[style=dotted]
 
 //	"Hscroll" -> "_GetPort"[style=dashed]
 //	"Hscroll" -> "_SetPort"[style=dashed]
@@ -1045,6 +1111,9 @@ digraph callgraph {
 
 	"FullStatus" -> "SaveStats"
 
+	"FullStatus" -> "doFullStatus"[style=dotted]
+	"FullStatus" -> "FSFilter"[style=dotted]
+
 //	"FullStatus" -> "_GetNewDialog"[style=dashed]
 //	"FullStatus" -> "_GetPort"[style=dashed]
 //	"FullStatus" -> "_SetPort"[style=dashed]
@@ -1068,6 +1137,9 @@ digraph callgraph {
 	"TopTen" -> "TTScroll"
 	"TopTen" -> "code2-anon8"
 	"TopTen" -> "SaveStats"
+
+	"TopTen" -> "doTopTen"[style=dotted]
+	"TopTen" -> "TSFilter"[style=dotted]
 
 //	"TopTen" -> "_GetPort"[style=dashed]
 //	"TopTen" -> "_GetNewDialog"[style=dashed]
@@ -1185,6 +1257,8 @@ digraph callgraph {
 	"WakeyTime" -> "AddRAEvent"
 	"WakeyTime" -> "rand"
 
+	"WakeyTime" -> "AnimalMove"[style=dotted]
+
 	"hintsOK" -> "AskUser"
 
 //	"hintsOK" -> "_SetCursor"[style=dashed]
@@ -1199,6 +1273,10 @@ digraph callgraph {
 	"PickMany" -> "code3-anon2"
 	"PickMany" -> "pickscroll"
 	"PickMany" -> "pickselect"
+
+	"PickMany" -> "ShowThings"[style=dotted]
+	"PickMany" -> "ShowScroll"[style=dotted]
+	"PickMany" -> "PickFilter"[style=dotted]
 
 //	"PickMany" -> "_GetNewDialog"[style=dashed]
 //	"PickMany" -> "_GetPort"[style=dashed]
@@ -1287,6 +1365,8 @@ digraph callgraph {
 
 //	"code2-anon8" -> "_GetHandleSize"[style=dashed]
 
+	"TTScroll" -> "myScroll"[style=dotted]
+
 //	"TTScroll" -> "_GetMouse"[style=dashed]
 //	"TTScroll" -> "_FindControl"[style=dashed]
 //	"TTScroll" -> "_TrackControl"[style=dashed]
@@ -1356,6 +1436,8 @@ digraph callgraph {
 
 	"pickscroll" -> "News"
 	"pickscroll" -> "Beep"
+
+	"pickscroll" -> "myScroll"[style=dotted]
 
 //	"pickscroll" -> "_GetMouse"[style=dashed]
 //	"pickscroll" -> "_FindControl"[style=dashed]
@@ -1454,5 +1536,207 @@ digraph callgraph {
 //	"code3-anon3" -> "_HiliteControl"[style=dashed]
 //	"code3-anon3" -> "_TEDeactivate"[style=dashed]
 
+	"AnimalMove" -> "AddRAEvent"
+	"AnimalMove" -> "TrackHero"
+	"AnimalMove" -> "BrownAnimal"
+	"AnimalMove" -> "TrotTo"
+	"AnimalMove" -> "rand"
+	"AnimalMove" -> "DropAll"
 
+	"AnimalMove" -> "AnimalMove"[style=dotted]
+
+	"Adder" -> "News"
+	"Adder" -> "AddHealth"
+	"Adder" -> "AddRAEvent"
+
+	"Adder" -> "poison"[style=dotted]
+
+	"burnoil" -> "News"
+	"burnoil" -> "view"
+	"burnoil" -> "AddRAEvent"
+	"burnoil" -> "code9-anon6"
+	"burnoil" -> "HeroStatus"
+	
+	"burnoil" -> "burnoil"[style=dotted]
+
+	"poison" -> "AddHealth"
+	"poison" -> "rand"
+	"poison" -> "AddRAEvent"
+
+	"poison" -> "poison"[style=dotted]
+
+	"code9-anon7" -> "AddHealth"
+	"code9-anon7" -> "rand"
+	"code9-anon7" -> "AddRAEvent"
+
+	"code9-anon7" -> "code9-anon7"[style=dotted]
+
+	"digest" -> "TellUser"
+	"digest" -> "mySetScroll"
+	"digest" -> "HeroStatus"
+	"digest" -> "AddRAEvent"
+
+	"digest" -> "digest"[style=dotted]
+
+//	"digest" -> "_SetCursor"[style=dashed]
+//	"digest" -> "_ExitToShell"[style=dashed]
+
+	"code10-anon0" -> "TypeNum"
+	"code10-anon0" -> "MakeThing"
+	"code10-anon0" -> "AddRAEvent"
+	"code10-anon0" -> "Nameit"
+	"code10-anon0" -> "AddIn"
+	"code10-anon0" -> "InsInven"
+
+	"code10-anon0" -> "burnoil"[style=dotted]
+	"code10-anon0" -> "digest"[style=dotted]
+	"code10-anon0" -> "code9-anon7"[style=dotted]
+
+//	"code10-anon0" -> "_TEInsert"[style=dashed]
+
+	"lantern" -> "burnoil"[style=dotted]
+
+	"darttrap" -> "springtrap"
+	"darttrap" -> "News"
+	"darttrap" -> "trip"
+	"darttrap" -> "AddHealth"
+	"darttrap" -> "AddRAEvent"
+
+	"darttrap" -> "poison"[style=dotted]
+
+	"ShowThings" -> "OutlineButton"
+	"ShowThings" -> "pNameit"
+	"ShowThings" -> "tprintf"
+	"ShowThings" -> "code2-anon25"
+	"ShowThings" -> "code3-anon3"
+
+//	"ShowThings" -> "_TEDeactivate"[style=dashed]
+//	"ShowThings" -> "_TESetSelect"[style=dashed]
+//	"ShowThings" -> "_TEDelete"[style=dashed]
+//	"ShowThings" -> "_GetDItem"[style=dashed]
+//	"ShowThings" -> "_FrameRect"[style=dashed]
+
+//	"ShowScroll" -> "_ShowControl"[style=dashed]
+
+	"UpdateTherm" -> "Thermometer"
+
+//	"UpdateTherm" -> "_GetDItem"[style=dashed]
+
+	"UpdateCompass" -> "Compass"
+
+	"doPrintMap" -> "PrintMap"
+
+//	"doLegend" -> "_GetDItem"[style=dashed]
+//	"doLegend" -> "_PenSize"[style=dashed]
+//	"doLegend" -> "_FrameOval"[style=dashed]
+//	"doLegend" -> "_FrameRect"[style=dashed]
+//	"doLegend" -> "_SetIText"[style=dashed]
+//	"doLegend" -> "_InsetRect"[style=dashed]
+//	"doLegend" -> "_FillRect"[style=dashed]
+
+	"doFullStatus" -> "PrintStatus"
+
+//	"doFullStatus" -> "_SetCursor"[style=dashed]
+//	"doFullStatus" -> "_InitCursor"[style=dashed]
+
+	"doTopTen" -> "FormatTopTen"
+	"doTopTen" -> "code2-anon25"
+
+//	"doTopTen" -> "_SetCursor"[style=dashed]
+//	"doTopTen" -> "_InitCursor"[style=dashed]
+
+	"springtrap" -> "TypeNum"
+	"springtrap" -> "TypeInList"
+	"springtrap" -> "rand"
+
+	"trip" -> "TrapSound"
+
+	"AddHealth" -> "TellUser"
+	"AddHealth" -> "mySetScroll"
+	"AddHealth" -> "HeroStatus"
+
+//	"AddHealth" -> "_SetCursor"[style=dashed]
+//	"AddHealth" -> "_ExitToShell"[style=dashed]
+
+	"TrackHero" -> "GoDir"
+
+	"BrownAnimal" -> "GoRandDir"
+	"BrownAnimal" -> "GoDir"
+
+	"TrotTo" -> "randdir"
+	"TrotTo" -> "DelThing"
+	"TrotTo" -> "AddThing"
+	"TrotTo" -> "code3-anon0"
+	"TrotTo" -> "view"
+
+	"DropAll" -> "DelThing"
+	"DropAll" -> "AddThing"
+
+	"PrintStatus" -> "atol"
+	"PrintStatus" -> "tprintf"
+	"PrintStatus" -> "code1-anon19"
+	"PrintStatus" -> "code1-anon22"
+	"PrintStatus" -> "TypeNum"
+	"PrintStatus" -> "TypeInList"
+	"PrintStatus" -> "PresLevel"
+
+//	"PrintStatus" -> "_GetResource"[style=dashed]
+
+	"FormatTopTen" -> "Getem"
+	"FormatTopTen" -> "code2-anon8"
+	"FormatTopTen" -> "atol"
+	"FormatTopTen" -> "tprintf"
+	"FormatTopTen" -> "code1-anon19"
+	"FormatTopTen" -> "code1-anon22"
+	"FormatTopTen" -> "PresLevel"
+
+//	"FormatTopTen" -> "_TEUpdate"[style=dashed]s
+//	"FormatTopTen" -> "_GetResource"[style=dashed]
+//	"FormatTopTen" -> "_TESetSelect"[style=dashed]
+//	"FormatTopTen" -> "_TEActivate"[style=dashed]
+
+	"TrapSound" -> "SilentSound"
+	
+//	"TrapSound" -> "_GetResource"[style=dashed]
+//	"TrapSound" -> "_SndPlay"[style=dashed]
+
+//	"SilentSound" -> "_FlashMenuBar"[style=dashed]
+//	"SilentSound" -> "_Delay"[style=dashed]
+
+	"GoRandDir" -> "randdir"
+	"GoRandDir" -> "rightof"
+
+	"code3-anon0" -> "view"
+
+	"atol" -> "code1-anon19"
+	
+//	"code19-anon0" -> "_DisposePtr"[style=dashed]
+
+	"code19-anon1" -> "code19-anon2"
+	"code19-anon1" -> "makefalsepaths"
+
+	"code19-anon2" -> "rand"
+	"code19-anon2" -> "randdir"
+	"code19-anon2" -> "GoDir"
+	"code19-anon2" -> "randchoice"
+	"code19-anon2" -> "InBounds"
+	"code19-anon2" -> "nowayout"
+	"code19-anon2" -> "reverseof"
+
+	"makefalsepaths" -> "randdir"
+	"makefalsepaths" -> "delude"
+
+	"randchoice" -> "rand"
+
+	"nowayout" -> "GoDir"
+	"nowayout" -> "InBounds"
+	"nowayout" -> "nowayout"
+	"nowayout" -> "rightof"
+
+	"delude" -> "randdir"
+	"delude" -> "GoDir"
+	"delude" -> "InBounds"
+	"delude" -> "delude"
+	"delude" -> "reverseof"
+	"delude" -> "rightof"
 }
