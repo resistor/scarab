@@ -19,4 +19,16 @@ Step 7: Run across lots of familiar-looking libc functions!
 
 Step 8: Try to work out execution flow starting in CODE 0.  Identify that it's basically crt1.o, figure out how it finds and calls main in CODE 1.  Remark on constant pool used for main() offset - cheap linker hack?
 
+Step 9: Re-run disassembly to fix up broken functions
 
+Step 10: Label all (static) callsites
+
+Step 11: Build (static) call graph.  Start to build some intuition of what things do what.  Notice that large swaths of the binary are not touched.
+
+Step 12: Start looking into indirect jumps.  Identify and label switch jumps.
+
+Step 13: Figure out the meaning of PEA instruction, and its use for callbacks.  Label PEAs, add to callgraph.
+
+Step 14: Notice that some nodes found in PEA search still have no incoming edges.  Start looking for ways they could be accessed through globals.
+
+Step 15: Figure out that DATA resource is probably data section.  Poke through CODE 1 (crt1.o) and figure out that code1-anon25() is likely setting it up.  Convert function pseudo code to figure it out.  Determine that it's using RLE of nulls, as well as applying some kind of A5-relative relocations.

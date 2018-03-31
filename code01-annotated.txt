@@ -59,7 +59,7 @@ Jump Table 1:
 0000009A: A9C9            '..'            _SysError                     ; A9C9
 
 
-(func intern code1-anon25
+(func intern code1-anon25)
 0000009C: 598F            'Y.'            SUBQ.L   #$4,A7              
 0000009E: 2F3C 5A45 524F  '/<ZERO'        MOVE.L   #$5A45524F,-(A7)    ; 'ZERO'
 000000A4: 4267            'Bg'            CLR.W    -(A7)               
@@ -125,8 +125,6 @@ Jump Table 1:
 00000122: 6A04            'j.'            BPL.S    *+$0006             ; 00000128
 00000124: 1683            '..'            MOVE.B   D3,(A3)             
 00000126: 4E75            'Nu'            RTS                          
-
-(func intern code1-anon4)
 00000128: 204B            ' K'            MOVEA.L  A3,A0               
 0000012A: 1003            '..'            MOVE.B   D3,D0               
 0000012C: A06A            '.j'            _HSetState                     ; A06A

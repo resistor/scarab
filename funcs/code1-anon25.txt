@@ -1,0 +1,148 @@
+
+
+entry:
+	A7 <- A7 - 4
+	push 'ZERO'.l
+	push 0.0
+	_GetResource
+	A2 <- (*A7)
+
+	A7 <- A7 - 4
+	push 'DATA'.l
+	push 0.l
+	_GetResource
+	A0 <- (*A7).l
+
+	A0 <- (*A0).l
+	A1 <- 0x908
+	A2 <- (*A2).l
+
+	goto D0
+C2:
+	*(A1++) <- (*A0++).w
+	if (copied value != 0) goto D0
+
+C6:
+	D1 <- *(A2++).w
+	goto CC
+
+CA:
+	(*A1++) <- 0.b
+
+CC:
+	D1 <- D1 - 1
+	if (D1 != -1) goto CA
+
+
+D0:
+	if (A1 != A5) goto C2
+
+D4:
+	_ReleaseResource
+	_ReleaseResource
+
+	A7 <- A7 - 4
+	push 'DREL'.l
+	push 0.l
+	_GetResource
+	
+
+	A0 <- pop A7
+	A2 <- A5
+	_GetHandleSize
+
+	push A0.l
+	A0 <- (*A0)
+	
+	D0 <- (D0 >> 1)
+	goto 104
+
+F2:
+	D2 <- A5
+	D1 <- (*A0++).w
+	
+	D1 <- D1 & 0xFFFE
+	if (bit 0 was previous set) goto 100
+
+FC:
+	D2 <- (special constant at 0x00 in crt1.o)
+
+100:
+	*(A2 + D1.w) <- *(A2 + D1.w) + D2
+
+
+104:
+	D0 <- D0 - 1
+	if (D0 != -1) goto F2
+
+108:
+	_ReleaseResource
+	return
+
+
+----------------
+
+
+void code1-anon25() {
+	void** ZEROHandle = GetResource("ZERO");
+	void* ZEROPtr = *ZEROHandle;
+
+	void** DATAHandle = GetResource("DATA");
+	void* DATAPtr = *DATAHandle;
+	
+
+	void* base = CurStackBase;
+	
+	while (base != A5) {
+		int16_t val = *(int16_t*)DATAPtr;
+		DATAPtr += 2;
+
+		*(int16_t*)base = val;
+		base += 2;
+
+		if (val == 0) {
+			int16_t repeat = *(int16_t*)ZEROPtr;
+			ZEROPtr += 2;
+
+			while (repeat > 0) {
+				*(char*)base = 0;
+				base += 1;
+
+				repeat -= 1;
+			}
+			
+		}
+	}
+
+	ReleaseResource(ZEROHandle);
+	ReleaseResource(DATAHandle);
+
+	void** DRELHandle = GetResource("DREL");
+	void* DRELPtr = *DRELHandle;
+
+	int16_t DRELSize = GetHandleSize(DRELHandle);
+	DRELSize >>= 1;
+
+	while (DRELSize > 0) {
+		int16_t val = *(int16_t*)DRELPtr;
+		DRELPtr += 2;
+
+		bool set = val & 0x1;
+		val &= ~0x1;
+
+		int16_t addend = A5;
+		if (!set) {
+			// This actually is a pc-relative reference
+			// to a constant at the very beginning of crt1.o.
+			// Very likely that this constant was updated by
+			// the linker somehow.
+			addend = 0x0;
+		}
+
+		*(int16_t)(A5 + val) += addend;
+	
+	}
+
+	ReleaseResource(DRELHandle);
+
+}

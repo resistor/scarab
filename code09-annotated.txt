@@ -1075,7 +1075,7 @@ Jump Table 166:
 (func extern MakeThing)
 00000AC8: 4E56 0000       'NV..'          LINK     A6,#$0000           
 00000ACC: 2F07            '/.'            MOVE.L   D7,-(A7)            
-00000ACE: 4EBA 006C       'N..l'          JSR      *+$006E             ; code9-anon0
+00000ACE: 4EBA 006C       'N..l'          JSR      *+$006E             ; code9-anon0()
 00000AD2: 3E00            '>.'            MOVE.W   D0,D7               
 00000AD4: 4A40            'J@'            TST.W    D0                  
 00000AD6: 6C04            'l.'            BGE.S    *+$0006             ; 00000ADC
