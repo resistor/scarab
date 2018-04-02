@@ -34,3 +34,6 @@ Step 14: Notice that some nodes found in PEA search still have no incoming edges
 Step 15: Figure out that DATA resource is probably data section.  Poke through CODE 1 (crt1.o) and figure out that code1-anon25() is likely setting it up.  Convert function pseudo code to figure it out.  Determine that it's using RLE of nulls, as well as applying some kind of A5-relative relocations.
 
 Step 16: Extract DATA, ZERO, and DREL resources using DeRez.  Cleanup a bit in vim, then convert to binary blobs with xxd.
+
+Step 17: Write a utility to decompress the DATA section.  Squash some bugs (bytes vs words, big vs little endian).  Verify that the result matches the global size listed in the jump table.
+
